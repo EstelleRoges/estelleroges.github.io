@@ -1,0 +1,92 @@
+.pin {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: inline;
+  filter: drop-shadow(2px 2px 3px var(--brownTertiary));
+  -webkit-animation: pulse 1s;
+          animation: pulse 1s;
+}
+.pin i {
+  color: var(--greenSecondary);
+}
+
+.tags {
+  -webkit-animation: jackInTheBox 0.7s;
+          animation: jackInTheBox 0.7s;
+  background-color: white;
+  background-image: url("https://www.transparenttextures.com/patterns/lined-paper.png");
+  margin: auto;
+  padding: 1em;
+  width: 30vw;
+  max-width: 400px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 5px;
+  transform: rotate(-5deg);
+  box-shadow: 3px 3px 3px var(--brownSecondary);
+}
+.tags h2 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0;
+  padding: 0 0.5em;
+  display: inline;
+}
+.tags ul {
+  margin: 0;
+  padding-top: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-evenly;
+}
+.tags ul li {
+  padding: 0.4em;
+}
+.tags span {
+  margin: 0;
+  -webkit-animation: bounceIn 1.5s;
+          animation: bounceIn 1.5s;
+}
+.tags .luv i {
+  margin: 0;
+  font-size: 17px;
+  color: #d13149;
+  display: inline-block;
+  position: relative;
+  right: 2px;
+  bottom: 5px;
+  -webkit-animation: heartBeat 2s 0.7s;
+          animation: heartBeat 2s 0.7s;
+  transform: rotate(15deg);
+}
+
+.storyContent {
+  padding: 1em;
+  -webkit-animation: fadeIn 6s;
+          animation: fadeIn 6s;
+  text-align: justify;
+  line-height: 1.5em;
+}
+
+.moreStory {
+  margin-top: 1em;
+}
+
+@media screen and (max-width: 991px) {
+  #about .col-md-6 {
+    width: 100%;
+  }
+  .tags {
+    margin: 1em auto;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .second h2 {
+    text-align: center;
+  }
+}/*# sourceMappingURL=styles_about.css.map */

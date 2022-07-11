@@ -1,0 +1,59 @@
+#skills .row {
+  text-align: center;
+}
+#skills i {
+  font-size: 40px;
+}
+#skills svg {
+  height: 40px;
+}
+#skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#skills ul:first-child {
+  width: 100%;
+}
+#skills ul li {
+  padding: 1em;
+}
+#skills .htmlStyle {
+  color: #f16529;
+}
+#skills .cssStyle {
+  color: #2965f1;
+}
+#skills .jsStyle {
+  color: #f7df1e;
+}
+#skills .reactStyle {
+  color: #00d8ff;
+}
+#skills .bsStyle {
+  color: #563d7c;
+}
+#skills .sassStyle {
+  color: #f06292;
+}
+#skills .nodeStyle {
+  color: #83cd29;
+}
+
+@media screen and (max-width: 768px) {
+  #skills ul {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .stack {
+    display: flex;
+    flex-direction: column;
+  }
+  .stack li {
+    display: flex;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}/*# sourceMappingURL=styles_skills.css.map */

@@ -1,0 +1,72 @@
+#skills {
+  .row {
+    text-align: center;
+  }
+
+  i {
+    font-size: 40px;
+  }
+  svg {
+    height: 40px;
+  }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+    &:first-child {
+      width: 100%;
+    }
+
+      li {
+        padding: 1em;
+      }
+    }
+
+  .htmlStyle {
+    color: #f16529;
+  }
+  .cssStyle {
+    color: #2965f1;
+  }
+  .jsStyle {
+    color: #f7df1e;
+  }
+  .reactStyle {
+    color: #00d8ff;
+  }
+  .bsStyle {
+    color: #563d7c;
+  }
+  .sassStyle {
+    color: #f06292;
+  }
+  // . wpStyle: {color: #21759B;}
+  .nodeStyle {
+    color: #83cd29;
+  }
+  // . jestStyle: {color: #99415B;}
+}
+
+@media screen and (max-width: 768px) {
+  #skills ul {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    // &:first-child .row {
+    //   flex-direction: column;
+    // }
+  }
+
+  .stack {
+    display: flex;
+    flex-direction: column;
+
+    li {
+      display: flex;
+      width: fit-content;
+    }
+  }
+}

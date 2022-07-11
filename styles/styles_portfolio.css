@@ -1,0 +1,49 @@
+#carouselExampleCaptions img {
+  width: 100%;
+  height: 700px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#carouselExampleCaptions button {
+  background-color: transparent;
+}
+#carouselExampleCaptions button:hover {
+  background-color: transparent;
+}
+#carouselExampleCaptions h5, #carouselExampleCaptions p {
+  text-align: center;
+}
+#carouselExampleCaptions p {
+  font-size: 18px;
+}
+#carouselExampleCaptions .gradient {
+  position: relative;
+}
+#carouselExampleCaptions .gradient::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.295), #ae9a84);
+}
+#carouselExampleCaptions .seeProject {
+  padding: 0.5em 0.7em;
+  background-color: var(--text);
+}
+#carouselExampleCaptions .seeProject a {
+  color: var(--background);
+}
+#carouselExampleCaptions .seeProject:hover {
+  background-color: var(--brownTertiary);
+}
+#carouselExampleCaptions .seeProject:hover a {
+  color: white;
+}
+
+@media screen and (max-width: 576px) {
+  #carouselExampleCaptions img {
+    height: 450px;
+  }
+}/*# sourceMappingURL=styles_portfolio.css.map */

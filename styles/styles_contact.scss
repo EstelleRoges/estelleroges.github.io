@@ -1,0 +1,99 @@
+@keyframes rotate {
+  0% {
+    transform: rotate(12deg);
+  }
+
+  25% {
+    transform: rotate(36deg);
+  }
+
+  50% {
+    transform: rotate(60deg);
+  }
+
+  75% {
+    transform: rotate(84deg);
+  }
+
+  100% {
+    transform: rotate(12deg);
+  }
+}
+
+.contactSection {
+  margin-top: 2em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  input,
+  textarea {
+    font-size: 18px;
+    border: none;
+    border-radius: 0.5em;
+    margin-bottom: 1em;
+    padding: 1em;
+    resize: none;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 3px var(--brownPrimary);
+  }
+}
+
+.moreInfos {
+  animation: jackInTheBox 0.7s ease-out;
+}
+
+.someInfos {
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/lined-paper.png");
+  margin: 1.5em auto 1.5em 3em;
+  padding: 1em;
+  width: fit-content;
+  max-width: 400px;
+  height: fit-content;
+  letter-spacing: 2px;
+  border-radius: 5px;
+  transform: rotate(6deg);
+  box-shadow: -2px 2px 4px var(--brownPrimary);
+
+  h2,
+  span {
+    margin: 0;
+    margin-bottom: 0.5em;
+     width: fit-content;
+    display: inline;
+    font-family: "Courgette", cursive, serif;
+    animation: bounceIn 1s;
+  }
+
+  .pin {
+    display: inline-block;
+    color: #a2b36b;
+    filter: drop-shadow(2px 2px 3px #5c5c5c);
+    animation: pulse 1s;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contactSection .row {
+    flex-direction: column;
+    box-sizing: border-box;
+
+    form, .moreInfos {
+      width: 100%;
+    }
+
+    .someInfos {
+      margin: auto;
+      margin-top: 3em;
+      max-width: 400px;
+      .row {
+        flex-direction: row;
+      }
+    }
+  }
+}
