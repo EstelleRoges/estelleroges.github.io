@@ -22,6 +22,7 @@
 </head>
 
 <body>
+    <!-- <div class ="shapedividers_com-2476"></div> -->
     <div id="upperSection" class="container-fluid">
         <h1>Tea&Dev</h1>
         <div>
@@ -34,7 +35,7 @@
             <i class="menu bi bi-list d-inline d-lg-none"></i>
         </div>
     </div>
-    <div class="container-fluid shapedividers_com-2476">
+    <div class="container-fluid">
         <div class="row justify-content-between">
             <div id="nav" class="col-md-1 order-last d-sm-none d-md-block">
                 <ul>
@@ -287,11 +288,11 @@
                     <div class="contactSection">
                         <div class="row">
                             <form class="col-md-6 col-sm-12">
-                                <input type="text" name="name" placeholder="Votre nom" />
-                                <input type="email" name="mail" placeholder="E-mail" />
-                                <input type="text" name="subject" placeholder="C'est à quel sujet?" />
-                                <textarea rows="7" placeholder="Exprimez-vous!"></textarea>
-                                <button type="submit">Envoyer</button>
+                                <input type="text" name="name" id="personName" placeholder="Votre nom" />
+                                <input type="email" name="mail" id="personMail" placeholder="E-mail" />
+                                <input type="text" name="subject" id="topic" placeholder="C'est à quel sujet?" />
+                                <textarea id="personMessage" rows="7" placeholder="Exprimez-vous!"></textarea>
+                                <button onClick="sendMail()" type="submit">Envoyer</button>
                             </form>
                             <div class="moreInfos col-md-6 col-sm-12">
                                 <div class="someInfos">
@@ -318,6 +319,14 @@
         </div>
     </div>
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("FOlf6XQ311rAPFxv-");
+        })();
+    </script>
+    <script src="./sendMails.js"></script>
     <script src="https://kit.fontawesome.com/a789c7f6d3.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
