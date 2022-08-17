@@ -77,8 +77,8 @@ form {
 
   .pin {
     display: inline-block;
-    color: #a2b36b;
-    filter: drop-shadow(2px 2px 3px var(--greenTertiary));
+    color: var(--purpleSecondary);
+    filter: drop-shadow(2px 2px 3px var(--purpleTertiary));
     animation: pulse 1s;
   }
 }
@@ -100,5 +100,11 @@ form {
         flex-direction: row;
       }
     }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .someInfos {
+    transform: rotate(0);
   }
 }

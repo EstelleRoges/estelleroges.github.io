@@ -3,12 +3,12 @@
   width: -moz-fit-content;
   width: fit-content;
   display: inline;
-  filter: drop-shadow(2px 2px 3px var(--greenTertiary));
+  filter: drop-shadow(2px 2px 3px var(--purpleTertiary));
   -webkit-animation: pulse 1s;
           animation: pulse 1s;
 }
 .pin i {
-  color: var(--greenSecondary);
+  color: var(--purpleSecondary);
 }
 
 .tags {
@@ -88,5 +88,10 @@
 @media screen and (max-width: 768px) {
   .second h2 {
     text-align: center;
+  }
+}
+@media screen and (max-width: 576px) {
+  .tags {
+    transform: rotate(0);
   }
 }/*# sourceMappingURL=styles_about.css.map */

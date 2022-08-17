@@ -1,17 +1,10 @@
 :root {
-  --background: #fffcfa;
-  --backgroundSecondary: #f3e1ce;
-  --text: #211508;
-  --bluePrimary: #a9d4e7;
-  --blueSecondary: #70b8d7;
-  --blueTertiary: #60b0d2;
-  --greenPrimary: #9db87a;
-  --greenSecondary: #75924f;
-  --greenTertiary: #4A5D32;
-  --yellowPrimary: #ddbd55;
-  --yellowSecondary: #e4ca76;
-  --yellowTertiary: #bb9625;
-  --shadow: #ccc;
+  --background: white;
+  --text: #0F1D0C;
+  --greenPrimary: #34642B;
+  --greenSecondary: #3B6318;
+  --greenTertiary: #BFDB6B;
+  --shadow: #B8B8B8;
 }
 
 * {
@@ -22,14 +15,16 @@
 }
 
 body {
-  margin: auto;
-  box-sizing: border-box;
+  width: 100%;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 1400px;
-  height: fit-content;
-  background-color: var(--background);
+  background: linear-gradient(to bottom, black 10%, white 30%);
+  background: url(../assets/deskBackground.jpg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: 100% 100vh;
   color: var(--text);
 }
 
@@ -80,19 +75,18 @@ button {
   padding: 0.7em 1.4em;
   border: none;
   border-radius: 1em;
-  background-color: var(--blueSecondary);
-  color: var(--background);
+  background-color: var(--greenSecondary);
+  color: white;
   transition: 0.3s ease-in-out;
+  box-shadow: 0 3px 2px var(--greenTertiary);
 
   &:hover {
-    background-color: var(--blueTertiary);
+    background-color: var(--greenTertiary);
     transition: 0.3s ease-in-out;
   }
 }
 
-#upperSection,
-.upperArea {
-  width: 100%;
+#upperSection {
   padding: 0.5em;
   display: flex;
   justify-content: space-between;
@@ -101,7 +95,7 @@ button {
 
   h1 {
     display: inline-block;
-    padding-left: 0.5em;
+    padding: 0.25em 0.5em;
     font-size: 44px;
     letter-spacing: 2px;
   }
@@ -109,64 +103,70 @@ button {
   i {
     padding: 0 0.4em;
   }
-  .menu {
-    display: none;
+}
+
+.navbar-toggler, .btn-close {
+  border: none;
+  outline: none;
+  &:hover {
+    background-color: transparent;
   }
 }
 
-nav {
-  padding: 0;
-}
+// nav {
+//   padding: 0;
+// }
 
-#nav {
-  margin: 1.5em;
-  margin-top: 12em;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+// #nav {
+//   margin: 1.5em;
+//   margin-top: 12em;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-end;
 
-  ul {
-    position: fixed;
-  }
+//   ul {
+//     position: fixed;
+//   }
 
-  li {
-    width: 60px;
-    height: 60px;
-    margin: 1em auto;
-    padding-top: 15px;
-    border-radius: 50%;
-    box-shadow: inset -1px -1px 3px var(--brownPrimary),
-      1px 1px 7px var(--brownPrimary);
-    transition: 0.3s ease-in-out;
-    cursor: pointer;
+//   li {
+//     width: 60px;
+//     height: 60px;
+//     margin: 1em auto;
+//     padding-top: 15px;
+//     border-radius: 50%;
+//     box-shadow: inset -1px -1px 3px var(--brownPrimary),
+//       1px 1px 7px var(--brownPrimary);
+//     transition: 0.3s ease-in-out;
+//     cursor: pointer;
 
-    i {
-      transition: 0.3s ease-in-out;
-    }
+//     i {
+//       transition: 0.3s ease-in-out;
+//     }
 
-    &:hover {
-      background-color: var(--brownSecondary);
-      transition: 0.3s ease-in-out;
+//     &:hover {
+//       background-color: var(--brownSecondary);
+//       transition: 0.3s ease-in-out;
 
-      i {
-        color: var(--background);
-        transition: 0.3s ease-in-out;
-      }
-    }
-  }
-}
+//       i {
+//         color: var(--background);
+//         transition: 0.3s ease-in-out;
+//       }
+//     }
+//   }
+// }
 
-.navbar {
-  padding: 0;
+// .navbar {
+//   padding: 0;
 
-  li {
-    font-size: 20px;
-  }
-}
+//   li {
+//     font-size: 20px;
+//   }
+// }
 
 #content {
-  box-sizing: border-box;
+  margin: auto;
   padding: 3em 5em;
+  max-width: 1400px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -175,7 +175,6 @@ nav {
 // HERO SECTION
 .textSection {
   text-shadow: 1px 3px 5px #fff;
-  animation: blurbluePrimary 1s both;
 
   span {
     font-size: 1.3em;
@@ -188,7 +187,7 @@ nav {
     margin-bottom: 0.3em;
     font-size: 5em;
     color: var(--bluePrimary);
-    text-shadow: 2px 2px 6px var(--blueSecondary);
+    text-shadow: 2px 2px 4px var(--blueTertiary);
   }
 }
 
@@ -229,6 +228,10 @@ nav {
   .textSection h1 {
     font-size: 3em;
   }
+
+  .imageSection img {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -264,12 +267,16 @@ nav {
       font-size: 14px;
     }
 
-    yellowPrimary {
+    button {
       padding: 0.4em 1.1em;
       a {
         font-size: 14px;
       }
     }
+  }
+
+  #content {
+    padding: 3em;
   }
 }
 
@@ -328,5 +335,9 @@ nav {
 
   .imageSection img {
     width: 100%;
+  }
+
+  #content {
+    padding: 2em;
   }
 }

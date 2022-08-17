@@ -6,51 +6,61 @@
   color: var(--blueSecondary);
 }
 
-#projectsCarousel button {
+#carouselExampleCaptions button {
   background-color: transparent;
 }
-#projectsCarousel button:hover {
+#carouselExampleCaptions button:hover {
   background-color: transparent;
 }
-#projectsCarousel button i {
+#carouselExampleCaptions button i {
   font-size: 36px;
   color: var(--text);
 }
-#projectsCarousel h4 {
+#carouselExampleCaptions h3 {
+  margin-left: 2em;
   padding: 0.5em 0em;
-  color: var(--background);
-  text-align: center;
+  color: var(--purplePrimary);
+  text-shadow: 1px 1px 2px var(--purpleTertiary);
+  text-align: end;
 }
-#projectsCarousel p {
-  margin-left: 4em;
+#carouselExampleCaptions p {
+  margin-left: 5em;
+  padding: 0.5em;
+  height: 5em;
   font-size: 18px;
+  overflow-y: auto;
 }
-#projectsCarousel .carousel-control-next, #projectsCarousel .carousel-control-prev {
+#carouselExampleCaptions ::-webkit-scrollbar {
+  width: 7px;
+}
+#carouselExampleCaptions ::-webkit-scrollbar-thumb {
+  background: var(--background);
+  border-radius: 10px;
+}
+#carouselExampleCaptions .carousel-control-next,
+#carouselExampleCaptions .carousel-control-prev {
   width: 0;
 }
-#projectsCarousel .seeProject {
+#carouselExampleCaptions .seeProject {
   align-self: flex-end;
   padding: 0.5em 0.7em;
-  background-color: var(--greenPrimary);
+  background-color: var(--pinkPrimary);
 }
-#projectsCarousel .seeProject a {
+#carouselExampleCaptions .seeProject a {
   padding: 0.5em;
   color: var(--background);
   font-size: 22px;
 }
-#projectsCarousel .seeProject:hover {
-  background-color: var(--greenSecondary);
+#carouselExampleCaptions .seeProject:hover {
+  background-color: var(--pinkSecondary);
 }
-#projectsCarousel .seeProject:hover a {
+#carouselExampleCaptions .seeProject:hover a {
   color: white;
 }
 
 .carouselItem {
   padding: 3em;
   height: 500px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
   position: relative;
 }
 .carouselItem div {
@@ -60,7 +70,7 @@
 }
 
 .carouselImage {
-  width: 35%;
+  width: 45%;
   height: 350px;
   top: 1em;
   left: 7em;
@@ -70,22 +80,114 @@
   width: 100%;
   height: 100%;
   border-radius: 2em;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: fill;
+     object-fit: fill;
+  -o-object-position: 0 0;
+     object-position: 0 0;
 }
 
 .carouselContent {
   padding: 2em;
-  width: 50%;
-  background-color: var(--backgroundSecondary);
+  padding-left: 4em;
+  width: 45%;
+  height: 70%;
   right: 7em;
   bottom: 3em;
+  background-color: white;
   display: flex;
   flex-direction: column;
 }
 
+@media screen and (max-width: 1300px) {
+  #carouselExampleCaptions p {
+    margin-left: 2em;
+  }
+  .carouselImage {
+    left: 5em;
+  }
+  .carouselContent {
+    right: 5em;
+  }
+}
+@media screen and (max-width: 992px) {
+  #carouselExampleCaptions p {
+    margin-left: 4.5em;
+  }
+  .carouselImage {
+    width: 45%;
+    left: 3em;
+  }
+  .carouselContent {
+    width: 50%;
+    padding-left: 1em;
+    right: 3em;
+  }
+}
+@media screen and (max-width: 900px) {
+  #carouselExampleCaptions {
+    display: flex;
+    align-content: center;
+  }
+  #carouselExampleCaptions h3 {
+    text-align: center;
+  }
+  #carouselExampleCaptions p {
+    margin-left: 0;
+  }
+  #carouselExampleCaptions button {
+    margin: auto;
+  }
+  .carouselItem {
+    height: 700px;
+  }
+  .carouselItem div {
+    margin: auto;
+    left: 0;
+    right: 0;
+  }
+  .carouselImage {
+    width: 70%;
+    top: 3em;
+  }
+  .carouselContent {
+    width: 90%;
+    height: 45%;
+    bottom: 1em;
+    margin: auto;
+  }
+}
 @media screen and (max-width: 576px) {
-  #carouselExampleCaptions img {
-    height: 450px;
+  .carouselImage {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 430px) {
+  #carouselExampleCaptions h3 {
+    margin-left: 0;
+    text-align: center;
+  }
+  #carouselExampleCaptions p {
+    margin: 0.5em 0em;
+    height: 12em;
+    text-align: center;
+  }
+  .carouselItem {
+    height: 500px;
+  }
+  .carouselItem div {
+    margin: auto;
+    height: auto;
+    left: 0;
+    right: 0;
+  }
+  .carouselImage {
+    display: none;
+  }
+  .carouselContent {
+    margin: auto;
+    padding: 1em;
+    width: 90%;
+    top: 0;
+    bottom: 0;
   }
 }/*# sourceMappingURL=styles_portfolio.css.map */

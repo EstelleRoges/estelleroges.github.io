@@ -5,11 +5,11 @@
 .pin {
   width: fit-content;
   display: inline;
-  filter: drop-shadow(2px 2px 3px var(--greenTertiary));
+  filter: drop-shadow(2px 2px 3px var(--purpleTertiary));
   animation: pulse 1s;
 
   i {
-    color: var(--greenSecondary);
+    color: var(--purpleSecondary);
   }
 }
 
@@ -90,4 +90,10 @@ margin-top: 1em;
   .second h2 {
       text-align: center;
     }
+}
+
+@media screen and (max-width: 576px) {
+  .tags {
+    transform: rotate(0);
+  }
 }
