@@ -119,7 +119,9 @@
                     </div>
                     <div class="moreStory row-cols-1 col-sm-12">
                         <p>
-                            Ce qui me fascine le plus dans le code, c'est ce passage de lignes écrites en résultat visuel. J'aspire à maîtriser la stack que j'ai choisi pour créer des sites dans lesquels il sera agréable de naviguer.
+                            Ce qui me fascine le plus dans le code, c'est ce passage de lignes écrites en résultat
+                            visuel. J'aspire à maîtriser la stack que j'ai choisi pour créer des sites dans lesquels il
+                            sera agréable de naviguer.
                         </p>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates illum magnam rem
@@ -217,8 +219,10 @@
 
             <section id="portfolio">
                 <h2>Portfolio</h2>
-                <p>Voici des projets variés que j'ai développé. Certains sont créés de toutes pièces, d'autres sont le résultats de challenges proposés par <a id="fm" href="https://www.frontendmentor.io/home" target="_blank" rel="noopener noreferrer">Frontend Mentor</a>.</p>
-                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+                <p>Voici des projets variés que j'ai développé. Certains sont créés de toutes pièces, d'autres sont le
+                    résultats de challenges proposés par <a id="fm" href="https://www.frontendmentor.io/home"
+                        target="_blank" rel="noopener noreferrer">Frontend Mentor</a>.</p>
+                <div id="projectsCarousel" class="carousel slide" data-bs-ride="false">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
                             class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -239,98 +243,149 @@
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <div class="gradient">
-                                <img src="assets/theSucciPlaceThumbnail.jpg" class="d-block w-100" alt="theSucciPlace">
-                            </div>
-                            <div class="carousel-caption  d-sm-block">
-                                <h4>The Succi Place</h5>
-                                <button class="seeProject"><a href="https://thesucciplace.netlify.app/"
-                                        target="_blank">Voir le projet</a></button>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="gradient">
-                                <img src="assets/cakeWebsiteTh.jpg" class="d-block w-100" alt="cakeAddictWebsite">
-                            </div>
-                            <div class="carousel-caption d-sm-block">
-                                <h4>Cake Addict</h4>
-                                <button class="seeProject"><a
-                                        href="https://rawcdn.githack.com/EstelleRoges/CakeAddiction_Website/2e54fb58335078a777c3b14692ff5a71e878a8ce/index.html"
-                                        target="_blank">Voir le projet</a></button>
+                            <div class="carouselItem">
+                                <div class="carouselImage"><img src="assets/theSucciPlaceThumbnail.jpg"
+                                        alt="theSucciPlace">
+                                </div>
+                                <div class="carouselContent">
+                                    <h4>The Succi Place</h4>
+                                    <p>Mon premier projet avec React. C'est un projet front-end, mais j'y ai tout de
+                                        même ajouté quelques éléments dynamiques comme le panier.</p>
+                                    <button class="seeProject"><a href="https://thesucciplace.netlify.app/"
+                                            target="_blank">Voir le projet</a></button>
+                                </div>
                             </div>
                         </div>
+
                         <div class="carousel-item">
-                            <div class="gradient">
-                                <img src="assets/introSignUpComponentTh.jpg" class="d-block w-100" alt="IntroSignUp">
-                            </div>
-                            <div class="carousel-caption d-sm-block">
-                                <h4>Intro and SignUp component</h4>
-                                <button class="seeProject"><a
-                                        href="https://www.frontendmentor.io/solutions/intro-component-with-signup-form-htmlsassvanilla-js-Lsl2Dvh5SG"
-                                        target="_blank">Voir le projet</a></button>
+                            <div class="carouselItem">
+                                <div class="carouselImage">
+                                    <img src="assets/cakeWebsiteTh.jpg" alt="cakeAddictWebsite">
+                                </div>
+                                <div class="carouselContent">
+                                    <h4>Cake Addict</h4>
+                                    <p>Un site fictif que j'ai fait avec Bootstrap.</p>
+                                    <button class="seeProject"><a
+                                            href="https://rawcdn.githack.com/EstelleRoges/CakeAddiction_Website/2e54fb58335078a777c3b14692ff5a71e878a8ce/index.html"
+                                            target="_blank">Voir le projet</a></button>
+                                </div>
                             </div>
                         </div>
+
                         <div class="carousel-item">
-                            <div class="gradient">
-                                <img src="assets/ratingComponentTh.jpg" class="d-block w-100" alt="RatingComponent">
-                            </div>
-                            <div class="carousel-caption d-sm-block">
-                                <h4>Rating component</h4>
-                                <button class="seeProject"><a
-                                        href="https://www.frontendmentor.io/solutions/esteller-interactive-rating-component-Yihhhudkeq"
-                                        target="_blank">Voir le projet</a></button>
+                            <div class="carouselItem">
+                                <div class="carouselImage">
+                                    <img src="assets/ratingComponentTh.jpg" alt="carouselItemImage">
+                                </div>
+                                <div class="carouselContent">
+                                    <h4>Rating component</h4>
+                                    <p>Un petit projet où il fallait récupérer la note choisie pour la
+                                        réafficher ensuite.</p>
+                                    <button class="seeProject"><a href="https://codepen.io/Teruu-san/full/LYQKKQN"
+                                            target="_blank">Voir le projet</a></button>
+                                </div>
                             </div>
                         </div>
+
                         <div class="carousel-item">
-                            <div class="gradient">
-                                <img src="assets/room_homepage.jpg" class="d-block w-100" alt="RatingComponent">
-                            </div>
-                            <div class="carousel-caption d-sm-block">
-                                <h4>Room homepage</h4>
-                                <button class="seeProject"><a href="https://fm-roomhomepage.netlify.app/"
-                                        target="_blank">Voir le projet</a></button>
+                            <div class="carouselItem">
+                                <div class="carouselImage">
+                                    <img src="assets/introSignUpComponentTh.jpg" alt="IntroSignUp">
+                                </div>
+                                <div class="carouselContent">
+                                    <h4>Intro and SignUp component</h4>
+                                    <p>La difficulté ici était de ne valider le formulaire que si tous
+                                        les
+                                        champs étaient correctement remplis.</p>
+                                    <button class="seeProject"><a
+                                            href="https://www.frontendmentor.io/solutions/intro-component-with-signup-form-htmlsassvanilla-js-Lsl2Dvh5SG"
+                                            target="_blank">Voir le projet</a></button>
+                                </div>
                             </div>
                         </div>
+
                         <div class="carousel-item">
-                            <div class="gradient">
-                                <img src="assets/faq_component.jpg" class="d-block w-100" alt="RatingComponent">
+                            <div class="carouselItem">
+                                <div class="carouselImage">
+                                    <img src="assets/advice_generator.jpg" alt="carouselItemImage">
+                                </div>
+                                <div class="carouselContent">
+                                    <h4>Advice generator</h4>
+                                    <p>Pour ce projet, il a fallu établir un lien entre l'appli et une
+                                        API.</p>
+                                    <button class="seeProject"><a
+                                            href="https://esteller-frontendmentor-advice-generator-app.netlify.app/"
+                                            target="_blank">Voir le projet</a></button>
+                                </div>
                             </div>
-                            <div class="carousel-caption d-sm-block">
-                                <h4>FAQ component</h4>
-                                <button class="seeProject"><a href="https://qny9gn.csb.app/" target="_blank">Voir le
-                                        projet</a></button>
+
+                        </div>
+
+                        <div class="carousel-item">
+                            <div class="carouselItem">
+                                <div class="carouselImage">
+                                    <img src="assets/faq_component.jpg" alt="carouselItemImage">
+                                </div>
+                                <div class="carouselContent">
+                                    <h4>FAQ component</h4>
+                                    <p>Dans ce projet, il a fallu placer les images correctement. Je
+                                        l'ai réalisé sans javascript. Ce projet m'a surtout appris qu'il ne fallait pas
+                                        sous-estimer la puissance du duo HTML/CSS.</p>
+                                    <button class="seeProject"><a href="https://qny9gn.csb.app/" target="_blank">Voir le
+                                            projet</a></button>
+                                </div>
                             </div>
                         </div>
+
                         <div class="carousel-item">
-                            <div class="gradient">
-                                <img src="assets/huddle_homepage.jpg" class="d-block w-100" alt="RatingComponent">
-                            </div>
-                            <div class="carousel-caption d-sm-block">
-                                <h4>Huddle Homepage</h4>
-                                <button class="seeProject"><a href="https://fmchallenge-huddlelandingpage.netlify.app/"
-                                        target="_blank">Voir le projet</a></button>
+                            <div class="carouselItem">
+                                <div class="carouselImage">
+                                    <img src="assets/room_homepage.jpg" alt="carouselItemImage">
+                                </div>
+                                <div class="carouselContent">
+                                    <h4>Room homepage</h4>
+                                    <p>J'ai réalisé ce projet sous React. Le rendu global de la page
+                                        était
+                                        un peu délicat à mettre en place. Le carousel a été créé par mes soins, et je
+                                        n'en
+                                        suis pas peu fière. Bien que vouloir réinventer la roue n'est pas la meilleure
+                                        idée,
+                                        je trouve utile de partir de zéro, ne serait-ce que pour étudier et améliorer
+                                        son
+                                        raisonnement.</p>
+                                    <button class="seeProject"><a href="https://fm-roomhomepage.netlify.app/"
+                                            target="_blank">Voir le projet</a></button>
+                                </div>
                             </div>
                         </div>
+
                         <div class="carousel-item">
-                            <div class="gradient">
-                                <img src="assets/advice_generator.jpg" class="d-block w-100" alt="RatingComponent">
+                            <div class="carouselItem">
+                                <div class="carouselImage">
+                                    <img src="assets/huddle_homepage.jpg" alt="carouselItemImage">
+                                </div>
+                                <div class="carouselContent">
+                                    <h4>Huddle Homepage</h4>
+                                    <p>Cette landing page fictive était très intéressante à
+                                        développer, notamment par la présence des dividers, élément avec lequel je
+                                        souhaitais travailler. les breakpoints et la mise en place étaient un peu
+                                        challengeants, mais plaisants à travailler.</p>
+                                    <button class="seeProject"><a
+                                            href="https://fmchallenge-huddlelandingpage.netlify.app/"
+                                            target="_blank">Voir le projet</a></button>
+                                </div>
                             </div>
-                            <div class="carousel-caption d-sm-block">
-                                <h4>Advice generator</h4>
-                                <button class="seeProject"><a href="https://esteller-frontendmentor-advice-generator-app.netlify.app/"
-                                        target="_blank">Voir le projet</a></button>
-                            </div>
+
                         </div>
                     </div>
+
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
                         data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
+                        <i class="bi bi-caret-left"></i>
                     </button>
                     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
                         data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
+                        <i class="bi bi-caret-right"></i>
                     </button>
                 </div>
             </section>
@@ -381,6 +436,7 @@
         })();
     </script>
     <script src="./sendMails.js"></script>
+    <script src="./slideshow.js"></script>
     <script src="https://kit.fontawesome.com/a789c7f6d3.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"

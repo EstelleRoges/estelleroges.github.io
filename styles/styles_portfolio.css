@@ -6,51 +6,82 @@
   color: var(--blueSecondary);
 }
 
-#carouselExampleCaptions img {
-  width: 100%;
-  height: 600px;
-  -o-object-fit: fill;
-     object-fit: fill;
-}
-#carouselExampleCaptions button {
+#projectsCarousel button {
   background-color: transparent;
 }
-#carouselExampleCaptions button:hover {
+#projectsCarousel button:hover {
   background-color: transparent;
 }
-#carouselExampleCaptions h4 {
+#projectsCarousel button i {
+  font-size: 36px;
+  color: var(--text);
+}
+#projectsCarousel h4 {
+  padding: 0.5em 0em;
   color: var(--background);
   text-align: center;
 }
-#carouselExampleCaptions p {
+#projectsCarousel p {
+  margin-left: 4em;
   font-size: 18px;
 }
-#carouselExampleCaptions .gradient {
-  position: relative;
+#projectsCarousel .carousel-control-next, #projectsCarousel .carousel-control-prev {
+  width: 0;
 }
-#carouselExampleCaptions .gradient::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.295) 10%, var(--text) 90%);
-}
-#carouselExampleCaptions .seeProject {
+#projectsCarousel .seeProject {
+  align-self: flex-end;
   padding: 0.5em 0.7em;
   background-color: var(--greenPrimary);
 }
-#carouselExampleCaptions .seeProject a {
+#projectsCarousel .seeProject a {
   padding: 0.5em;
   color: var(--background);
   font-size: 22px;
 }
-#carouselExampleCaptions .seeProject:hover {
+#projectsCarousel .seeProject:hover {
   background-color: var(--greenSecondary);
 }
-#carouselExampleCaptions .seeProject:hover a {
+#projectsCarousel .seeProject:hover a {
   color: white;
+}
+
+.carouselItem {
+  padding: 3em;
+  height: 500px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+.carouselItem div {
+  border-radius: 2em;
+  box-shadow: 2px 2px 7px var(--shadow);
+  position: absolute;
+}
+
+.carouselImage {
+  width: 35%;
+  height: 350px;
+  top: 1em;
+  left: 7em;
+  z-index: 2;
+}
+.carouselImage img {
+  width: 100%;
+  height: 100%;
+  border-radius: 2em;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.carouselContent {
+  padding: 2em;
+  width: 50%;
+  background-color: var(--backgroundSecondary);
+  right: 7em;
+  bottom: 3em;
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (max-width: 576px) {
