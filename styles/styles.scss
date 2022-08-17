@@ -116,6 +116,17 @@ button {
   i {
     padding: 0 0.4em;
     font-size: 28px;
+    transition: 0.3s ease-in-out;
+    &:hover {
+      color: var(--greenPrimary);
+    }
+  }
+
+  li a {
+    color: var(--text);
+    &:hover {
+      color: var(--greenSecondary);
+    }
   }
 }
 

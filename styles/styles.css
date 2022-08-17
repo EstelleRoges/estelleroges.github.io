@@ -114,6 +114,16 @@ button:hover {
 #upperSection i {
   padding: 0 0.4em;
   font-size: 28px;
+  transition: 0.3s ease-in-out;
+}
+#upperSection i:hover {
+  color: var(--greenPrimary);
+}
+#upperSection li a {
+  color: var(--text);
+}
+#upperSection li a:hover {
+  color: var(--greenSecondary);
 }
 
 .navbar-toggler,
