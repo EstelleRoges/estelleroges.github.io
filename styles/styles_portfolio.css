@@ -1,8 +1,16 @@
+#fm {
+  color: var(--bluePrimary);
+  text-decoration: overline;
+}
+#fm:hover {
+  color: var(--blueSecondary);
+}
+
 #carouselExampleCaptions img {
   width: 100%;
-  height: 700px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 600px;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 #carouselExampleCaptions button {
   background-color: transparent;
@@ -10,7 +18,8 @@
 #carouselExampleCaptions button:hover {
   background-color: transparent;
 }
-#carouselExampleCaptions h5, #carouselExampleCaptions p {
+#carouselExampleCaptions h4 {
+  color: var(--background);
   text-align: center;
 }
 #carouselExampleCaptions p {
@@ -26,17 +35,19 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.295), #ae9a84);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.295) 10%, var(--text) 90%);
 }
 #carouselExampleCaptions .seeProject {
   padding: 0.5em 0.7em;
-  background-color: var(--text);
+  background-color: var(--greenPrimary);
 }
 #carouselExampleCaptions .seeProject a {
+  padding: 0.5em;
   color: var(--background);
+  font-size: 22px;
 }
 #carouselExampleCaptions .seeProject:hover {
-  background-color: var(--brownTertiary);
+  background-color: var(--greenSecondary);
 }
 #carouselExampleCaptions .seeProject:hover a {
   color: white;

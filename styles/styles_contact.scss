@@ -1,25 +1,30 @@
-@keyframes rotate {
-  0% {
-    transform: rotate(12deg);
-  }
+// @keyframes rotate {
+//   0% {
+//     transform: rotate(12deg);
+//   }
 
-  25% {
-    transform: rotate(36deg);
-  }
+//   25% {
+//     transform: rotate(36deg);
+//   }
 
-  50% {
-    transform: rotate(60deg);
-  }
+//   50% {
+//     transform: rotate(60deg);
+//   }
 
-  75% {
-    transform: rotate(84deg);
-  }
+//   75% {
+//     transform: rotate(84deg);
+//   }
 
-  100% {
-    transform: rotate(12deg);
+//   100% {
+//     transform: rotate(12deg);
+//   }
+// }
+
+#contact {
+  p {
+    font-size: 24px;
   }
 }
-
 .contactSection {
   margin-top: 2em;
 }
@@ -39,7 +44,7 @@ form {
     resize: none;
     outline: none;
     background-color: rgb(255, 255, 255);
-    box-shadow: 0 2px 3px var(--brownPrimary);
+    box-shadow: 1px 3px 5px var(--shadow);
   }
 }
 
@@ -58,13 +63,13 @@ form {
   letter-spacing: 2px;
   border-radius: 5px;
   transform: rotate(6deg);
-  box-shadow: -2px 2px 4px var(--brownPrimary);
+  box-shadow: -2px 2px 4px var(--shadow);
 
   h2,
   span {
     margin: 0;
     margin-bottom: 0.5em;
-     width: fit-content;
+    width: fit-content;
     display: inline;
     font-family: "Courgette", cursive, serif;
     animation: bounceIn 1s;
@@ -73,7 +78,7 @@ form {
   .pin {
     display: inline-block;
     color: #a2b36b;
-    filter: drop-shadow(2px 2px 3px #5c5c5c);
+    filter: drop-shadow(2px 2px 3px var(--greenTertiary));
     animation: pulse 1s;
   }
 }

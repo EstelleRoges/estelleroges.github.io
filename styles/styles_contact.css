@@ -1,37 +1,7 @@
-@-webkit-keyframes rotate {
-  0% {
-    transform: rotate(12deg);
-  }
-  25% {
-    transform: rotate(36deg);
-  }
-  50% {
-    transform: rotate(60deg);
-  }
-  75% {
-    transform: rotate(84deg);
-  }
-  100% {
-    transform: rotate(12deg);
-  }
+#contact p {
+  font-size: 24px;
 }
-@keyframes rotate {
-  0% {
-    transform: rotate(12deg);
-  }
-  25% {
-    transform: rotate(36deg);
-  }
-  50% {
-    transform: rotate(60deg);
-  }
-  75% {
-    transform: rotate(84deg);
-  }
-  100% {
-    transform: rotate(12deg);
-  }
-}
+
 .contactSection {
   margin-top: 2em;
 }
@@ -51,7 +21,7 @@ form textarea {
   resize: none;
   outline: none;
   background-color: rgb(255, 255, 255);
-  box-shadow: 0 2px 3px var(--brownPrimary);
+  box-shadow: 1px 3px 5px var(--shadow);
 }
 
 .moreInfos {
@@ -74,7 +44,7 @@ form textarea {
   letter-spacing: 2px;
   border-radius: 5px;
   transform: rotate(6deg);
-  box-shadow: -2px 2px 4px var(--brownPrimary);
+  box-shadow: -2px 2px 4px var(--shadow);
 }
 .someInfos h2,
 .someInfos span {
@@ -91,7 +61,7 @@ form textarea {
 .someInfos .pin {
   display: inline-block;
   color: #a2b36b;
-  filter: drop-shadow(2px 2px 3px #5c5c5c);
+  filter: drop-shadow(2px 2px 3px var(--greenTertiary));
   -webkit-animation: pulse 1s;
           animation: pulse 1s;
 }

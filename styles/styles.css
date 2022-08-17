@@ -1,11 +1,17 @@
 :root {
-  --background: #f7f5f3;
-  --text: #4a3e30;
-  --brownPrimary: #947c61;
-  --brownSecondary: #ae9a84;
-  --brownTertiary: #635340;
-  --greenPrimary: #829461;
-  --greenSecondary: #abb97c;
+  --background: #fffcfa;
+  --backgroundSecondary: #f3e1ce;
+  --text: #211508;
+  --bluePrimary: #a9d4e7;
+  --blueSecondary: #70b8d7;
+  --blueTertiary: #60b0d2;
+  --greenPrimary: #9db87a;
+  --greenSecondary: #75924f;
+  --greenTertiary: #4A5D32;
+  --yellowPrimary: #ddbd55;
+  --yellowSecondary: #e4ca76;
+  --yellowTertiary: #bb9625;
+  --shadow: #ccc;
 }
 
 * {
@@ -36,6 +42,7 @@ h4,
 h5,
 h6 {
   font-family: "Courgette", cursive;
+  color: var(--text);
 }
 
 h2 {
@@ -77,33 +84,42 @@ button {
   padding: 0.7em 1.4em;
   border: none;
   border-radius: 1em;
-  background-color: var(--brownPrimary);
+  background-color: var(--blueSecondary);
   color: var(--background);
   transition: 0.3s ease-in-out;
 }
 button:hover {
-  background-color: var(--brownSecondary);
+  background-color: var(--blueTertiary);
   transition: 0.3s ease-in-out;
 }
 
-#upperSection {
+#upperSection,
+.upperArea {
   width: 100%;
-  padding: 1em 1.5em;
-  padding-bottom: 0;
+  padding: 0.5em;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: linear-gradient(to bottom, var(--backgroundSecondary), var(--background));
 }
-#upperSection h1 {
+#upperSection h1,
+.upperArea h1 {
   display: inline-block;
+  padding-left: 0.5em;
   font-size: 44px;
   letter-spacing: 2px;
 }
-#upperSection i {
+#upperSection i,
+.upperArea i {
   padding: 0 0.4em;
 }
-#upperSection .menu {
+#upperSection .menu,
+.upperArea .menu {
   display: none;
+}
+
+nav {
+  padding: 0;
 }
 
 #nav {
@@ -138,9 +154,16 @@ button:hover {
   transition: 0.3s ease-in-out;
 }
 
+.navbar {
+  padding: 0;
+}
+.navbar li {
+  font-size: 20px;
+}
+
 #content {
   box-sizing: border-box;
-  padding: 3em;
+  padding: 3em 5em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -148,8 +171,8 @@ button:hover {
 
 .textSection {
   text-shadow: 1px 3px 5px #fff;
-  -webkit-animation: blurTitle 1s both;
-          animation: blurTitle 1s both;
+  -webkit-animation: blurbluePrimary 1s both;
+          animation: blurbluePrimary 1s both;
 }
 .textSection span {
   font-size: 1.3em;
@@ -157,11 +180,11 @@ button:hover {
   color: var(--text);
 }
 .textSection h1 {
-  margin: 0;
+  margin: 0.5em 0;
   margin-bottom: 0.3em;
-  font-size: 50px;
-  color: var(--brownTertiary);
-  text-shadow: 2px 1px 6px var(--brownSecondary);
+  font-size: 5em;
+  color: var(--bluePrimary);
+  text-shadow: 2px 2px 6px var(--blueSecondary);
 }
 
 .connectAndCV {
@@ -185,6 +208,16 @@ button:hover {
   height: auto;
 }
 
+@media screen and (max-width: 1200px) {
+  .textSection h1 {
+    font-size: 4em;
+  }
+}
+@media screen and (max-width: 992px) {
+  .textSection h1 {
+    font-size: 3em;
+  }
+}
 @media screen and (max-width: 768px) {
   #home div:first-child {
     flex-direction: column;
@@ -213,10 +246,10 @@ button:hover {
   .connectAndCV a {
     font-size: 14px;
   }
-  .connectAndCV button {
+  .connectAndCV yellowPrimary {
     padding: 0.4em 1.1em;
   }
-  .connectAndCV button a {
+  .connectAndCV yellowPrimary a {
     font-size: 14px;
   }
 }
@@ -257,7 +290,7 @@ button:hover {
   .connectAndCV {
     flex-direction: column;
   }
-  .connectAndCV button {
+  .connectAndCV yellowPrimary {
     margin-top: 0.5em;
     padding: 0.4em 1.1em;
   }
