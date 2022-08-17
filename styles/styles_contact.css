@@ -24,11 +24,6 @@ form textarea {
   box-shadow: 1px 3px 5px var(--shadow);
 }
 
-.moreInfos {
-  -webkit-animation: jackInTheBox 0.7s ease-out;
-          animation: jackInTheBox 0.7s ease-out;
-}
-
 .someInfos {
   background-color: #ffffff;
   background-image: url("https://www.transparenttextures.com/patterns/lined-paper.png");
@@ -55,15 +50,11 @@ form textarea {
   width: fit-content;
   display: inline;
   font-family: "Courgette", cursive, serif;
-  -webkit-animation: bounceIn 1s;
-          animation: bounceIn 1s;
 }
 .someInfos .pin {
   display: inline-block;
-  color: var(--purpleSecondary);
-  filter: drop-shadow(2px 2px 3px var(--purpleTertiary));
-  -webkit-animation: pulse 1s;
-          animation: pulse 1s;
+  color: var(--brownSecondary);
+  filter: drop-shadow(2px 2px 3px var(--brownPrimary));
 }
 
 @media screen and (max-width: 768px) {

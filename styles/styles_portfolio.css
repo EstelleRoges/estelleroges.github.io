@@ -1,61 +1,41 @@
 #fm {
-  color: var(--bluePrimary);
+  color: var(--greenPrimary);
   text-decoration: overline;
 }
 #fm:hover {
-  color: var(--blueSecondary);
+  color: var(--greenSecondary);
 }
 
-#carouselExampleCaptions button {
-  background-color: transparent;
-}
-#carouselExampleCaptions button:hover {
-  background-color: transparent;
-}
-#carouselExampleCaptions button i {
-  font-size: 36px;
-  color: var(--text);
-}
-#carouselExampleCaptions h3 {
+#portfolio h3 {
   margin-left: 2em;
   padding: 0.5em 0em;
-  color: var(--purplePrimary);
-  text-shadow: 1px 1px 2px var(--purpleTertiary);
+  color: var(--brownPrimary);
+  text-shadow: 1px 1px 2px var(--brownSecondary);
   text-align: end;
 }
-#carouselExampleCaptions p {
-  margin-left: 5em;
-  padding: 0.5em;
-  height: 5em;
-  font-size: 18px;
-  overflow-y: auto;
-}
-#carouselExampleCaptions ::-webkit-scrollbar {
+
+::-webkit-scrollbar {
   width: 7px;
 }
-#carouselExampleCaptions ::-webkit-scrollbar-thumb {
-  background: var(--background);
+
+::-webkit-scrollbar-thumb {
+  background: var(--text);
   border-radius: 10px;
 }
-#carouselExampleCaptions .carousel-control-next,
-#carouselExampleCaptions .carousel-control-prev {
+
+.carousel-control-next,
+.carousel-control-prev {
   width: 0;
+  background-color: transparent;
 }
-#carouselExampleCaptions .seeProject {
-  align-self: flex-end;
-  padding: 0.5em 0.7em;
-  background-color: var(--pinkPrimary);
+.carousel-control-next:hover,
+.carousel-control-prev:hover {
+  background-color: transparent;
 }
-#carouselExampleCaptions .seeProject a {
-  padding: 0.5em;
-  color: var(--background);
-  font-size: 22px;
-}
-#carouselExampleCaptions .seeProject:hover {
-  background-color: var(--pinkSecondary);
-}
-#carouselExampleCaptions .seeProject:hover a {
-  color: white;
+.carousel-control-next i,
+.carousel-control-prev i {
+  font-size: 36px;
+  color: var(--text);
 }
 
 .carouselItem {
@@ -97,6 +77,28 @@
   display: flex;
   flex-direction: column;
 }
+.carouselContent p {
+  margin-left: 5em;
+  padding: 0.5em;
+  height: 7em;
+  font-size: 18px;
+  overflow-y: auto;
+}
+
+.seeProject {
+  align-self: flex-end;
+  padding: 0.5em 0.7em;
+  background-color: var(--brownPrimary);
+  box-shadow: 0 3px 2px var(--brownSecondary);
+  transition: 0.3s ease-in-out;
+}
+.seeProject:hover {
+  background-color: var(--brownSecondary);
+}
+.seeProject a {
+  color: white;
+  font-size: 20px;
+}
 
 @media screen and (max-width: 1300px) {
   #carouselExampleCaptions p {
@@ -129,6 +131,7 @@
     align-content: center;
   }
   #carouselExampleCaptions h3 {
+    margin-left: 0;
     text-align: center;
   }
   #carouselExampleCaptions p {
@@ -150,6 +153,7 @@
     top: 3em;
   }
   .carouselContent {
+    padding: 2em;
     width: 90%;
     height: 45%;
     bottom: 1em;

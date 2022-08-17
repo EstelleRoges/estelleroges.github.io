@@ -1,20 +1,14 @@
-// #about {.row {
-//   flex-wrap: nowrap;
-// }}
-
 .pin {
   width: fit-content;
   display: inline;
-  filter: drop-shadow(2px 2px 3px var(--purpleTertiary));
-  animation: pulse 1s;
+  filter: drop-shadow(2px 2px 3px var(--brownPrimary));
 
   i {
-    color: var(--purpleSecondary);
+    color: var(--brownSecondary);
   }
 }
 
 .tags {
-  animation: jackInTheBox 0.7s;
   background-color: white;
   background-image: url("https://www.transparenttextures.com/patterns/lined-paper.png");
   margin: auto;
@@ -66,7 +60,6 @@
 
 .storyContent {
   padding: 1em;
-  animation: fadeIn 6s;
   text-align: justify;
   line-height: 1.5em;
 }
@@ -76,7 +69,6 @@ margin-top: 1em;
 }
 
 @media screen and (max-width: 992px) {
-
   #about .col-md-6 {
     width: 100%;
   }

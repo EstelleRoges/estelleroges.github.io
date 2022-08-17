@@ -1,4 +1,5 @@
-const sendMail = () => {
+const sendMail = (event) => {
+  event.preventDefault();
   var personName = document.getElementById("personName").value;
   var personMail = document.getElementById("personMail").value;
   var mailTopic = document.getElementById("topic").value;

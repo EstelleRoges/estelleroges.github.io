@@ -22,9 +22,9 @@
 </head>
 
 <body>
-    <div id="upperSection" class="navbar navbar-expand-lg">
+    <div id="upperSection" class="navbar navbar-expand-lg fixed-top">
         <h1>Tea&Dev'</h1>
-        <nav>
+        <div>
             <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                 aria-controls="offcanvasNavbar">
                 <i class="menu bi bi-list d-inline"></i>
@@ -52,12 +52,11 @@
                     </ul>
                 </nav>
             </div>
-        </nav>
+        </div>
     </div>
 
     <div id="content" class="container-fluid">
         <section id="home">
-            <div class="row justify-content-between">
                 <div class="textSection col-12">
                     <span>Je suis Estelle,</span>
                     <h1>Développeuse Frontend</h1>
@@ -70,10 +69,6 @@
                         </a>
                     </div>
                 </div>
-                <!-- <div class="imageSection col-md-6 col-sm-12">
-                    <img src="assets/homeSVG.svg" alt="homeImg">
-                </div> -->
-            </div>
         </section>
 
         <section id="about">
@@ -218,24 +213,6 @@
                 résultats de challenges proposés par <a id="fm" href="https://www.frontendmentor.io/home"
                     target="_blank" rel="noopener noreferrer">Frontend Mentor</a>.</p>
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-                <!-- <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
-                        aria-label="Slide 4"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
-                        aria-label="Slide 5"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"
-                        aria-label="Slide 6"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6"
-                        aria-label="Slide 7"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7"
-                        aria-label="Slide 8"></button>
-                </div> -->
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="carouselItem">
@@ -287,7 +264,7 @@
                                 <img src="assets/introSignUpComponentTh.jpg" alt="IntroSignUp">
                             </div>
                             <div class="carouselContent">
-                                <h3>Intro and SignUp component</h3>
+                                <h3>Intro SignUp component</h3>
                                 <p>La difficulté ici était de ne valider le formulaire que si tous
                                     les
                                     champs étaient correctement remplis.</p>
@@ -395,7 +372,7 @@
                         <input type="email" name="mail" id="personMail" placeholder="E-mail" />
                         <input type="text" name="subject" id="topic" placeholder="C'est à quel sujet?" />
                         <textarea id="personMessage" rows="7" placeholder="Exprimez-vous!"></textarea>
-                        <button onClick="sendMail()" type="submit">Envoyer</button>
+                        <button onClick="sendMail(event)" type="submit">Envoyer</button>
                     </form>
                     <div class="moreInfos col-md-6 col-sm-12">
                         <div class="someInfos">
@@ -433,6 +410,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
+        <!-- <a href='https://www.freepik.com/photos/laptop-coffee'>Laptop coffee photo created by jcomp - www.freepik.com</a> -->
 </body>
 
 </html>

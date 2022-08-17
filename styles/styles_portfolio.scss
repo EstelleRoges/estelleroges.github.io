@@ -1,71 +1,41 @@
 #fm {
-  color: var(--bluePrimary);
+  color: var(--greenPrimary);
   text-decoration: overline;
   &:hover {
-    color: var(--blueSecondary);
+    color: var(--greenSecondary);
   }
 }
 
-#carouselExampleCaptions {
-  button {
-    background-color: transparent;
-    &:hover {
-      background-color: transparent;
-    }
-
-    i {
-      font-size: 36px;
-      color: var(--text);
-    }
-  }
-
+#portfolio {
   h3 {
     margin-left: 2em;
     padding: 0.5em 0em;
-    color: var(--purplePrimary);
-    text-shadow: 1px 1px 2px var(--purpleTertiary);
+    color: var(--brownPrimary);
+    text-shadow: 1px 1px 2px var(--brownSecondary);
     text-align: end;
   }
+}
 
-  p {
-    margin-left: 5em;
-    padding: 0.5em;
-    height: 5em;
-    font-size: 18px;
-    overflow-y: auto;
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text);
+  border-radius: 10px;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  width: 0;
+  background-color: transparent;
+  &:hover {
+    background-color: transparent;
   }
 
-  ::-webkit-scrollbar {
-    width: 7px;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: var(--background);
-    border-radius: 10px;
-  }
-
-  .carousel-control-next,
-  .carousel-control-prev {
-    width: 0;
-  }
-
-  .seeProject {
-    align-self: flex-end;
-    padding: 0.5em 0.7em;
-    background-color: var(--pinkPrimary);
-
-    a {
-      padding: 0.5em;
-      color: var(--background);
-      font-size: 22px;
-    }
-
-    &:hover {
-      background-color: var(--pinkSecondary);
-      a {
-        color: white;
-      }
-    }
+  i {
+    font-size: 36px;
+    color: var(--text);
   }
 }
 
@@ -107,6 +77,30 @@
   background-color: white;
   display: flex;
   flex-direction: column;
+  
+    p {
+    margin-left: 5em;
+    padding: 0.5em;
+    height: 7em;
+    font-size: 18px;
+    overflow-y: auto;
+  }
+}
+
+.seeProject {
+  align-self: flex-end;
+  padding: 0.5em 0.7em;
+  background-color: var(--brownPrimary);
+  box-shadow: 0 3px 2px var(--brownSecondary);
+  transition: 0.3s ease-in-out;
+  &:hover {
+    background-color: var(--brownSecondary);
+  }
+
+  a {
+    color: white;
+    font-size: 20px;
+  }
 }
 
 @media screen and (max-width: 1300px) {
@@ -147,6 +141,7 @@
     display: flex;
     align-content: center;
     h3 {
+      margin-left: 0;
       text-align: center;
     }
     p {
@@ -171,6 +166,7 @@
     top: 3em;
   }
   .carouselContent {
+    padding: 2em;
     width: 90%;
     height: 45%;
     bottom: 1em;
@@ -205,7 +201,6 @@
       left: 0;
       right: 0;
     }
-  
   }
 
   .carouselImage {

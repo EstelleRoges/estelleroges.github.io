@@ -1,10 +1,12 @@
 :root {
-  --background: white;
-  --text: #0F1D0C;
-  --greenPrimary: #34642B;
-  --greenSecondary: #3B6318;
-  --greenTertiary: #BFDB6B;
-  --shadow: #B8B8B8;
+  --background: #f4f5f7;
+  --text: #0f1d0c;
+  --greenPrimary: #5d841f;
+  --greenSecondary: #699523;
+  --greenTertiary: #d9e89c;
+  --brownPrimary: #bf8d5f;
+  --brownSecondary: #cba27c;
+  --shadow: #b8b8b8;
 }
 
 * {
@@ -20,10 +22,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: linear-gradient(to bottom, black 10%, white 30%);
-  background: url(../assets/deskBackground.jpg);
+  background: url(../assets/background.jpg);
+  background-color: var(--background);
   background-repeat: no-repeat;
-  background-attachment: scroll;
   background-size: 100% 100vh;
   color: var(--text);
 }
@@ -75,13 +76,13 @@ button {
   padding: 0.7em 1.4em;
   border: none;
   border-radius: 1em;
-  background-color: var(--greenSecondary);
+  background-color: var(--greenPrimary);
   color: white;
   transition: 0.3s ease-in-out;
   box-shadow: 0 3px 2px var(--greenTertiary);
 
   &:hover {
-    background-color: var(--greenTertiary);
+    background-color: var(--greenSecondary);
     transition: 0.3s ease-in-out;
   }
 }
@@ -91,21 +92,35 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to bottom, var(--backgroundSecondary), var(--background));
+  background: linear-gradient(
+    to bottom,
+    var(--background) 75%,
+    transparent 100%
+  );
 
   h1 {
     display: inline-block;
-    padding: 0.25em 0.5em;
-    font-size: 44px;
+    margin: 0;
+    padding: 0.5em;
+    padding-top: 0.25em;
+    font-size: 42px;
     letter-spacing: 2px;
+    background: linear-gradient(to right, black 0%, var(--greenPrimary) 70%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
   }
 
   i {
     padding: 0 0.4em;
+    font-size: 28px;
   }
 }
 
-.navbar-toggler, .btn-close {
+.navbar-toggler,
+.btn-close {
   border: none;
   outline: none;
   &:hover {
@@ -172,9 +187,12 @@ button {
   align-items: center;
 }
 
+#home {
+  padding: 15em 0 25em 0;
+}
 // HERO SECTION
 .textSection {
-  text-shadow: 1px 3px 5px #fff;
+  text-align: center;
 
   span {
     font-size: 1.3em;
@@ -183,22 +201,26 @@ button {
   }
 
   h1 {
-    margin: 0.5em 0;
-    margin-bottom: 0.3em;
     font-size: 5em;
-    color: var(--bluePrimary);
-    text-shadow: 2px 2px 4px var(--blueTertiary);
+    background: linear-gradient(to right, black 25%, var(--greenPrimary) 70%, var(--greenTertiary) 99%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
   }
 }
 
 .connectAndCV {
+  margin-top: 2em;
   display: flex;
+  justify-content: center;
   align-items: center;
 
   button {
+    margin: 0 30px;
     a {
       font-family: "Courgette", cursive, sans-serif;
-      margin-left: 0;
       letter-spacing: 2px;
       font-size: 18px;
       color: var(--background);
@@ -206,71 +228,32 @@ button {
   }
 
   a {
-    margin-left: 30px;
     letter-spacing: 0.5px;
   }
 }
 
-.imageSection {
-  img {
-    width: auto;
-    height: auto;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .textSection h1 {
-    font-size: 4em;
-  }
-}
-
 @media screen and (max-width: 992px) {
-  .textSection h1 {
-    font-size: 3em;
-  }
-
-  .imageSection img {
-    width: 100%;
+  body {
+    background-size: 120vw 100vh;
   }
 }
 
 @media screen and (max-width: 768px) {
-  #home div:first-child {
-    flex-direction: column;
-
-    .textSection,
-    .imageSection {
-      width: 100%;
-      text-align: center;
-    }
-
-    .imageSection {
-      margin-top: 2em;
-
-      img {
-        max-width: 400px;
-      }
-    }
-  }
-
-  #upperSection .menu {
-    display: inline;
-  }
-
   .textSection h1 {
-    font-size: 6vw;
+    font-size: 4em;
   }
+
   .connectAndCV {
     flex-direction: row;
     justify-content: center;
     a {
-      font-size: 14px;
+      font-size: 16px;
     }
 
     button {
       padding: 0.4em 1.1em;
       a {
-        font-size: 14px;
+        font-size: 16px;
       }
     }
   }
@@ -283,7 +266,10 @@ button {
 @media screen and (max-width: 576px) {
   body {
     text-align: center;
+    background-size: 200% 100vh;
+    background-position: 15% 0;
   }
+
   section {
     margin: 0;
     text-align: center;
@@ -291,19 +277,12 @@ button {
 
   #upperSection {
     padding: 1em 0.7em;
-
-    h1 {
-      font-size: 10vw;
-    }
-
-    i {
-      font-size: 18px;
-    }
   }
 
   #home {
     margin-bottom: 0;
   }
+
   .heroSection {
     flex-direction: column;
     justify-content: center;
@@ -331,10 +310,6 @@ button {
     a {
       margin: 1em 0;
     }
-  }
-
-  .imageSection img {
-    width: 100%;
   }
 
   #content {
