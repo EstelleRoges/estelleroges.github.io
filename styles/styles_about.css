@@ -23,7 +23,7 @@
   transform: rotate(-5deg);
   box-shadow: 3px 3px 3px var(--shadow);
 }
-.tags h2 {
+.tags h3 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;

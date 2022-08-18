@@ -41,8 +41,42 @@ h6 {
   color: var(--text);
 }
 
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text);
+  border-radius: 10px;
+}
+
+.gradientTitle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  -o-border-image: linear-gradient(to right, var(--greenPrimary), var(--greenTertiary)) 1;
+     border-image: linear-gradient(to right, var(--greenPrimary), var(--greenTertiary)) 1;
+}
+.gradientTitle i {
+  font-size: 36px;
+  padding-right: 0.3em;
+  color: var(--greenTertiary);
+  filter: drop-shadow(2px 2px 1px var(--greenPrimary));
+}
+
 h2 {
-  font-size: 30px;
+  padding-right: 1em;
+  text-indent: 0.3em;
+  display: inline-block;
+  font-size: 34px;
+  background: linear-gradient(to right, var(--greenPrimary) 10%, var(--greenTertiary) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }
 
 a,

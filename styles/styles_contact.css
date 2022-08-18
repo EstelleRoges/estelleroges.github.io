@@ -41,10 +41,10 @@ form textarea {
   transform: rotate(6deg);
   box-shadow: -2px 2px 4px var(--shadow);
 }
-.someInfos h2,
+.someInfos h3,
 .someInfos span {
   margin: 0;
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;

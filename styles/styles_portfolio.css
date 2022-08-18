@@ -14,13 +14,8 @@
   text-align: end;
 }
 
-::-webkit-scrollbar {
-  width: 7px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--text);
-  border-radius: 10px;
+#carouselExampleCaptions {
+  margin-top: 3em;
 }
 
 .carousel-control-next,
@@ -44,7 +39,7 @@
   position: relative;
 }
 .carouselItem div {
-  border-radius: 2em;
+  border-radius: 3em;
   box-shadow: 2px 2px 7px var(--shadow);
   position: absolute;
 }

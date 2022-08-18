@@ -1,23 +1,43 @@
 #skills {
   .row {
-    text-align: center;
+    margin-top: 3em;
+  div {
+    position: relative;
+  }
+  }
+
+  h3 {
+    width: 6em;
+    padding: 0.5em 1em;
+    border-radius: 1em;
+    box-shadow: 1px 4px 4px var(--shadow);
+    background: linear-gradient(to right, var(--greenPrimary) 50%, var(--greenTertiary) 100%);
+    color: white;
+    display: inline-block;
+    z-index: 2;
   }
 
   i {
     font-size: 40px;
   }
+
   svg {
     height: 40px;
   }
 
     ul {
+      padding: 1em;
+      position: relative;
+      top: -1.5em;
+      right: 0;
+      left: 0;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-
-    &:first-child {
-      width: 100%;
-    }
+      background-color: white;
+      border-radius: 2em;
+      box-shadow: 2px 2px 7px var(--shadow);
+      z-index: -1;
 
       li {
         padding: 1em;
