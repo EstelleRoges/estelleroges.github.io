@@ -1,10 +1,55 @@
+#skills {
+  background-color: var(--greenBackground);
+  position: relative;
+}
 #skills .row {
   margin-top: 3em;
 }
 #skills .row div {
   position: relative;
 }
-#skills h3 {
+#skills .gradientTitle {
+  margin-top: 3em;
+}
+#skills .skillsDividerTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+#skills .skillsDividerTop svg {
+  position: relative;
+  display: block;
+  width: calc(183% + 1.3px);
+  height: 110px;
+}
+#skills .skillsDividerTop .shape-fill {
+  fill: var(--background);
+}
+#skills .skillsDividerBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+#skills .skillsDividerBottom svg {
+  position: relative;
+  display: block;
+  width: calc(183% + 1.3px);
+  height: 110px;
+}
+#skills .skillsDividerBottom .shape-fill {
+  fill: var(--background);
+}
+#skills .skillSet {
+  z-index: 2;
+}
+#skills h4 {
   width: 6em;
   padding: 0.5em 1em;
   border-radius: 1em;
@@ -12,7 +57,6 @@
   background: linear-gradient(to right, var(--greenPrimary) 50%, var(--greenTertiary) 100%);
   color: white;
   display: inline-block;
-  z-index: 2;
 }
 #skills i {
   font-size: 40px;
@@ -21,6 +65,7 @@
   height: 40px;
 }
 #skills ul {
+  margin-left: 2em;
   padding: 1em;
   position: relative;
   top: -1.5em;
@@ -32,7 +77,7 @@
   background-color: white;
   border-radius: 2em;
   box-shadow: 2px 2px 7px var(--shadow);
-  z-index: -1;
+  z-index: 0;
 }
 #skills ul li {
   padding: 1em;

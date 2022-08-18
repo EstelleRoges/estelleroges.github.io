@@ -42,7 +42,6 @@
 
   span {
     margin: 0;
-    animation: bounceIn 1.5s;
   }
 
   .luv i {
@@ -53,7 +52,6 @@
     position: relative;
     right: 2px;
     bottom: 5px;
-    animation: heartBeat 2s 0.7s;
     transform: rotate(15deg);
   }
 }

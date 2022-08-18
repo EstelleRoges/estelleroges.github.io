@@ -44,8 +44,6 @@
 }
 .tags span {
   margin: 0;
-  -webkit-animation: bounceIn 1.5s;
-          animation: bounceIn 1.5s;
 }
 .tags .luv i {
   margin: 0;
@@ -55,8 +53,6 @@
   position: relative;
   right: 2px;
   bottom: 5px;
-  -webkit-animation: heartBeat 2s 0.7s;
-          animation: heartBeat 2s 0.7s;
   transform: rotate(15deg);
 }
 

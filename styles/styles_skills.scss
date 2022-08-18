@@ -1,20 +1,72 @@
 #skills {
+  background-color: var(--greenBackground);
+  position: relative;
   .row {
     margin-top: 3em;
-  div {
-    position: relative;
+    div {
+      position: relative;
+    }
   }
+  .gradientTitle {
+    margin-top: 3em;
   }
 
-  h3 {
+  .skillsDividerTop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+
+    svg {
+      position: relative;
+      display: block;
+      width: calc(183% + 1.3px);
+      height: 110px;
+    }
+
+    .shape-fill {
+      fill: var(--background);
+    }
+  }
+
+  .skillsDividerBottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    svg {
+      position: relative;
+      display: block;
+      width: calc(183% + 1.3px);
+      height: 110px;
+    }
+
+    .shape-fill {
+      fill: var(--background);
+    }
+  }
+
+  .skillSet {
+    z-index: 2;
+  }
+
+  h4 {
     width: 6em;
     padding: 0.5em 1em;
     border-radius: 1em;
     box-shadow: 1px 4px 4px var(--shadow);
-    background: linear-gradient(to right, var(--greenPrimary) 50%, var(--greenTertiary) 100%);
+    background: linear-gradient(
+      to right,
+      var(--greenPrimary) 50%,
+      var(--greenTertiary) 100%
+    );
     color: white;
     display: inline-block;
-    z-index: 2;
   }
 
   i {
@@ -25,24 +77,25 @@
     height: 40px;
   }
 
-    ul {
-      padding: 1em;
-      position: relative;
-      top: -1.5em;
-      right: 0;
-      left: 0;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      background-color: white;
-      border-radius: 2em;
-      box-shadow: 2px 2px 7px var(--shadow);
-      z-index: -1;
+  ul {
+    margin-left: 2em;
+    padding: 1em;
+    position: relative;
+    top: -1.5em;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: white;
+    border-radius: 2em;
+    box-shadow: 2px 2px 7px var(--shadow);
+    z-index: 0;
 
-      li {
-        padding: 1em;
-      }
+    li {
+      padding: 1em;
     }
+  }
 
   .htmlStyle {
     color: #f16529;

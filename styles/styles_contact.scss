@@ -1,8 +1,36 @@
 #contact {
+  position: relative;
+  background-color: var(--greenBackground);
+  background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
   p {
     font-size: 24px;
   }
+
+  .gradientTitle {
+    margin-top: 2em;
+  }
 }
+
+.contactDividerTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+
+  svg {
+    position: relative;
+    display: block;
+    width: calc(187% + 1.3px);
+    height: 110px;
+  }
+
+  .shape-fill {
+    fill: var(--background);
+  }
+}
+
 .contactSection {
   margin-top: 2em;
 }
@@ -60,7 +88,8 @@ form {
     flex-direction: column;
     box-sizing: border-box;
 
-    form, .moreInfos {
+    form,
+    .moreInfos {
       width: 100%;
     }
 
