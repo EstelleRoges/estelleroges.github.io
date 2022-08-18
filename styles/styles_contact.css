@@ -12,7 +12,8 @@
 
 .contactDividerTop {
   position: absolute;
-  top: 0;
+  filter: blur(1px);
+  top: -1px;
   left: 0;
   width: 100%;
   overflow: hidden;

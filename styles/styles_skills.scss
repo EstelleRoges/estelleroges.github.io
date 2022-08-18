@@ -13,7 +13,8 @@
 
   .skillsDividerTop {
     position: absolute;
-    top: 0;
+    filter: blur(1px);
+    top: -1px;
     left: 0;
     width: 100%;
     overflow: hidden;
@@ -33,7 +34,8 @@
 
   .skillsDividerBottom {
     position: absolute;
-    bottom: 0;
+    filter: blur(1px);
+    bottom: -1px;
     left: 0;
     width: 100%;
     overflow: hidden;
@@ -127,10 +129,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
-    // &:first-child .row {
-    //   flex-direction: column;
-    // }
   }
 
   .stack {
@@ -141,5 +139,11 @@
       display: flex;
       width: fit-content;
     }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #skills ul {
+    margin-left: 0;
   }
 }

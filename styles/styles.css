@@ -318,4 +318,8 @@ footer a:hover {
   #content {
     padding: 2em;
   }
+  .subContent {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
 }/*# sourceMappingURL=styles.css.map */
