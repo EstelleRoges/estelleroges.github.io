@@ -22,9 +22,9 @@
 </head>
 
 <body>
-    <div id="upperSection" class="navbar navbar-expand-lg fixed-top">
+    <div id="upperSection" class="fixed-top">
         <h1>Tea&Dev'</h1>
-        <div>
+        <div class="navbar navbar-expand-lg">
             <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                 <i class="menu bi bi-list d-inline"></i>
@@ -37,8 +37,8 @@
                         aria-label="Close"></button>
                 </div>
                 <nav class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end align-items-center">
-                        <li class="nav-item"><a class="nav-link" href="#about">À propos</a>
+                    <ul class="navbar-nav navbar-collapse justify-content-end align-items-center">
+                        <li class="nav-item" onclick="doubleClick()"><a class="nav-link" href="#about">À propos</a>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="#skills">Stack</a>
                         </li>
@@ -51,7 +51,7 @@
                         <li class="nav-item"><a class="nav-link" href="https://github.com/EstelleRoges"
                                 target="_blank"><i class="bi bi-github"></i></a></li>
                     </ul>
-                </nav>
+                </d>
             </div>
         </div>
     </div>
@@ -118,10 +118,13 @@
                     <div class="moreStory row-cols-1 col-sm-12">
                         <p>
                             Ce qui me fascine le plus dans le code, c'est ce passage de lignes écrites en résultat
-                            visuel. J'aspire à maîtriser la stack que j'ai choisi pour créer des sites dans lesquels il sera agréable de naviguer.
+                            visuel. J'aspire à maîtriser la stack que j'ai choisi pour créer des sites dans lesquels il
+                            sera agréable de naviguer.
                         </p>
                         <p>
-                           Je suis à la recherche d'une première expérience professionnelle pour mettre mes compétences en service. Motivée et prête à remonter mes manches, je ferai ce qu'il faut pour m'améliorer et donner vie à tout type de design!
+                            Je suis à la recherche d'une première expérience professionnelle pour mettre mes compétences
+                            en service. Motivée et prête à remonter mes manches, je ferai ce qu'il faut pour m'améliorer
+                            et donner vie à tout type de design!
                         </p>
                     </div>
                 </div>
@@ -268,7 +271,8 @@
                                 <div class="carouselContent">
                                     <h3>The Succi Place</h3>
                                     <p>Mon premier projet avec React. C'est un projet front-end, mais j'y ai tout de
-                                        même ajouté quelques éléments dynamiques comme le panier. Attention, le site n'est pas encore 100% responsive!</p>
+                                        même ajouté quelques éléments dynamiques comme le panier. Attention, le site
+                                        n'est pas encore 100% responsive!</p>
                                     <button class="seeProject"><a href="https://thesucciplace.netlify.app/"
                                             target="_blank">Voir le projet</a></button>
                                 </div>
@@ -467,24 +471,46 @@
 
     <footer>
         <p>© Copyright Estelle ROGÈS | Tea&Dev </p>
-        <p>Background Image from <a href='https://www.freepik.com/photos/laptop-coffee'>www.freepik.com</a></p>
-        <p>Shape Dividers from <a href="https://www.shapedivider.app/" target="_blank" rel="noopener noreferrer">Shape
+        <p><a href='https://www.freepik.com/photos/laptop-coffee'>Background Image</a> | <a
+                href="https://www.shapedivider.app/" target="_blank" rel="noopener noreferrer">Shape
                 Divider App</a></p>
     </footer>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-        (function () {
-            emailjs.init("FOlf6XQ311rAPFxv-");
-        })();
-    </script>
-    <script src="./script/sendMails.js"></script>
-    <script src="./script/slideshow.js"></script>
-    <script src="https://kit.fontawesome.com/a789c7f6d3.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-        crossorigin="anonymous"></script>
+    <div id="scripts">
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+            (function () {
+                emailjs.init("FOlf6XQ311rAPFxv-");
+            })();
+        </script>
+        <script>
+            const closeBtn = document.querySelector(".navbar-toggler");
+            const upperSection = document.getElementById("upperSection");
+            const offcanvas = document.getElementById("offcanvasNavbar");
+            const navLinks = document.getElementsByClassName("nav-item");
+
+            offcanvas.addEventListener('click', () => {
+                const offcanvasBackdrop = document.querySelector(".offcanvas-backdrop");
+                // document.body.removeAttribute("style");
+                // upperSection.removeAttribute("style");
+                offcanvas.classList.toggle("show");
+                // offcanvas.removeAttribute("aria-modal");
+                // offcanvas.removeAttribute("role");
+                offcanvasBackdrop.remove();
+                setTimeout(() => {
+                  closeBtn.click();  
+                }, 500);
+            });
+        </script>
+        <script src="./script/sendMails.js"></script>
+        <!-- <script src="./script/slideshow.js"></script> -->
+        <script src="https://kit.fontawesome.com/a789c7f6d3.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+            crossorigin="anonymous"></script>
+    </div>
+
 </body>
 
 </html>
