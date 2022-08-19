@@ -492,11 +492,7 @@
 
             offcanvas.addEventListener('click', () => {
                 const offcanvasBackdrop = document.querySelector(".offcanvas-backdrop");
-                // document.body.removeAttribute("style");
-                // upperSection.removeAttribute("style");
                 offcanvas.classList.toggle("show");
-                // offcanvas.removeAttribute("aria-modal");
-                // offcanvas.removeAttribute("role");
                 offcanvasBackdrop.remove();
                 setTimeout(() => {
                   closeBtn.click();  
