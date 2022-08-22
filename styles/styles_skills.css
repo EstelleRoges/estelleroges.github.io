@@ -82,7 +82,14 @@
   z-index: 0;
 }
 #skills ul li {
-  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 1em;
+}
+#skills ul p {
+  margin-bottom: 0;
 }
 #skills .htmlStyle {
   color: #f16529;
