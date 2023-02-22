@@ -44,19 +44,22 @@
   }
 
   &:nth-child(1) img {
-    object-position: 50% 0;
+    object-position: 10% 0;
   }
   &:nth-child(2) img {
-    object-position: 5% 0;
+    object-position: 20% 0;
   }
   &:nth-child(3) img {
     object-position: 50% 0;
   }
   &:nth-child(4) img {
-    object-position: 2% 0;
+    object-position: 5% 0;
   }
   &:nth-child(5) img {
-    object-position: 2% 0;
+    object-position: 20% 0;
+  }
+  &:nth-child(6) img {
+    object-position: 50% 0;
   }
 }
 
