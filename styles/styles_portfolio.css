@@ -21,6 +21,7 @@
   transition: all 0.4s;
   cursor: pointer;
   position: relative;
+  box-shadow: 0 0 10px var(--shadow);
 }
 .projectCard:nth-child(odd) {
   transform: translateY(1em);
