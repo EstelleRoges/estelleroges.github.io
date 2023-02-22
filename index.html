@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Estelle ROGÈS frontend developper portfolio">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Josefin+Sans:wght@300;400;700&display=swap"
@@ -27,36 +27,22 @@
 <body>
     <div id="upperSection" class="fixed-top">
         <h1>Tea&Dev'</h1>
-        <div class="navbar navbar-expand-lg">
-            <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                <i class="menu bi bi-list d-inline"></i>
-            </button>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Tea&Dev</h5>
-                    <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
-                </div>
-                <nav class="offcanvas-body">
-                    <ul class="navbar-nav navbar-collapse justify-content-end align-items-center">
-                        <li class="nav-item" onclick="doubleClick()"><a class="nav-link" href="#about">À propos</a>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="#skills">Stack</a>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/estelle-roges-dev/"
-                                target="_blank"><i class="bi bi-linkedin"></i></a></li>
-                        <li class="nav-item"><a class="nav-link" href="https://github.com/EstelleRoges"
-                                target="_blank"><i class="bi bi-github"></i></a></li>
-                    </ul>
-                    </d>
-            </div>
-        </div>
+        <nav>
+            <!-- <i class="menu bi bi-list d-inline"></i> -->
+            <ul>
+                <li><a href="#about">À propos</a>
+                </li>
+                <li><a href="#skills">Stack</a>
+                </li>
+                <li><a href="#portfolio">Portfolio</a>
+                </li>
+                <li><a href="#contact">Contact</a>
+                </li>
+                <li><a href="https://www.linkedin.com/in/estelle-roges-dev/" target="_blank"><i
+                            class="bi bi-linkedin"></i></a></li>
+                <li><a href="https://github.com/EstelleRoges" target="_blank"><i class="bi bi-github"></i></a></li>
+            </ul>
+        </nav>
     </div>
 
     <div class="container-fluid content">
@@ -105,15 +91,15 @@
                     </div>
                     <div class="storyContent col-md-6 col-sm-12">
                         <h3>Hello World!</h3>
-                            <p>
-                                Récemment reconvertie, j'ai pour ambition de devenir développeuse
-                                frontend.
-                            </p>
-                            <p>
-                                Ma passion, c'est la création en général. Rien n'est plus
-                                satisfaisant pour moi qu'avoir une idée et tout mettre en place pour
-                                lui donner vie.
-                            </p>
+                        <p>
+                            Récemment reconvertie, j'ai pour ambition de devenir développeuse
+                            frontend.
+                        </p>
+                        <p>
+                            Ma passion, c'est la création en général. Rien n'est plus
+                            satisfaisant pour moi qu'avoir une idée et tout mettre en place pour
+                            lui donner vie.
+                        </p>
                     </div>
                     <div class="moreStory row-cols-1 col-sm-12">
                         <p>
@@ -286,120 +272,71 @@
                 <p>Voici des projets variés que j'ai développé. Certains sont créés de toutes pièces, d'autres sont le
                     résultat de challenges proposés par <a id="fm" href="https://www.frontendmentor.io/home"
                         target="_blank" rel="noopener noreferrer">Frontend Mentor</a>.</p>
-                        <p>des projets plus complexes sont à venir!</p>
-                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="carouselItem">
-                                <div class="carouselImage"><img src="assets/theSucciPlaceThumbnail.jpg"
-                                        alt="theSucciPlace">
-                                </div>
-                                <div class="carouselContent">
-                                    <h3>The Succi Place</h3>
-                                    <p>Mon premier projet avec React. C'est un projet frontend, mais j'y ai tout de
-                                        même ajouté quelques éléments dynamiques comme le panier.</p>
-                                    <button class="seeProject"><a href="https://thesucciplace.netlify.app/"
-                                            target="_blank">Voir le projet</a></button>
-                                </div>
-                            </div>
+
+                <div class="cardsDeck">
+                    <div class="projectCard">
+                        <div class="dataOverlay">
+                            <p>The Succi Place</p>
+                            <button onclick="openModal(0)"><i
+                                    class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
                         </div>
-
-                        <div class="carousel-item">
-                            <div class="carouselItem">
-                                <div class="carouselImage">
-                                    <img src="assets/cakeWebsiteTh.jpg" alt="cakeAddictWebsite">
-                                </div>
-                                <div class="carouselContent">
-                                    <h3>Cake Addict</h3>
-                                    <p>Un site fictif que j'ai développé avec Bootstrap.</p>
-                                    <button class="seeProject"><a
-                                            href="https://rawcdn.githack.com/EstelleRoges/CakeAddiction_Website/2e54fb58335078a777c3b14692ff5a71e878a8ce/index.html"
-                                            target="_blank">Voir le projet</a></button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <div class="carouselItem">
-                                <div class="carouselImage">
-                                    <img src="assets/introSignUpComponentTh.jpg" alt="IntroSignUp">
-                                </div>
-                                <div class="carouselContent">
-                                    <h3>Intro SignUp component</h3>
-                                    <p>La difficulté ici était de ne valider le formulaire que si tous
-                                        les
-                                        champs étaient correctement remplis.</p>
-                                    <button class="seeProject"><a
-                                            href="https://fmchallenge-introsignupcomponent.netlify.app/"
-                                            target="_blank">Voir le projet</a></button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <div class="carouselItem">
-                                <div class="carouselImage">
-                                    <img src="assets/advice_generator.jpg" alt="carouselItemImage">
-                                </div>
-                                <div class="carouselContent">
-                                    <h3>Advice generator</h3>
-                                    <p>Pour ce projet, il a fallu établir un lien entre l'appli et une
-                                        API.</p>
-                                    <button class="seeProject"><a
-                                            href="https://esteller-frontendmentor-advice-generator-app.netlify.app/"
-                                            target="_blank">Voir le projet</a></button>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="carousel-item">
-                            <div class="carouselItem">
-                                <div class="carouselImage">
-                                    <img src="assets/room_homepage.jpg" alt="carouselItemImage">
-                                </div>
-                                <div class="carouselContent">
-                                    <h3>Room homepage</h3>
-                                    <p>J'ai réalisé ce projet sous React. Je ne suis pas peu fière du rendu global de la page. Vouloir réinventer la roue n'est pas toujours pertinent, mais j'ai trouvé ça utile dans ce cas pratique, ne serait-ce que pour améliorer son
-                                        raisonnement.</p>
-                                    <button class="seeProject"><a href="https://fm-roomhomepage.netlify.app/"
-                                            target="_blank">Voir le projet</a></button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <div class="carouselItem">
-                                <div class="carouselImage">
-                                    <img src="assets/huddle_homepage.jpg" alt="carouselItemImage">
-                                </div>
-                                <div class="carouselContent">
-                                    <h3>Huddle Homepage</h3>
-                                    <p>Cette landing page fictive était très intéressante à
-                                        développer, notamment par la présence des dividers, élément avec lequel je
-                                        souhaitais travailler. Les breakpoints et la mise en place étaient un peu
-                                        challengeants, mais plaisants à travailler.</p>
-                                    <button class="seeProject"><a
-                                            href="https://fmchallenge-huddlelandingpage.netlify.app/"
-                                            target="_blank">Voir le projet</a></button>
-                                </div>
-                            </div>
-
-                        </div>
+                        <img src="./assets/theSucciPlaceThumbnail.jpg" alt="">
                     </div>
 
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="prev">
-                        <i class="bi bi-caret-left"></i>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="next">
-                        <i class="bi bi-caret-right"></i>
-                    </button>
+                    <div class="projectCard">
+                        <div class="dataOverlay">
+                            <p>KinkyTea Blog</p>
+                            <button><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                        </div><img src="" alt="">
+                    </div>
+
+                    <div class="projectCard">
+                        <div class="dataOverlay">
+                            <p>The Cookie Quotes App</p>
+                            <button><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                        </div><img src="./assets/CookieQuotes-Title.png" alt="">
+                    </div>
+
+                    <div class="projectCard">
+                        <div class="dataOverlay">
+                            <p>Room Home Page</p>
+                            <button><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                        </div><img src="./assets/room_homepage.jpg" alt="">
+                    </div>
+
+                    <div class="projectCard">
+                        <div class="dataOverlay">
+                            <p>Huddle Home Page</p>
+                            <button onclick="closeModal()"><i
+                                    class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                        </div><img src="./assets/huddle_homepage.jpg" alt="">
+                    </div>
                 </div>
+
+
+                <!-- <div class="projectModal">
+                    <div class="projectModalView">
+                        <i onclick="closeModal(0)" class="fa-solid fa-xmark"></i>
+
+                        <div><img src="assets/theSucciPlaceThumbnail.jpg" alt="theSucciPlace"></div>
+                        <div>
+                            <h2>The Succi Place</h2>
+                            <p>Site e-commerce</p>
+                            <ul>
+                                <li>Front: React (Javascript)</li>
+                                <li>Back: Pas de backend</li>
+                                <li>Autres: </li>
+                            </ul>
+                            <p>Mon premier projet "complexe" avec React. C'est un projet frontend, mais j'y ai tout de
+                                même ajouté quelques éléments dynamiques comme le panier.</p>
+                            <a href="https://thesucciplace.netlify.app/" class="seeProject" target="_blank">Démo</a>
+                        </div>
+                    </div>
+                </div> -->
             </div>
         </section>
     </div>
+
 
     <div class="container-fluid content">
         <section id="contact">
@@ -468,23 +405,8 @@
                 emailjs.init("FOlf6XQ311rAPFxv-");
             })();
         </script>
-        <script>
-            const closeBtn = document.querySelector(".navbar-toggler");
-            const upperSection = document.getElementById("upperSection");
-            const offcanvas = document.getElementById("offcanvasNavbar");
-            const navLinks = document.getElementsByClassName("nav-item");
-
-            offcanvas.addEventListener('click', () => {
-                const offcanvasBackdrop = document.querySelector(".offcanvas-backdrop");
-                offcanvas.classList.toggle("show");
-                offcanvasBackdrop.remove();
-                setTimeout(() => {
-                    closeBtn.click();
-                }, 1000);
-            });
-        </script>
         <script src="./script/sendMails.js"></script>
-        <!-- <script src="./script/slideshow.js"></script> -->
+        <script src="./script/scrollAnimations.js"></script>
         <script src="https://kit.fontawesome.com/a789c7f6d3.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"

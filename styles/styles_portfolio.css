@@ -1,198 +1,165 @@
-#fm {
-  color: var(--greenPrimary);
-  text-decoration: overline;
-}
-#fm:hover {
-  color: var(--greenSecondary);
-}
-
-#portfolio h3 {
-  margin-left: 2em;
-  padding: 0.5em 0em;
-  color: var(--brownPrimary);
-  text-shadow: 1px 1px 2px var(--brownSecondary);
-  text-align: end;
-}
-
-#carouselExampleCaptions {
+.cardsDeck {
   margin-top: 3em;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s all ease-in-out;
 }
 
-.carousel-control-next,
-.carousel-control-prev {
-  width: 0;
-  background-color: transparent;
-}
-.carousel-control-next:hover,
-.carousel-control-prev:hover {
-  background-color: transparent;
-}
-.carousel-control-next i,
-.carousel-control-prev i {
-  font-size: 36px;
-  color: var(--text);
+.deckVisible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.carouselItem {
-  padding: 3em;
-  height: 500px;
+.projectCard {
+  margin: 0.3em;
+  width: 10em;
+  height: 25em;
+  border-radius: 1.5em;
+  transition: all 0.4s;
+  cursor: pointer;
   position: relative;
 }
-.carouselItem div {
-  border-radius: 2em;
-  box-shadow: 2px 2px 7px var(--shadow);
-  position: absolute;
+.projectCard:nth-child(odd) {
+  transform: translateY(1em);
 }
-
-.carouselImage {
-  width: 45%;
-  height: 350px;
-  top: 1em;
-  left: 7em;
-  z-index: 2;
+.projectCard:nth-child(even) {
+  transform: translateY(-1em);
 }
-.carouselImage img {
+.projectCard:hover .dataOverlay {
+  opacity: 1;
+  transition: all 0.4s;
+}
+.projectCard img {
   width: 100%;
   height: 100%;
-  border: 1px solid var(--background);
-  border-radius: 2em;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 1.5em;
+}
+.projectCard:nth-child(1) img {
   -o-object-position: 50% 0;
      object-position: 50% 0;
 }
-
-.carouselContent {
-  padding: 2em;
-  padding-left: 4em;
-  width: 45%;
-  height: 80%;
-  right: 7em;
-  bottom: 3em;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.projectCard:nth-child(2) img {
+  -o-object-position: 5% 0;
+     object-position: 5% 0;
 }
-.carouselContent p {
-  margin-left: 5em;
-  padding: 0.5em;
+.projectCard:nth-child(3) img {
+  -o-object-position: 50% 0;
+     object-position: 50% 0;
+}
+.projectCard:nth-child(4) img {
+  -o-object-position: 2% 0;
+     object-position: 2% 0;
+}
+.projectCard:nth-child(5) img {
+  -o-object-position: 2% 0;
+     object-position: 2% 0;
+}
+
+.dataOverlay {
+  width: 100%;
   height: 100%;
-  font-size: 18px;
-  overflow-y: auto;
+  padding: 0.3em;
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  align-content: space-evenly;
+  border-radius: 1.5em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-image: linear-gradient(to bottom, rgba(203, 162, 124, 0.7019607843), rgba(203, 162, 124, 0.5019607843));
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  transition: all 0.4s;
 }
-
-.seeProject {
-  align-self: flex-end;
-  padding: 0.5em 0.7em;
+.dataOverlay p {
+  padding: 0;
+  text-align: center;
+  font-size: 20px;
+  word-wrap: break-word;
+}
+.dataOverlay button {
+  padding: 0.5em 0.75em;
+  border-radius: 50%;
   background-color: var(--brownPrimary);
-  box-shadow: 0 3px 2px var(--brownSecondary);
-  transition: 0.3s ease-in-out;
+  box-shadow: none;
 }
-.seeProject:hover {
-  background-color: var(--brownSecondary);
-}
-.seeProject a {
+.dataOverlay i {
+  padding-top: 0.2em;
   color: white;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+.dataOverlay i:hover {
   font-size: 20px;
 }
 
-@media screen and (max-width: 1300px) {
-  #carouselExampleCaptions p {
-    margin-left: 2em;
-  }
-  .carouselImage {
-    left: 5em;
-  }
-  .carouselContent {
-    right: 5em;
-  }
+.projectModal {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99999;
 }
-@media screen and (max-width: 992px) {
-  #carouselExampleCaptions p {
-    margin-left: 4.5em;
-  }
-  .carouselImage {
-    width: 45%;
-    left: 3em;
-  }
-  .carouselContent {
-    width: 50%;
-    padding-left: 1em;
-    right: 3em;
-  }
+
+.projectModalView {
+  margin: 5em auto;
+  padding: 1.5em;
+  max-width: 780px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background);
+  border-radius: 1.5em;
+  box-shadow: 0 0 10px var(--background);
 }
-@media screen and (max-width: 900px) {
-  #carouselExampleCaptions {
-    display: flex;
-    align-content: center;
-  }
-  #carouselExampleCaptions h3 {
-    margin-left: 0;
-    text-align: center;
-  }
-  #carouselExampleCaptions p {
-    margin-left: 0;
-  }
-  #carouselExampleCaptions button {
-    margin: auto;
-  }
-  .carouselItem {
-    height: 700px;
-  }
-  .carouselItem div {
-    margin: auto;
-    left: 0;
-    right: 0;
-  }
-  .carouselImage {
-    width: 70%;
-    top: 3em;
-  }
-  .carouselContent {
-    padding: 2em;
-    width: 90%;
-    height: 45%;
-    bottom: 1em;
-    margin: auto;
-  }
+.projectModalView i {
+  margin-bottom: 1em;
+  display: flex;
+  align-self: flex-end;
+  cursor: pointer;
 }
-@media screen and (max-width: 576px) {
-  .carouselImage {
-    width: 85%;
-  }
+.projectModalView div:nth-child(2) img {
+  margin-bottom: 2em;
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 1.5em;
 }
-@media screen and (max-width: 430px) {
-  #carouselExampleCaptions h3 {
-    margin: 0;
-    padding: 0;
-    padding-top: 0.3em;
-    text-align: center;
-  }
-  #carouselExampleCaptions p {
-    margin: 0.5em 0em;
-    height: 12em;
-    text-align: center;
-  }
-  .carouselItem {
-    height: 550px;
-    margin-bottom: 0.5em;
-  }
-  .carouselItem div {
-    margin: auto;
-    width: 90%;
-    left: 0;
-    right: 0;
-  }
-  .carouselImage {
-    top: 0.5em;
-    height: 40%;
-  }
-  .carouselContent {
-    margin: auto;
-    padding: 1em;
-    width: 60%;
-    height: 60%;
-    bottom: 0;
-  }
+.projectModalView div:nth-child(2) img p:first-child {
+  margin: 0;
+}
+.projectModalView h2 {
+  margin-bottom: 0;
+  text-indent: 0;
+}
+.projectModalView ul {
+  text-align: left;
+}
+.projectModalView a {
+  margin: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.seeProject {
+  padding: 0.5em 1em;
+  border-radius: 0.75em;
+  font-size: 20px;
+  background-color: var(--brownPrimary);
+  box-shadow: 0 3px 2px var(--brownSecondary);
+}
+.seeProject:hover {
+  background-color: var(--brownSecondary);
 }/*# sourceMappingURL=styles_portfolio.css.map */

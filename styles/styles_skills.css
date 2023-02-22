@@ -1,5 +1,5 @@
 #skills {
-  background-color: var(--greenBackground);
+  background-color: var(--greyBackground);
   position: relative;
 }
 #skills .row {
@@ -125,7 +125,6 @@
   }
   .stack li {
     display: flex;
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
   }

@@ -1,6 +1,6 @@
 #contact {
   position: relative;
-  background-color: var(--greenBackground);
+  background-color: var(--greyBackground);
   background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
 }
 #contact p {
@@ -56,11 +56,9 @@ form textarea {
   background-image: url("https://www.transparenttextures.com/patterns/lined-paper.png");
   margin: 1.5em auto 1.5em 3em;
   padding: 1em;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   max-width: 400px;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   letter-spacing: 2px;
@@ -72,7 +70,6 @@ form textarea {
 .someInfos span {
   margin: 0;
   margin-bottom: 1em;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   display: inline;
@@ -90,7 +87,7 @@ form textarea {
     box-sizing: border-box;
   }
   .contactSection .row form,
-.contactSection .row .moreInfos {
+  .contactSection .row .moreInfos {
     width: 100%;
   }
   .contactSection .row .someInfos {
