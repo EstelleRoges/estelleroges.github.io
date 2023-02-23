@@ -25,29 +25,30 @@
 </head>
 
 <body>
-    <div id="upperSection" class="fixed-top">
+    <div id="upperSection">
         <h1>Tea&Dev'</h1>
-        <nav>
-            <!-- <i class="menu bi bi-list d-inline"></i> -->
-            <ul>
-                <li><a href="#about">À propos</a>
-                </li>
-                <li><a href="#skills">Stack</a>
-                </li>
-                <li><a href="#portfolio">Portfolio</a>
-                </li>
-                <li><a href="#contact">Contact</a>
-                </li>
-                <li><a href="https://www.linkedin.com/in/estelle-roges-dev/" target="_blank"><i
-                            class="bi bi-linkedin"></i></a></li>
-                <li><a href="https://github.com/EstelleRoges" target="_blank"><i class="bi bi-github"></i></a></li>
-            </ul>
+        <nav id="navbar">
+            <div id="menuIcon"><i onclick="displayNav()" class="menu bi bi-list"></i></div>
+            <div id="links">
+                <i id="closeIcon" onclick="closeMenu()" class="fa-solid fa-xmark"></i>
+                <ul>
+                    <li><a onclick="autoClose()" href="#about">À propos</a></li>
+                    <li><a onclick="autoClose()" href="#skills">Stack</a></li>
+                    <li><a onclick="autoClose()" href="#portfolio">Portfolio</a></li>
+                    <li><a onclick="autoClose()" href="#contact">Contact</a></li>
+                    <li><a onclick="autoClose()" href="https://www.linkedin.com/in/estelle-roges-dev/"
+                            target="_blank"><i class="bi bi-linkedin"></i></a></li>
+                    <li><a onclick="autoClose()" href="https://github.com/EstelleRoges" target="_blank"><i
+                                class="bi bi-github"></i></a></li>
+                </ul>
+            </div>
+
         </nav>
     </div>
 
     <div class="container-fluid content">
         <section id="home">
-            <div class="textSection col-12">
+            <div class="textSection">
                 <span>Je suis Estelle,</span>
                 <h1>Développeuse Frontend</h1>
                 <div class="connectAndCV">
@@ -275,76 +276,208 @@
 
                 <div class="cardsDeck">
                     <div class="projectCard">
-                        <div class="dataOverlay">
-                            <p>The Succi Place</p>
-                            <button onclick="openModal(0)"><i
-                                    class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                        <div class="truncatedCard">
+                            <div class="dataOverlay">
+                                <p>The Succi Place</p>
+                                <button onclick="extendCard(0)"><i
+                                        class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                            </div>
+                            <img src="./assets/theSucciPlaceTh-mini.jpg" alt="estelle-roges-project-image">
                         </div>
-                        <img src="./assets/theSucciPlaceTh-mini.jpg" alt="">
+
+                        <div class="extendedProjectCard none">
+                            <i onclick="truncateCard(0)" class="fa-solid fa-xmark"></i>
+                            <div class="dataExtended">
+                                <div>
+                                    <img src="assets/theSucciPlaceThumbnail.jpg" alt="estelle-roges-the-Succi-Place">
+                                </div>
+                                <div>
+                                    <h2>The Succi Place</h2>
+                                    <p>Site e-commerce</p>
+                                    <ul>
+                                        <li>Front: React (Javascript)</li>
+                                        <li>Back: Pas de backend</li>
+                                        <!-- <li>Autres: </li> -->
+                                    </ul>
+                                    <p>Mon premier projet "complexe" avec React. C'est un projet frontend, mais j'y ai
+                                        tout de
+                                        même ajouté quelques éléments dynamiques comme le panier.</p>
+                                    <a href="https://thesucciplace.netlify.app/" class="seeProject"
+                                        target="_blank">Démo</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="projectCard">
-                        <div class="dataOverlay">
-                            <p>KinkyTea Blog</p>
-                            <button><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
-                        </div><img src="./assets/kinkyteaBlogTh-mini.jpg" alt="">
+                        <div class="truncatedCard">
+                            <div class="dataOverlay">
+                                <p>KinkyTea Blog</p>
+                                <button onclick="extendCard(1)"><i
+                                        class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                            </div><img src="./assets/kinkyteaBlogTh-mini.jpg" alt="estelle-roges-project-image">
+                        </div>
+
+                        <div class="extendedProjectCard none">
+                            <i onclick="truncateCard(1)" class="fa-solid fa-xmark"></i>
+                            <div class="dataExtended">
+                                <div><img src="assets/kinkyteaBlogTh.jpg" alt="estelle-roges-kinky-tea-blog"></div>
+                                <div>
+                                    <h2>KinkyTea Blog</h2>
+                                    <p>Blog fictif</p>
+                                    <ul>
+                                        <li>Front: React (Typecript)</li>
+                                        <li>Back: NodeJs / Express /MongoDB</li>
+                                        <!-- <li>Autres: </li> -->
+                                    </ul>
+                                    <p>Ce blog fictif est un projet full-stack; le premier projet officiellement
+                                        développé avec Typescript. <br>
+                                        Actuellement, le front-end du blog est en construction. Les articles de blogs
+                                        seront stockés dans une base de données, et je créerai aussi un dashboard pour
+                                        gérer les données de l'administrateur et le contenu du blog.
+                                    </p>
+                                    <a href="#" class="seeProject disabled">En construction</a>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
 
                     <div class="projectCard">
-                        <div class="dataOverlay">
-                            <p>The Cookie Quotes App</p>
-                            <button><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
-                        </div><img src="./assets/CookieQuotes-Title.png" alt="">
+                        <div class="truncatedCard">
+                            <div class="dataOverlay">
+                                <p>The Cookie Quotes App</p>
+                                <button onclick="extendCard(2)"><i
+                                        class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                            </div><img src="./assets/CookieQuotes-Title.png" alt="estelle-roges-project-image">
+                        </div>
+                        <div class="extendedProjectCard none">
+                            <i onclick="truncateCard(2)" class="fa-solid fa-xmark"></i>
+                            <div class="dataExtended">
+                                <div>
+                                    <img src="assets/CookieQuotes-Title.png" alt="estelle-roges-the-cookie-quotes-app"
+                                        style="height: 25em">
+                                </div>
+                                <div>
+                                    <h2>The Cookie Quotes App</h2>
+                                    <p>Application mobile</p>
+                                    <ul>
+                                        <li>Front: React Native (Javascript)</li>
+                                        <li>Back: Pas de backend</li>
+                                        <!-- <li>Autres: </li> -->
+                                    </ul>
+                                    <p>Cette application mobile est un projet que j'ai depuis un moment. Elle permettra
+                                        à l'utilisateur de recevoir des citations à certains moments.</p>
+                                    <a href="#" class="seeProject disabled">En construction</a>
+                                </div>
+                            </div>
+
+                        </div>
+
                     </div>
 
                     <div class="projectCard">
-                        <div class="dataOverlay">
-                            <p>Room Home Page</p>
-                            <button><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
-                        </div><img src="./assets/roomHomepageTh-mini.jpg" alt="">
+                        <div class="truncatedCard">
+                            <div class="dataOverlay">
+                                <p>Room Home Page</p>
+                                <button onclick="extendCard(3)"><i
+                                        class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                            </div><img src="./assets/roomHomepageTh-mini.jpg" alt="estelle-roges-project-image">
+                        </div>
+                        <div class="extendedProjectCard none">
+                            <i onclick="truncateCard(3)" class="fa-solid fa-xmark"></i>
+                            <div class="dataExtended">
+                                <div><img src="assets/roomHomepageTh.jpg" alt="estelle-roges-room-homepage"></div>
+                                <div>
+                                    <h2>Room - Home page</h2>
+                                    <p>Landing page</p>
+                                    <ul>
+                                        <li>Front: React (Javascript)</li>
+                                        <li>Back: Pas de backend</li>
+                                        <!-- <li>Autres: </li> -->
+                                    </ul>
+                                    <p>J'ai réalisé ce projet sous React. Je ne suis pas peu fière du rendu global de la
+                                        page. Vouloir réinventer la roue n'est pas toujours pertinent, mais j'ai trouvé
+                                        ça
+                                        utile dans ce cas pratique, ne serait-ce que pour améliorer son
+                                        raisonnement.</p>
+                                    <a href="https://fm-roomhomepage.netlify.app/" class="seeProject"
+                                        target="_blank">Démo</a>
+                                </div>
+                            </div>
+
+                        </div>
+
                     </div>
 
                     <div class="projectCard">
-                        <div class="dataOverlay">
-                            <p>Huddle Home Page</p>
-                            <button onclick="closeModal()"><i
-                                    class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
-                        </div><img src="./assets/huddleHomepage-mini.jpg" alt="">
+                        <div class="truncatedCard">
+                            <div class="dataOverlay">
+                                <p>Huddle Home Page</p>
+                                <button onclick="extendCard(4)"><i
+                                        class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                            </div><img src="./assets/huddleHomepage-mini.jpg" alt="estelle-roges-project-image">
+                        </div>
+                        <div class="extendedProjectCard none">
+                            <i onclick="truncateCard(4)" class="fa-solid fa-xmark"></i>
+                            <div class="dataExtended">
+                                <div><img src="assets/huddle_homepage.jpg" alt="theSucciPlace"></div>
+                                <div>
+                                    <h2>Huddle homepage</h2>
+                                    <p>Landing page</p>
+                                    <ul>
+                                        <li>Front: React (Javascript)</li>
+                                        <li>Back: Pas de backend</li>
+                                        <!-- <li>Autres: </li> -->
+                                    </ul>
+                                    <p>Cette landing page fictive était très intéressante à
+                                        développer, notamment par la présence des dividers, élément avec lequel je
+                                        souhaitais travailler. Les breakpoints et la mise en place étaient un peu
+                                        challengeants, mais plaisants à travailler.</p>
+                                    <a href="https://fmchallenge-huddlelandingpage.netlify.app/" class="seeProject"
+                                        target="_blank">Démo</a>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
 
                     <div class="projectCard">
-                        <div class="dataOverlay">
-                            <p>Grains Nobles et Plus</p>
-                            <button onclick="closeModal()"><i
-                                    class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
-                        </div><img src="./assets/grainsNoblesTh-mini.jpg" alt="">
+                        <div class="truncatedCard">
+                            <div class="dataOverlay">
+                                <p>Grains Nobles et Plus</p>
+                                <button onclick="extendCard(5)"><i
+                                        class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                            </div><img src="./assets/grainsNoblesTh-mini.jpg" alt="estelle-roges-project-image">
+                        </div>
+                        <div class="extendedProjectCard none">
+                            <i onclick="truncateCard(5)" class="fa-solid fa-xmark"></i>
+                            <div class="dataExtended">
+                                <div><img src="assets/grainsNoblesTh.jpg" alt="estelle-roges-grains-nobles-et-plus"
+                                        style="object-position: 0 0;"></div>
+                                <div>
+                                    <h2>Grains Nobles et Plus</h2>
+                                    <p>Site web - Restaurant</p>
+                                    <ul>
+                                        <li>Front: HTML / CSS / Javascript</li>
+                                        <li>Back: Pas de backend</li>
+                                        <li></li>
+                                    </ul>
+                                    <p>Voici le tout premier site que j'ai développé et hébergé. ce site internet
+                                        présente
+                                        le restaurant Grains Nobles et Plus, qui se trouve dans le 5è arrondissement de
+                                        Paris. <br> J'ai développé ce site bénévolement.</p>
+                                    <a href="http://www.grainsnoblesetplus.com/" class="seeProject"
+                                        target="_blank">Accéder
+                                        au site</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-
-                <!-- <div class="projectModal">
-                    <div class="projectModalView">
-                        <i onclick="closeModal(0)" class="fa-solid fa-xmark"></i>
-
-                        <div><img src="assets/theSucciPlaceThumbnail.jpg" alt="theSucciPlace"></div>
-                        <div>
-                            <h2>The Succi Place</h2>
-                            <p>Site e-commerce</p>
-                            <ul>
-                                <li>Front: React (Javascript)</li>
-                                <li>Back: Pas de backend</li>
-                                <li>Autres: </li>
-                            </ul>
-                            <p>Mon premier projet "complexe" avec React. C'est un projet frontend, mais j'y ai tout de
-                                même ajouté quelques éléments dynamiques comme le panier.</p>
-                            <a href="https://thesucciplace.netlify.app/" class="seeProject" target="_blank">Démo</a>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </section>
     </div>
-
 
     <div class="container-fluid content">
         <section id="contact">
@@ -413,6 +546,7 @@
                 emailjs.init("FOlf6XQ311rAPFxv-");
             })();
         </script>
+        <script src="./script/navbarScript.js"></script>
         <script src="./script/sendMails.js"></script>
         <script src="./script/scrollAnimations.js"></script>
         <script src="https://kit.fontawesome.com/a789c7f6d3.js" crossorigin="anonymous"></script>

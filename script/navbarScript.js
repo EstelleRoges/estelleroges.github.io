@@ -1,13 +1,34 @@
-const closeBtn = document.querySelector(".navbar-toggler");
-const upperSection = document.getElementById("upperSection");
-const offcanvas = document.getElementById("offcanvasNavbar");
-const navLinks = document.getElementsByClassName("nav-item");
+const menuIcon = document.getElementById("menuIcon");
+const closeIcon = document.getElementById("closeIcon");
+const links = document.getElementById("links");
 
-offcanvas.addEventListener("click", () => {
-  const offcanvasBackdrop = document.querySelector(".offcanvas-backdrop");
-  offcanvas.classList.toggle("show");
-  offcanvasBackdrop.remove();
+const hideNavbar = () => {
+  if(screen.width < 768) {
+    links.style.display = "none";
+    closeIcon.style.display = "block";
+  } else {
+    links.style.display = "block";
+    closeIcon.style.display = "none"
+  }
+};
+
+window.addEventListener("resize", hideNavbar);
+
+const displayNav = () => {
+  if (links.style.display == "none") {
+    links.style.display = "flex";
+    links.classList.add("showLinks");
+  } else {
+    links.style.display = "none";
+    links.classList.remove("showLinks");
+  }
+};
+
+const autoClose = () => {
   setTimeout(() => {
-    closeBtn.click();
-  }, 1000);
-});
+    links.style.display = "none";
+  }, 500);
+};
+const closeMenu = () => {
+  links.style.display = "none";
+};

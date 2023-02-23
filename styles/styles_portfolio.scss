@@ -15,13 +15,7 @@
 
 .projectCard {
   margin: 0.3em;
-  width: 10em;
-  height: 25em;
-  border-radius: 1.5em;
-  transition: all 0.4s;
-  cursor: pointer;
-  position: relative;
-  box-shadow: 0 0 10px var(--shadow);
+  height: 20em;
 
   &:nth-child(odd) {
     transform: translateY(1em);
@@ -30,10 +24,18 @@
   &:nth-child(even) {
     transform: translateY(-1em);
   }
+}
+
+.truncatedCard {
+  min-width: 100%;
+  height: 20em;
+  border-radius: 1.5em;
+  transition: all 0.4s;
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--shadow);
 
   &:hover .dataOverlay {
     opacity: 1;
-    transition: all 0.4s;
   }
 
   img {
@@ -59,8 +61,12 @@
     object-position: 20% 0;
   }
   &:nth-child(6) img {
-    object-position: 50% 0;
+    object-position: 60% 0;
   }
+}
+
+.extended {
+  width: 100%;
 }
 
 .dataOverlay {
@@ -85,7 +91,10 @@
     padding: 0;
     text-align: center;
     font-size: 20px;
+    font-weight: bold;
     word-wrap: break-word;
+    color: white;
+    text-shadow: 0 0 3px #664629;
   }
 
   button {
@@ -106,29 +115,19 @@
   }
 }
 
-.projectModal {
-  display: none;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 99999;
-}
-
-.projectModalView {
-  margin: 5em auto;
-  padding: 1.5em;
-  max-width: 780px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: var(--background);
+.extendedProjectCard {
+  margin: 0.3em;
+  height: 20em;
   border-radius: 1.5em;
+  transition: all 0.4s;
+  box-shadow: 0 0 10px var(--shadow);
+  background-color: var(--background);
   box-shadow: 0 0 10px var(--background);
 
   i {
     margin-bottom: 1em;
     display: flex;
-    align-self: flex-end;
+    justify-content: flex-end;
     cursor: pointer;
   }
 
@@ -162,6 +161,25 @@
   }
 }
 
+.dataExtended {
+  display: flex;
+  align-items: center;
+
+  div:first-child {
+    width: 50%;
+
+    img {
+      max-height: 345px;
+      object-fit: cover;
+    }
+  }
+
+  div:last-child {
+    width: 50%;
+    padding: 2em;
+  }
+}
+
 .seeProject {
   padding: 0.5em 1em;
   border-radius: 0.75em;
@@ -171,5 +189,107 @@
 
   &:hover {
     background-color: var(--brownSecondary);
+  }
+}
+
+.disabled {
+  background-color: var(--shadow);
+  box-shadow: 0 3px 2px #ababab;
+  cursor: none;
+  &:hover {
+    background-color: var(--shadow);
+  }
+}
+
+.none {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .cardsDeck {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 150px);
+    justify-items: stretch;
+    justify-content: space-evenly;
+  }
+}
+
+.projectCard,
+.truncatedCard,
+.dataOverlay {
+  height: 12em !important;
+}
+
+.projectCard {
+  &:nth-child(odd) {
+    transform: translateY(0);
+  }
+
+  &:nth-child(even) {
+    transform: translateY(0);
+  }
+}
+
+.dataOverlay {
+  width: 100%;
+  padding: 0.3em;
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  align-content: space-evenly;
+  border-radius: 1.5em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-image: linear-gradient(to bottom, #cba27cb3, #cba27c80);
+  backdrop-filter: blur(3px);
+  transition: all 0.4s;
+
+  p {
+    padding: 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    word-wrap: break-word;
+    color: white;
+    text-shadow: 0 0 3px #664629;
+  }
+
+  button {
+    padding: 0.5em 0.75em;
+    border-radius: 50%;
+    background-color: var(--brownPrimary);
+    box-shadow: none;
+  }
+  i {
+    padding-top: 0.2em;
+    color: white;
+    font-size: 18px;
+    transition: all 0.3s;
+
+    &:hover {
+      font-size: 20px;
+    }
+  }
+}
+
+.extendedProjectCard {
+  overflow: scroll;
+
+  i {
+    margin-bottom: 0;
+  }
+}
+
+.dataExtended {
+  flex-direction: column;
+  div:first-child {
+    display: none;
+  }
+  div:last-child {
+    padding-top: 0;
+    width: 100% !important;
   }
 }
