@@ -28,9 +28,10 @@
     <div id="upperSection">
         <h1>Tea&Dev'</h1>
         <nav id="navbar">
-            <div id="menuIcon"><i onclick="displayNav()" class="menu bi bi-list"></i></div>
+            <div id="menuIcon" class="icon none"><i onclick="displayNav()" class="menu bi bi-list"></i></div>
             <div id="links">
-                <i id="closeIcon" onclick="closeMenu()" class="fa-solid fa-xmark"></i>
+                <div id="closeIcon"><i onclick="closeMenu()" class="fa-solid fa-xmark"></i></div>
+
                 <ul>
                     <li><a onclick="autoClose()" href="#about">À propos</a></li>
                     <li><a onclick="autoClose()" href="#skills">Stack</a></li>
@@ -70,39 +71,42 @@
                     <h2>Qui suis-je</h2>
                     <i class="bi bi-person-workspace"></i>
                 </div>
-                <div class="row row-cols-1">
-                    <div class="tags col-md-5 col-sm-12 order-lg-first">
-                        <div class="row justify-content-between align-items-start">
-                            <span class="pin">
-                                <i class="bi bi-circle-fill"></i>
-                            </span>
-                            <h3>Tags</h3>
+                <div id="aboutContent">
+                    <div class="first-row">
+                        <aside class="tags">
+                            <div class="tagsHeader">
+                                <span class="pin">
+                                    <i class="bi bi-circle-fill"></i>
+                                </span>
+                                <h3>Tags</h3>
+                            </div>
+                            <ul>
+                                <li>#ViveLesIdées</li>
+                                <li>
+                                    #TeamThé<i class="luv bi bi-heart-fill"></i>
+                                </li>
+                                <li>#Créative</li>
+                                <li>#Curieuse</li>
+                                <li>#Persévérante</li>
+                                <li>#StackOverflow</li>
+                                <li>#CuteCode</li>
+                            </ul>
+                        </aside>
+                        <div class="storyContent">
+                            <h3>Hello World!</h3>
+                            <p>
+                                Récemment reconvertie, j'ai pour ambition de devenir développeuse
+                                frontend.
+                            </p>
+                            <p>
+                                Ma passion, c'est la création en général. Rien n'est plus
+                                satisfaisant pour moi qu'avoir une idée et tout mettre en place pour
+                                lui donner vie.
+                            </p>
                         </div>
-                        <ul>
-                            <li>#ViveLesIdées</li>
-                            <li>
-                                #TeamThé<i class="luv bi bi-heart-fill"></i>
-                            </li>
-                            <li>#Créative</li>
-                            <li>#Curieuse</li>
-                            <li>#Persévérante</li>
-                            <li>#StackOverflow</li>
-                            <li>#CuteCode</li>
-                        </ul>
+
                     </div>
-                    <div class="storyContent col-md-6 col-sm-12">
-                        <h3>Hello World!</h3>
-                        <p>
-                            Récemment reconvertie, j'ai pour ambition de devenir développeuse
-                            frontend.
-                        </p>
-                        <p>
-                            Ma passion, c'est la création en général. Rien n'est plus
-                            satisfaisant pour moi qu'avoir une idée et tout mettre en place pour
-                            lui donner vie.
-                        </p>
-                    </div>
-                    <div class="moreStory row-cols-1 col-sm-12">
+                    <div class="moreStory">
                         <p>
                             Ce qui me fascine le plus dans le code, c'est ce passage de lignes écrites en résultat
                             visuel. J'aspire à maîtriser la stack que j'ai choisie pour créer des sites efficaces dans
@@ -273,6 +277,7 @@
                 <p>Voici des projets variés que j'ai développé. Certains sont créés de toutes pièces, d'autres sont le
                     résultat de challenges proposés par <a id="fm" href="https://www.frontendmentor.io/home"
                         target="_blank" rel="noopener noreferrer">Frontend Mentor</a>.</p>
+                <a id="cardTop" href="#cardTop"></a>
 
                 <div class="cardsDeck">
                     <div class="projectCard">
@@ -463,7 +468,7 @@
                                         <li>Back: Pas de backend</li>
                                         <li></li>
                                     </ul>
-                                    <p>Voici le tout premier site que j'ai développé et hébergé. ce site internet
+                                    <p>Voici le tout premier site que j'ai développé et hébergé. <br>Ce site internet
                                         présente
                                         le restaurant Grains Nobles et Plus, qui se trouve dans le 5è arrondissement de
                                         Paris. <br> J'ai développé ce site bénévolement.</p>
@@ -502,30 +507,28 @@
                 </div>
                 <p>Intéressé par mon profil? Envoyez-moi donc un mail!</p>
                 <div class="contactSection">
-                    <div class="row">
-                        <form class="col-md-6 col-sm-12">
-                            <input type="text" name="name" id="personName" placeholder="Votre nom" />
-                            <input type="email" name="mail" id="personMail" placeholder="E-mail" />
-                            <input type="text" name="subject" id="topic" placeholder="C'est à quel sujet?" />
-                            <textarea id="personMessage" rows="7" placeholder="Exprimez-vous!"></textarea>
-                            <button onClick="sendMail(event)" type="submit">Envoyer</button>
-                        </form>
-                        <div class="moreInfos col-md-6 col-sm-12">
-                            <div class="someInfos">
-                                <div class="row justify-content-between ">
-                                    <span class="pin">
-                                        <i class="bi bi-circle-fill"></i>
-                                    </span>
-                                    <h3>Notes</h3>
-                                </div>
-                                <p>Je suis basée en Seine et Marne</p>
-                                <p>Je me déplace en transports</p>
-                                <p>Sur site, télétravail ou hybride, tout me va!<br />(*si c'est sur site, dîtes-moi si
-                                    je dois ramener ma bouilloire)</p>
-                                <p></p>
+                    <form>
+                        <input type="text" name="name" id="personName" placeholder="Votre nom" />
+                        <input type="email" name="mail" id="personMail" placeholder="E-mail" />
+                        <input type="text" name="subject" id="topic" placeholder="C'est à quel sujet?" />
+                        <textarea id="personMessage" rows="7" placeholder="Exprimez-vous!"></textarea>
+                        <button onClick="sendMail(event)" type="submit">Envoyer</button>
+                    </form>
+                    <aside class="moreInfos">
+                        <div class="someInfos">
+                            <div class="tagsHeader">
+                                <span class="pin">
+                                    <i class="bi bi-circle-fill"></i>
+                                </span>
+                                <h3>Notes</h3>
                             </div>
+                            <p>Je suis basée en Seine et Marne</p>
+                            <p>Je me déplace en transports</p>
+                            <p>Sur site, télétravail ou hybride, tout me va!<br />(*si c'est sur site, dîtes-moi si
+                                je dois ramener ma bouilloire)</p>
+                            <p></p>
                         </div>
-                    </div>
+                    </aside>
                 </div>
             </div>
         </section>

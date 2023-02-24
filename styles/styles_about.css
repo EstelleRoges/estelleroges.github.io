@@ -1,5 +1,16 @@
+.tagsHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.first-row {
+  display: flex;
+}
+.first-row div {
+  width: 50%;
+}
+
 .pin {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   display: inline;
@@ -15,21 +26,19 @@
   margin: auto;
   padding: 1em;
   width: 30vw;
-  max-width: 400px;
-  height: -webkit-fit-content;
+  max-width: 375px;
   height: -moz-fit-content;
   height: fit-content;
   border-radius: 5px;
   transform: rotate(-5deg);
   box-shadow: 3px 3px 3px var(--shadow);
+  position: relative;
 }
 .tags h3 {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   margin: 0;
   padding: 0 0.5em;
-  display: inline;
+  position: absolute;
+  right: 0.5em;
 }
 .tags ul {
   margin: 0;
@@ -60,6 +69,7 @@
   padding: 1em;
   text-align: justify;
   line-height: 1.5em;
+  margin-left: 1em;
 }
 
 .moreStory {
@@ -67,12 +77,21 @@
 }
 
 @media screen and (max-width: 992px) {
-  #about .col-md-6 {
+  .first-row {
+    flex-direction: column;
+  }
+  .first-row div {
     width: 100%;
   }
   .tags {
     margin: 1em auto;
     width: 100%;
+  }
+  .storyContent {
+    margin-left: 0;
+    padding: 1em 0 0 0;
+    text-align: justify;
+    line-height: 1.5em;
   }
 }
 @media screen and (max-width: 768px) {

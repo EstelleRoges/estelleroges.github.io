@@ -1,3 +1,15 @@
+.tagsHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.first-row {
+  display: flex;
+  div {
+    width: 50%;
+  }
+}
+
 .pin {
   width: fit-content;
   display: inline;
@@ -14,17 +26,18 @@
   margin: auto;
   padding: 1em;
   width: 30vw;
-  max-width: 400px;
+  max-width: 375px;
   height: fit-content;
   border-radius: 5px;
   transform: rotate(-5deg);
   box-shadow: 3px 3px 3px var(--shadow);
+  position: relative;
 
   h3 {
-    width: fit-content;
     margin: 0;
     padding: 0 0.5em;
-    display: inline;
+    position: absolute;
+    right: 0.5em;
   }
 
   ul {
@@ -60,26 +73,38 @@
   padding: 1em;
   text-align: justify;
   line-height: 1.5em;
+  margin-left: 1em;
 }
 
 .moreStory {
-margin-top: 1em;
+  margin-top: 1em;
 }
 
 @media screen and (max-width: 992px) {
-  #about .col-md-6 {
-    width: 100%;
+  .first-row {
+    flex-direction: column;
+
+    div {
+      width: 100%;
+    }
   }
   .tags {
     margin: 1em auto;
     width: 100%;
   }
+
+  .storyContent {
+    margin-left: 0;
+    padding: 1em 0 0 0;
+    text-align: justify;
+    line-height: 1.5em;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .second h2 {
-      text-align: center;
-    }
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 576px) {

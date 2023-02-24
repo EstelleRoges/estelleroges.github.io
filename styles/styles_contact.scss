@@ -34,6 +34,12 @@
 
 .contactSection {
   margin-top: 2em;
+  display: flex;
+  justify-content: space-between;
+
+  form, aside {
+    width: 50%;
+  }
 }
 
 form {
@@ -58,9 +64,9 @@ form {
 .someInfos {
   background-color: #ffffff;
   background-image: url("https://www.transparenttextures.com/patterns/lined-paper.png");
-  margin: 1.5em auto 1.5em 3em;
+  margin: 1.5em auto 1.5em 20%;
   padding: 1em;
-  width: fit-content;
+  width: 100%;
   max-width: 400px;
   height: fit-content;
   letter-spacing: 2px;
@@ -82,6 +88,21 @@ form {
     color: var(--brownSecondary);
     filter: drop-shadow(2px 2px 3px var(--brownPrimary));
   }
+}
+
+@media screen and (max-width: 992px) {
+  .contactSection {
+  flex-direction: column;
+
+  form, aside {
+    width: 100%;
+  }
+}
+
+.someInfos {
+  margin: auto;
+  margin-top: 4em;
+}
 }
 
 @media screen and (max-width: 768px) {

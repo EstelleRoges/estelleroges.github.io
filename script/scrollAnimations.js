@@ -3,6 +3,7 @@ const projectCards = document.querySelectorAll(".projectCard");
 const truncatedCards = document.querySelectorAll(".truncatedCard");
 const extendedProjectCards = document.querySelectorAll(".extendedProjectCard");
 const overlays = document.querySelectorAll(".dataOverlay");
+const cardTop = document.getElementById("cardTop");
 
 const scrollAnimation = () => {
   const cardDeckPosition = cardsDeck.getBoundingClientRect().top;
@@ -20,6 +21,10 @@ window.addEventListener("scroll", scrollAnimation);
 const projectModals = document.querySelectorAll(".projectModal");
 
 const extendCard = (index) => {
+  if (screen.width < 900) {
+    cardTop.scrollIntoView();
+  }
+  
   for (let i = 0; i < projectCards.length; i++) {
     projectCards[i].classList.add("none");
   }
@@ -33,13 +38,13 @@ const extendCard = (index) => {
 };
 
 const truncateCard = (index) => {
- for (let i = 0; i < projectCards.length; i++) {
+  for (let i = 0; i < projectCards.length; i++) {
     projectCards[i].classList.remove("none");
   }
   projectCards[index].classList.remove("extended");
-  
+
   truncatedCards[index].classList.remove("none");
   extendedProjectCards[index].classList.add("none");
   overlays[index].classList.remove("none");
-  cardsDeck.style.display = "grid";
+  cardsDeck.style.display = "flex";
 };

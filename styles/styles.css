@@ -98,9 +98,7 @@ section {
   display: flex;
 }
 
-#menuIcon,
-#closeIcon {
-  display: none;
+#closeIcon, .icon {
   cursor: pointer;
 }
 
@@ -204,16 +202,6 @@ button:hover {
   color: var(--greenSecondary);
 }
 
-.navbar-toggler,
-.btn-close {
-  border: none;
-  outline: none;
-}
-.navbar-toggler:hover,
-.btn-close:hover {
-  background-color: transparent;
-}
-
 #home {
   padding: 15em 0 25em 0;
 }
@@ -272,6 +260,34 @@ footer a:hover {
   color: var(--greenSecondary);
 }
 
+.none {
+  display: none;
+}
+
+.fadeIn {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.fadeOut {
+  animation: fadeOut 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 @media screen and (max-width: 992px) {
   body {
     background-size: 120vw 100vh;
@@ -283,10 +299,13 @@ footer a:hover {
     transition: 0.5s all ease-out;
   }
   #closeIcon {
-    margin: 1.5em 0.5em;
-    display: block;
-    color: white;
+    margin: 2em 0.75em;
+    display: flex;
+    justify-content: flex-end;
     align-self: flex-end;
+  }
+  #closeIcon i {
+    color: var(--background);
   }
   #links {
     position: absolute;
@@ -294,11 +313,13 @@ footer a:hover {
     left: 0;
     width: 100%;
     height: 100vh;
-    display: none;
     flex-direction: column;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.9);
     transition: 0.5s all ease-out;
+  }
+  #links > i {
+    color: white;
   }
   #links ul {
     padding-top: 4em;
@@ -335,6 +356,9 @@ footer a:hover {
   }
   #content {
     padding: 3em;
+  }
+  .subContent {
+    padding: 7em 3em 10em 3em;
   }
 }
 @media screen and (max-width: 576px) {
