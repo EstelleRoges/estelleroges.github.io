@@ -129,13 +129,9 @@
   height: 20em;
   border-radius: 1.5em;
   transition: all 0.4s;
-  box-shadow: 0 0 10px var(--shadow);
-  background-color: var(--background);
-  box-shadow: 0 0 10px var(--background);
   animation: fadeIn 0.5s ease-in;
 
   i {
-    margin-bottom: 1em;
     display: flex;
     justify-content: flex-end;
     cursor: pointer;
@@ -169,6 +165,14 @@
     color: white;
     text-align: center;
   }
+
+    &:nth-child(odd) {
+    transform: translateY(0);
+  }
+
+  &:nth-child(even) {
+    transform: translateY(0);
+  }
 }
 
 .dataExtended {
@@ -186,7 +190,7 @@
 
   div:last-child {
     width: 50%;
-    padding: 2em;
+    padding: 1.2em;
     padding-top: 0;
   }
 }

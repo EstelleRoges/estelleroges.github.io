@@ -20,18 +20,18 @@
     <link rel="stylesheet" type="text/css" href="styles/styles_skills.css">
     <link rel="stylesheet" type="text/css" href="styles/styles_portfolio.css">
     <link rel="stylesheet" type="text/css" href="styles/styles_contact.css">
-    <link rel="icon" type="image/x-icon" href="assets/teaCup_logo_50x50.png">
+    <link rel="icon" type="image/x-icon" href="assets/logo_favicon_ico.ico">
     <title>Estelle R | CodeCup</title>
 </head>
 
-<body>
-    <div id="upperSection">
-        <h1><img src="assets/teaCup_logo_50x50.png" alt="teaCup_logo" /></h1>
-        <nav id="navbar">
-            <div id="menuIcon" class="icon none"><i onclick="displayNav()" class="menu bi bi-list"></i></div>
+<body onload="navAnimation()">
+    <div class="navSection">
+        <nav>
+            <img src="assets/logo_svg.svg" alt="teaCup_logo" style="padding:
+        0.3em;" />
+            <i id="menuIcon" onclick="toggleNav()" class="menu bi bi-list icon" aria-expanded="false"></i>
             <div id="links">
-                <div id="closeIcon"><i onclick="closeMenu()" class="fa-solid fa-xmark"></i></div>
-
+                <i id="closeIcon" onclick="closeMenu()" class="fa-solid fa-xmark"></i>
                 <ul>
                     <li><a onclick="autoClose()" href="#about">À propos</a></li>
                     <li><a onclick="autoClose()" href="#skills">Stack</a></li>
@@ -43,7 +43,6 @@
                                 class="bi bi-github"></i></a></li>
                 </ul>
             </div>
-
         </nav>
     </div>
 
@@ -535,7 +534,7 @@
     </div>
 
     <footer>
-        <p>© Copyright Estelle ROGÈS | Tea&Dev </p>
+        <p>© Copyright Estelle ROGÈS </p>
         <p><a href='https://www.freepik.com/photos/laptop-coffee'>Background Image</a> | <a
                 href="https://www.shapedivider.app/" target="_blank" rel="noopener noreferrer">Shape
                 Divider App</a></p>

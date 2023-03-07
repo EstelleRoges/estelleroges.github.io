@@ -1,33 +1,34 @@
+const nav = document.querySelector(".navSection");
 const menuIcon = document.getElementById("menuIcon");
 const closeIcon = document.getElementById("closeIcon");
 const links = document.getElementById("links");
 
-const hideNavbar = () => {
-  if (screen.width < 768) {
-    links.classList.add("none");
-    closeIcon.classList.remove("none");
-  } else {
-    links.classList.remove("none");
-    closeIcon.classList.add("none");
-  }
+const ariaToggle =
+  menuIcon.getAttribute("aria-expanded") === true ? false : true;
+menuIcon.setAttribute("aria-expanded", ariaToggle);
+
+const navAnimation = () => {
+  setTimeout(() => {
+    nav.classList.add("appeared");
+  }, 300);
 };
 
-window.addEventListener("resize", hideNavbar);
-
-const displayNav = () => {
-  if (!links.classList.contains("none")) {
-    links.classList.add("none");
-    links.classList.remove("showLinks");
-  }
-  links.classList.remove("none");
+const toggleNav = () => {
+  menuIcon.style.display = "none";
   links.classList.add("showLinks");
 };
 
 const autoClose = () => {
   setTimeout(() => {
-    links.classList.add("none");
-  }, 500);
+    menuIcon.style.display = "block";
+    links.classList.remove("showLinks");
+  }, 300);
 };
+
 const closeMenu = () => {
-  links.classList.add("none");
+  menuIcon.style.display = "block";
+  links.classList.remove("showLinks");
 };
+
+menuIcon.addEventListener("click", toggleNav);
+closeIcon.addEventListener("click", closeMenu);

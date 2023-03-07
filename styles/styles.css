@@ -1,14 +1,15 @@
 :root {
   --background: #f4f5f7;
   --greenBackground: #d3e7c5;
-  --greyBackground: #d5d7d5;
+  --greyBackground: #eaebea;
   --text: #0f1d0c;
   --link-font: 20px;
-  --greenPrimary: #5d841f;
-  --greenSecondary: #699523;
-  --greenTertiary: #d9e89c;
+  --greenPrimary: #729044;
+  --greenSecondary: #7f9858;
+  --greenTertiary: #b7cb90;
   --brownPrimary: #bf8d5f;
-  --brownSecondary: #cba27c;
+  --brownSecondary: #cdb9a1;
+  --menuBackground: linear-gradient(to bottom, #b8b8b8f2 70%, #b7cb90f2 90%);
   --shadow: #b8b8b8;
 }
 
@@ -26,10 +27,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: url(../assets/background.jpg);
-  background-color: var(--background);
-  background-repeat: no-repeat;
-  background-size: 100% 100vh;
   color: var(--text);
 }
 
@@ -44,7 +41,7 @@ h6 {
 }
 
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -98,10 +95,15 @@ section {
   display: flex;
 }
 
-#closeIcon, .icon {
+#closeIcon,
+.icon {
   cursor: pointer;
 }
 
+#links {
+  display: flex;
+  align-items: center;
+}
 #links ul {
   margin: 0;
   display: flex;
@@ -162,49 +164,71 @@ button:hover {
   transition: 0.3s ease-in-out;
 }
 
-#upperSection {
-  padding: 0.5em;
+.navSection {
+  width: 100%;
+  background: linear-gradient(to bottom, var(--background) 85%, transparent 100%);
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  opacity: 0;
+  transform: translateY(-60%);
+  transition: all 0.75s ease-out;
+}
+.navSection nav {
+  margin: auto;
+  padding: 0.5em 2em;
+  padding-bottom: 1.5em;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(to bottom, var(--background) 75%, transparent 100%);
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 3;
 }
-#upperSection h1 {
-  display: inline-block;
-  margin: 0;
-  font-size: 42px;
-  letter-spacing: 2px;
-  background: linear-gradient(to right, black 0%, var(--greenPrimary) 70%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
-#upperSection i {
+.navSection i {
   padding: 0 0.4em;
   font-size: 24px;
   transition: 0.3s ease-in-out;
 }
-#upperSection i:hover {
+.navSection i:hover {
   color: var(--greenPrimary);
 }
-#upperSection li a {
+.navSection li a {
   color: var(--text);
 }
-#upperSection li a:hover {
+.navSection li a:hover {
   color: var(--greenSecondary);
 }
 
+.appeared {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#menuIcon,
+#closeIcon {
+  display: none;
+  transition: 0.5s all ease-out;
+}
+
 #home {
-  padding: 15em 0 25em 0;
+  padding-top: 15em;
+  height: 100vh;
+  background: url(../assets/background.jpg);
+  background-color: var(--background);
+  background-repeat: no-repeat;
+  background-size: 1500px 100vh;
+  position: relative;
+}
+#home::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, rgba(244, 245, 247, 0.4), var(--background));
 }
 
 .textSection {
+  position: relative;
+  z-index: 1;
   text-align: center;
 }
 .textSection span {
@@ -213,6 +237,7 @@ button:hover {
   color: var(--text);
 }
 .textSection h1 {
+  padding: 0 0.3em;
   font-size: 5em;
   background: linear-gradient(to right, black 25%, var(--greenPrimary) 70%, var(--greenTertiary) 99%);
   background-clip: text;
@@ -262,6 +287,10 @@ footer a:hover {
   display: none;
 }
 
+.showLinks {
+  transform: translateX(0) !important;
+}
+
 .fadeIn {
   animation: fadeIn 0.5s ease-in;
 }
@@ -286,18 +315,18 @@ footer a:hover {
     opacity: 0;
   }
 }
-@media screen and (max-width: 992px) {
+@media (max-width: 992px) {
   body {
     background-size: 120vw 100vh;
   }
 }
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   #menuIcon {
     display: block;
     transition: 0.5s all ease-out;
   }
   #closeIcon {
-    margin: 2em 0.75em;
+    margin: 1em 0.75em;
     display: flex;
     justify-content: flex-end;
     align-self: flex-end;
@@ -313,11 +342,14 @@ footer a:hover {
     height: 100vh;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-image: var(--menuBackground);
+    transform: translateX(100%);
     transition: 0.5s all ease-out;
   }
-  #links > i {
-    color: white;
+  #links i,
+  #links li a,
+  #links li i {
+    color: var(--text);
   }
   #links ul {
     padding-top: 4em;
@@ -328,13 +360,6 @@ footer a:hover {
   }
   #links li {
     padding: 1em 0em;
-  }
-  #links li a,
-  #links li i {
-    color: var(--background);
-  }
-  .showLinks {
-    transform: translateY(0);
   }
   .textSection h1 {
     font-size: 4em;
@@ -359,7 +384,7 @@ footer a:hover {
     padding: 7em 3em 10em 3em;
   }
 }
-@media screen and (max-width: 576px) {
+@media (max-width: 576px) {
   body {
     text-align: center;
     background-size: 200% 100vh;
