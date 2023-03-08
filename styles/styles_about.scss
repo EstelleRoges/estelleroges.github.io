@@ -1,15 +1,15 @@
 #about {
   padding-top: 2em;
   position: relative;
-  
-  &::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to bottom, var(--background) 0%, transparent 10%);
-  }
+
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   inset: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   background-image: linear-gradient(to bottom, var(--background) 0%, transparent 10%);
+  // }
 }
 
 .tagsHeader {
@@ -46,6 +46,8 @@
   transform: rotate(-5deg);
   box-shadow: 3px 3px 3px var(--shadow);
   position: relative;
+  opacity: 0;
+  transform: translateY(-5px);
 
   h3 {
     margin: 0;
@@ -64,6 +66,7 @@
 
     li {
       padding: 0.4em;
+      font-size: 18px;
     }
   }
 
@@ -88,13 +91,47 @@
   text-align: justify;
   line-height: 1.5em;
   margin-left: 1em;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: var(--05msTransition);
 }
 
 .moreStory {
   margin-top: 1em;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: var(--05msTransition);
 }
 
-@media screen and (max-width: 992px) {
+.fadedIn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tagShake {
+  transform: rotate(-5deg);
+  animation: tagShake 0.3s ease-out;
+}
+
+@keyframes tagShake {
+  0% {
+    transform: rotate(-5deg);
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  75% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+
+@media (max-width: 992px) {
   .first-row {
     flex-direction: column;
 
@@ -109,19 +146,21 @@
 
   .storyContent {
     margin-left: 0;
-    padding: 1em 0 0 0;
+    padding: 2em 0 0 0;
     text-align: justify;
     line-height: 1.5em;
+    opacity: 0;
+    transform: translateY(-20px);
   }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .second h2 {
     text-align: center;
   }
 }
 
-@media screen and (max-width: 576px) {
+@media (max-width: 576px) {
   .tags {
     transform: rotate(0);
   }

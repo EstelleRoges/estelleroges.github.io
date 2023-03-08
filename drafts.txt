@@ -214,7 +214,7 @@
   }
 }
 
-@media screen and (max-width: 1300px) {
+@media (max-width: 1300px) {
   #carouselExampleCaptions p {
     margin-left: 2em;
   }
@@ -228,7 +228,7 @@
   }
 }
 
-@media screen and (max-width: 992px) {
+@media (max-width: 992px) {
   #carouselExampleCaptions {
     p {
       margin-left: 4.5em;
@@ -247,7 +247,7 @@
   }
 }
 
-@media screen and (max-width: 900px) {
+@media (max-width: 900px) {
   #carouselExampleCaptions {
     display: flex;
     align-content: center;
@@ -285,13 +285,13 @@
   }
 }
 
-@media screen and (max-width: 576px) {
+@media (max-width: 576px) {
   .carouselImage {
     width: 85%;
   }
 }
 
-@media screen and (max-width: 430px) {
+@media (max-width: 430px) {
   #carouselExampleCaptions {
     h3 {
       margin: 0;

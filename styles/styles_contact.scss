@@ -42,10 +42,13 @@
   }
 }
 
-form {
+.contactForm {
   display: flex;
   flex-direction: column;
   width: 100%;
+  opacity: 0;
+  transform: translateX(-15px);
+  transition: var(--05msTransition);
 
   input,
   textarea {
@@ -71,8 +74,10 @@ form {
   height: fit-content;
   letter-spacing: 2px;
   border-radius: 5px;
-  transform: rotate(6deg);
   box-shadow: -2px 2px 4px var(--shadow);
+  opacity: 0;
+  transform: rotate(6deg) translateX(-20px) scale(0);
+  transition: var(--03msTransition);
 
   h3,
   span {
@@ -90,7 +95,36 @@ form {
   }
 }
 
-@media screen and (max-width: 992px) {
+.fadedInX-axis {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.notesShake {
+  opacity: 1;
+  transform: rotate(6deg) scale(1);
+  animation: notesShake 0.3s ease-out;
+}
+
+@keyframes notesShake {
+  0% {
+    transform: rotate(6deg);
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+  75% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(6deg);
+  }
+}
+
+@media (max-width: 992px) {
   .contactSection {
   flex-direction: column;
 
@@ -105,7 +139,7 @@ form {
 }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .contactSection .row {
     flex-direction: column;
     box-sizing: border-box;
@@ -126,7 +160,7 @@ form {
   }
 }
 
-@media screen and (max-width: 576px) {
+@media (max-width: 576px) {
   .someInfos {
     transform: rotate(0);
   }

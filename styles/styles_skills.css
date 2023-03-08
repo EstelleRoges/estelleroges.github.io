@@ -113,7 +113,7 @@
   color: #ccc;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   #skills ul {
     flex-direction: row;
     justify-content: center;
@@ -129,7 +129,7 @@
     width: fit-content;
   }
 }
-@media screen and (max-width: 576px) {
+@media (max-width: 576px) {
   #skills ul {
     margin-left: 0;
   }

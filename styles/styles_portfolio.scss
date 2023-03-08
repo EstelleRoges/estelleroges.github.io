@@ -216,7 +216,7 @@
   }
 }
 
-@media screen and (max-width: 900px) {
+@media (max-width: 900px) {
   #cardTop {
     margin-bottom: 3em;
   }
@@ -263,7 +263,7 @@
   }
 }
 
-@media screen and (max-width: 578px) {
+@media (max-width: 578px) {
   .dataExtended div:last-child {
     padding: 0 0.5em 0.5em 0.5em;
     width: 100% !important;
