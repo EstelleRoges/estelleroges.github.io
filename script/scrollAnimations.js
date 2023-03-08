@@ -1,3 +1,31 @@
+//Hero Section
+
+const homeElements = [
+  {
+    class: "iAm",
+    timeout: 600,
+  },
+  {
+    class: "myJob",
+    timeout: 1000,
+  },
+  {
+    class: "connectAndCV",
+    timeout: 1400,
+  },
+];
+
+window.addEventListener("load", () =>
+  homeElements.forEach((element, index) => {
+    setTimeout(() => {
+      document
+        .querySelector(`.${element.class}`)
+        .classList.add(`homeSectionElementAppeared`);
+    }, element.timeout);
+  })
+);
+
+//Portfolio
 const cardsDeck = document.querySelector(".cardsDeck");
 const projectCards = document.querySelectorAll(".projectCard");
 const truncatedCards = document.querySelectorAll(".truncatedCard");
@@ -24,7 +52,7 @@ const extendCard = (index) => {
   if (screen.width < 900) {
     cardTop.scrollIntoView();
   }
-  
+
   for (let i = 0; i < projectCards.length; i++) {
     projectCards[i].classList.add("none");
   }
