@@ -3,7 +3,7 @@
   --greenBackground: #d3e7c5;
   --greyBackground: #eaebea;
   --text: #0f1d0c;
-  --text-font: 20px;
+  --text-size: 20px;
   --greenPrimary: #729044;
   --greenSecondary: #7f9858;
   --greenTertiary: #b7cb90;
@@ -47,6 +47,13 @@ h6 {
 
 h3 {
   font-size: 26px;
+}
+
+h4 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 
 ::-webkit-scrollbar {
@@ -121,7 +128,7 @@ section {
 }
 #links ul li a {
   padding: 0 0.3em;
-  font-size: var(--text-font);
+  font-size: var(--text-size);
 }
 
 h2 {
@@ -158,7 +165,7 @@ i {
 
 p {
   text-align: justify;
-  font-size: var(--text-font);
+  font-size: var(--text-size);
 }
 
 button {
@@ -222,7 +229,7 @@ button:hover {
 #home {
   padding-top: 15em;
   height: 100vh;
-  background: url(../assets/background.jpg);
+  background: url(../assets/images/background.jpg);
   background-color: var(--background);
   background-repeat: no-repeat;
   background-size: 1500px 100vh;
@@ -292,6 +299,7 @@ button:hover {
 }
 
 footer {
+  padding-top: 3em;
   padding-bottom: 1em;
   background-color: var(--greyBackground);
   background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
@@ -401,7 +409,7 @@ footer a:hover {
     padding: 0.75em 1.5em;
   }
   .connectAndCV button a {
-    font-size: var(--text-font);
+    font-size: var(--text-size);
   }
   #content {
     padding: 3em;

@@ -1,12 +1,7 @@
 #skills {
   background-color: var(--greyBackground);
   position: relative;
-  .row {
-    margin-top: 3em;
-    div {
-      position: relative;
-    }
-  }
+  
   .gradientTitle {
     margin-top: 3em;
   }
@@ -53,14 +48,23 @@
     }
   }
 
-  .skillSet {
-    z-index: 2;
+  .stack {
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    div {
+      position: relative;
+    }
   }
 
   h4 {
     width: 6em;
-    padding: 0.5em 1em;
+    padding: 0.35em 1em;
     border-radius: 1em;
+    position: absolute;
+    top: -1em;
     box-shadow: 1px 4px 4px var(--shadow);
     background: linear-gradient(
       to right,
@@ -72,20 +76,12 @@
   }
 
   i {
-    font-size: 40px;
-  }
-
-  svg {
-    height: 40px;
+    font-size: 48px;
   }
 
   ul {
-    margin-left: 2em;
+    margin: 0 0 3em 2em;
     padding: 1em;
-    position: relative;
-    top: -1.5em;
-    right: 0;
-    left: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

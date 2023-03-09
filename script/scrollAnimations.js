@@ -1,4 +1,4 @@
-const screenPosition = window.innerHeight / 2;
+const screenPosition = window.innerHeight / 1.5;
 
 //Hero Section
 
@@ -67,7 +67,7 @@ const portfolioScrollAnimation = () => {
   if (cardDeckPosition < screenPosition) {
     cardsDeck.classList.add("deckVisible");
   } else {
-    storyContent.classList.remove("deckVisible");
+    cardsDeck.classList.remove("deckVisible");
   }
 };
 
