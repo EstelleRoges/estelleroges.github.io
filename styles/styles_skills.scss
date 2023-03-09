@@ -1,7 +1,7 @@
 #skills {
   background-color: var(--greyBackground);
   position: relative;
-  
+
   .gradientTitle {
     margin-top: 3em;
   }
@@ -101,6 +101,37 @@
     p {
       margin-bottom: 0;
     }
+  }
+
+  .basics {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: var(--05msTransition);
+
+    &.stackListAppeared {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  }
+  .frontend {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: var(--05msTransition);
+  }
+  .backend {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: var(--05msTransition);
+  }
+  .tools {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: var(--05msTransition);
+  }
+
+  .stackListAppeared {
+    opacity: 1;
+    transform: translateX(0);
   }
 
   .htmlStyle {

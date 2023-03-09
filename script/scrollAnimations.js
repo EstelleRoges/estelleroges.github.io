@@ -53,7 +53,46 @@ const aboutAnimations = () => {
   }
 };
 
-//Portfolio
+// Skills section
+
+const basics = document.querySelector(".basics");
+const frontend = document.querySelector(".frontend");
+const backend = document.querySelector(".backend");
+const tools = document.querySelector(".tools");
+
+const skillsAnimations = () => {
+  const basicsPosition = basics.getBoundingClientRect().top;
+  const frontendPosition = basics.getBoundingClientRect().top;
+  const backendPosition = basics.getBoundingClientRect().top;
+  const toolsPosition = basics.getBoundingClientRect().top;
+
+  if(basicsPosition < screenPosition) {
+    basics.classList.add("stackListAppeared");
+  } else {
+    basics.classList.remove("stackListAppeared");
+  }
+
+  if(frontendPosition < screenPosition) {
+    frontend.classList.add("stackListAppeared");
+  } else {
+    frontend.classList.remove("stackListAppeared");
+  }
+  
+  if(backendPosition < screenPosition) {
+    backend.classList.add("stackListAppeared");
+  } else {
+    backend.classList.remove("stackListAppeared");
+  }
+
+  if(toolsPosition < screenPosition) {
+    tools.classList.add("stackListAppeared");
+  } else {
+    tools.classList.remove("stackListAppeared");
+  }
+}
+
+
+// Portfolio section
 const cardsDeck = document.querySelector(".cardsDeck");
 const projectCards = document.querySelectorAll(".projectCard");
 const truncatedCards = document.querySelectorAll(".truncatedCard");
@@ -128,5 +167,6 @@ const contactAnimations = () => {
 //functions call
 
 window.addEventListener("scroll", aboutAnimations);
+window.addEventListener("scroll", skillsAnimations);
 window.addEventListener("scroll", portfolioScrollAnimation);
 window.addEventListener("scroll", contactAnimations);
