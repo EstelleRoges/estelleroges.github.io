@@ -99,16 +99,19 @@
   opacity: 0;
   transform: translateX(-30px);
   transition: var(--05msTransition);
+  transition-delay: 0.2s;
 }
 #skills .backend {
   opacity: 0;
   transform: translateX(-30px);
   transition: var(--05msTransition);
+  transition-delay: 0.4s;
 }
 #skills .tools {
   opacity: 0;
   transform: translateX(-30px);
   transition: var(--05msTransition);
+  transition-delay: 0.6s;
 }
 #skills .stackListAppeared {
   opacity: 1;

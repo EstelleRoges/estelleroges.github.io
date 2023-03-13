@@ -2,8 +2,9 @@
   position: relative;
   background-color: var(--greyBackground);
   background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+
   p {
-    font-size: 24px;
+    font-size: var(--text-size);
   }
 
   .gradientTitle {

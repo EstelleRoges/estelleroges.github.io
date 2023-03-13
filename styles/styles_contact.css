@@ -4,7 +4,7 @@
   background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
 }
 #contact p {
-  font-size: 24px;
+  font-size: var(--text-size);
 }
 #contact .gradientTitle {
   margin-top: 2em;

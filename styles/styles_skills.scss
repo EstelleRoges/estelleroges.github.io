@@ -117,16 +117,21 @@
     opacity: 0;
     transform: translateX(-30px);
     transition: var(--05msTransition);
+    transition-delay: 0.2s;
   }
   .backend {
     opacity: 0;
     transform: translateX(-30px);
     transition: var(--05msTransition);
+        transition-delay: 0.4s;
+
   }
   .tools {
     opacity: 0;
     transform: translateX(-30px);
     transition: var(--05msTransition);
+        transition-delay: 0.6s;
+
   }
 
   .stackListAppeared {
