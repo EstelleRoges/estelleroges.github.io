@@ -62,13 +62,7 @@
     object-position: 50% 0;
   }
   &:nth-child(4) img {
-    object-position: 5% 0;
-  }
-  &:nth-child(5) img {
     object-position: 20% 0;
-  }
-  &:nth-child(6) img {
-    object-position: 60% 0;
   }
 }
 
@@ -166,7 +160,7 @@
     text-align: center;
   }
 
-    &:nth-child(odd) {
+  &:nth-child(odd) {
     transform: translateY(0);
   }
 
@@ -222,12 +216,14 @@
   }
 
   .cardsDeck {
+    display: flex;
     flex-wrap: wrap;
   }
+
   .projectCard,
   .truncatedCard,
   .dataOverlay {
-    min-width: 10em;
+    min-width: 40%;
     height: 12em;
   }
 
@@ -267,5 +263,11 @@
   .dataExtended div:last-child {
     padding: 0 0.5em 0.5em 0.5em;
     width: 100% !important;
+  }
+
+  .projectCard,
+  .truncatedCard,
+  .dataOverlay {
+    min-width: 100%;
   }
 }

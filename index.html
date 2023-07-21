@@ -89,7 +89,7 @@
             </button>
             <a
               target="_blank"
-              href="assets/Estelle ROGÈS - Développeuse Web frontend 4.pdf"
+              href="assets/Estelle ROGÈS - Développeuse Web frontend 5.pdf"
             >
               Mon CV
             </a>
@@ -140,15 +140,11 @@
             <div class="moreStory">
               <p>
                 Ce qui me fascine le plus dans le code, c'est ce passage de
-                lignes écrites en résultat visuel. J'aspire à maîtriser la stack
-                que j'ai choisie pour créer des sites efficaces dans lesquels il
-                sera agréable de naviguer.
+                lignes écrites en résultat visuel. J'aspire à maîtriser le développement de sites optimisés et dans lesquels il est agréable de naviguer.
               </p>
               <p>
                 Mon objectif est de monter en compétences en contribuant à
-                développer des projets concrets et challengeants. J'ai déjà un
-                peu expérimenté le poste via mon bénévolat pour développer une
-                application mobile en React Native. Maintenant, je suis à la
+                développer des projets concrets et challengeants. Suite à mes deux expériences pour une application mobile et une plateforme éducative, je suis à la
                 recherche de nouveaux défis!
               </p>
             </div>
@@ -188,11 +184,6 @@
             <h2>Ma stack</h2>
             <i class="bi bi-journal-code"></i>
           </div>
-          <p>
-            Voici les technologies que j'utilise pour développer. Je veux me
-            spécialiser en front, mais avoir des connaissances en back, c'est
-            bien aussi!
-          </p>
           <p>
             *Les icônes grises sont les technologies que je suis encore en train
             de découvrir
@@ -240,8 +231,11 @@
                   <p>Sass</p>
                 </li>
                 <li>
-                  <i class="bsStyle fa-brands fa-bootstrap"></i>
-                  <p>BootStrap</p>
+                  <img
+                    src="assets/svgs/icons8-styled-components-48.png"
+                    alt="sass_logo"
+                  />
+                  <p>Styled Comp.</p>
                 </li>
               </ul>
             </div>
@@ -297,6 +291,10 @@
                   <img src="assets/svgs/npm.svg" alt="npm logo" />
                   <p>NPM</p>
                 </li>
+                <li>
+                  <img src="assets/svgs/yarn.svg" alt="yarn logo" />
+                  <p>Yarn</p>
+                </li>
               </ul>
             </div>
 
@@ -337,15 +335,7 @@
             <i class="bi bi-list-stars"></i>
           </div>
           <p>
-            Voici des projets variés que j'ai développé. Certains sont créés de
-            toutes pièces, d'autres sont le résultat de challenges proposés par
-            <a
-              id="fm"
-              href="https://www.frontendmentor.io/home"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Frontend Mentor</a
-            >.
+            Voici des projets variés que j'ai développé. D'autres sont à venir!
           </p>
           <a id="cardTop" href="#cardTop"></a>
 
@@ -402,7 +392,7 @@
             <div class="projectCard">
               <div class="truncatedCard">
                 <div class="dataOverlay">
-                  <p>Shinaito Koto</p>
+                  <p>Shinaito List</p>
                   <button onclick="extendCard(1)">
                     <i
                       class="fa-solid fa-up-right-and-down-left-from-center"
@@ -410,7 +400,7 @@
                   </button>
                 </div>
                 <img
-                  src="./assets/images/shinaitoKotoThumbnail_mini.jpg"
+                  src="./assets/images/shinaitoListThumbnail_mini.jpg"
                   alt="estelle-roges-project-image"
                 />
               </div>
@@ -420,12 +410,12 @@
                 <div class="dataExtended">
                   <div>
                     <img
-                      src="assets/images/shinaitoKotoThumbnail.jpg"
-                      alt="estelle-roges-kinky-tea-blog"
+                      src="assets/images/shinaitoListThumbnail.jpg"
+                      alt="estelle-roges-shinaiti-list-to-do-list"
                     />
                   </div>
                   <div>
-                    <h2>Shinaito Koto</h2>
+                    <h2>Shinaito List</h2>
                     <p>To-do list</p>
                     <ul>
                       <li>Front: React</li>
@@ -434,14 +424,13 @@
                     </ul>
                     <p>
                       Une to-do liste dans laquelle j'ai appris à utiliser le hook useContext.<br />
-                      Le projet n'est pas encore 100% terminé, il manque encore le localStorage.
+                      Elle possède aussi un système d'onglets dans lesquels on peut ranger les tâches à faire.
                     </p>
                     <a href="https://shinaitokoto-todolist.netlify.app/" class="seeProject">Démo</a>
                   </div>
                 </div>
               </div>
             </div>
-
 
             <!-- <div class="projectCard">
               <div class="truncatedCard">
@@ -537,108 +526,8 @@
             <div class="projectCard">
               <div class="truncatedCard">
                 <div class="dataOverlay">
-                  <p>Room Home Page</p>
-                  <button onclick="extendCard(3)">
-                    <i
-                      class="fa-solid fa-up-right-and-down-left-from-center"
-                    ></i>
-                  </button>
-                </div>
-                <img
-                  src="./assets/images/roomHomepageTh-mini.jpg"
-                  alt="estelle-roges-project-image"
-                />
-              </div>
-              <div class="extendedProjectCard none">
-                <i onclick="truncateCard(3)" class="fa-solid fa-xmark"></i>
-                <div class="dataExtended">
-                  <div>
-                    <img
-                      src="assets/images/roomHomepageTh.jpg"
-                      alt="estelle-roges-room-homepage"
-                    />
-                  </div>
-                  <div>
-                    <h2>Room - Home page</h2>
-                    <p>Landing page</p>
-                    <ul>
-                      <li>Front: React (Javascript)</li>
-                      <li>Back: Pas de backend</li>
-                      <!-- <li>Autres: </li> -->
-                    </ul>
-                    <p>
-                      J'ai réalisé ce projet sous React. Je ne suis pas peu
-                      fière du rendu global de la page. Vouloir réinventer la
-                      roue n'est pas toujours pertinent, mais j'ai trouvé ça
-                      utile dans ce cas pratique, ne serait-ce que pour
-                      améliorer son raisonnement.
-                    </p>
-                    <a
-                      href="https://fm-roomhomepage.netlify.app/"
-                      class="seeProject"
-                      target="_blank"
-                      >Démo</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="projectCard">
-              <div class="truncatedCard">
-                <div class="dataOverlay">
-                  <p>Huddle Home Page</p>
-                  <button onclick="extendCard(4)">
-                    <i
-                      class="fa-solid fa-up-right-and-down-left-from-center"
-                    ></i>
-                  </button>
-                </div>
-                <img
-                  src="./assets/images/huddleHomepage-mini.jpg"
-                  alt="estelle-roges-project-image"
-                />
-              </div>
-              <div class="extendedProjectCard none">
-                <i onclick="truncateCard(4)" class="fa-solid fa-xmark"></i>
-                <div class="dataExtended">
-                  <div>
-                    <img
-                      src="assets/images/huddle_homepage.jpg"
-                      alt="theSucciPlace"
-                    />
-                  </div>
-                  <div>
-                    <h2>Huddle homepage</h2>
-                    <p>Landing page</p>
-                    <ul>
-                      <li>Front: React (Javascript)</li>
-                      <li>Back: Pas de backend</li>
-                      <!-- <li>Autres: </li> -->
-                    </ul>
-                    <p>
-                      Cette landing page fictive était très intéressante à
-                      développer, notamment par la présence des dividers,
-                      élément avec lequel je souhaitais travailler. Les
-                      breakpoints et la mise en place étaient un peu
-                      challengeants, mais plaisants à travailler.
-                    </p>
-                    <a
-                      href="https://fmchallenge-huddlelandingpage.netlify.app/"
-                      class="seeProject"
-                      target="_blank"
-                      >Démo</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="projectCard">
-              <div class="truncatedCard">
-                <div class="dataOverlay">
                   <p>Grains Nobles et Plus</p>
-                  <button onclick="extendCard(5)">
+                  <button onclick="extendCard(3)">
                     <i
                       class="fa-solid fa-up-right-and-down-left-from-center"
                     ></i>
@@ -650,7 +539,7 @@
                 />
               </div>
               <div class="extendedProjectCard none">
-                <i onclick="truncateCard(5)" class="fa-solid fa-xmark"></i>
+                <i onclick="truncateCard(3)" class="fa-solid fa-xmark"></i>
                 <div class="dataExtended">
                   <div>
                     <img
