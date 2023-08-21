@@ -38,18 +38,12 @@ const aboutAnimations = () => {
 
   if (tagsPosition < screenPosition) {
     tags.classList.add("fadedIn", "tagShake");
-  } else {
-    tags.classList.remove("fadedIn", "tagShake");
   }
   if (storyContentPosition < screenPosition) {
     storyContent.classList.add("fadedIn");
-  } else {
-    storyContent.classList.remove("fadedIn");
   }
   if (moreStoryPosition < screenPosition) {
     moreStory.classList.add("fadedIn");
-  } else {
-    moreStory.classList.remove("fadedIn");
   }
 };
 
@@ -66,31 +60,22 @@ const skillsAnimations = () => {
   const backendPosition = basics.getBoundingClientRect().top;
   const toolsPosition = basics.getBoundingClientRect().top;
 
-  if(basicsPosition < screenPosition) {
+  if (basicsPosition < screenPosition) {
     basics.classList.add("stackListAppeared");
-  } else {
-    basics.classList.remove("stackListAppeared");
   }
 
-  if(frontendPosition < screenPosition) {
+  if (frontendPosition < screenPosition) {
     frontend.classList.add("stackListAppeared");
-  } else {
-    frontend.classList.remove("stackListAppeared");
   }
-  
-  if(backendPosition < screenPosition) {
+
+  if (backendPosition < screenPosition) {
     backend.classList.add("stackListAppeared");
-  } else {
-    backend.classList.remove("stackListAppeared");
   }
 
-  if(toolsPosition < screenPosition) {
+  if (toolsPosition < screenPosition) {
     tools.classList.add("stackListAppeared");
-  } else {
-    tools.classList.remove("stackListAppeared");
   }
-}
-
+};
 
 // Portfolio section
 const cardsDeck = document.querySelector(".cardsDeck");
@@ -105,8 +90,6 @@ const portfolioScrollAnimation = () => {
 
   if (cardDeckPosition < screenPosition) {
     cardsDeck.classList.add("deckVisible");
-  } else {
-    cardsDeck.classList.remove("deckVisible");
   }
 };
 
@@ -141,7 +124,6 @@ const truncateCard = (index) => {
   cardsDeck.style.display = "flex";
 };
 
-
 //Contact Section
 
 const contactForm = document.querySelector(".contactForm");
@@ -151,18 +133,14 @@ const contactAnimations = () => {
   const contactFormPosition = contactForm.getBoundingClientRect().top;
   const someInfosPosition = someInfos.getBoundingClientRect().top;
 
-  if(contactFormPosition < screenPosition) {
+  if (contactFormPosition < screenPosition) {
     contactForm.classList.add("fadedInX-axis");
-  } else {
-    contactForm.classList.remove("fadedInX-axis");
   }
 
-  if(someInfosPosition < screenPosition) {
+  if (someInfosPosition < screenPosition) {
     someInfos.classList.add("notesShake");
-  } else {
-    someInfos.classList.remove("notesShake");
   }
-}
+};
 
 //functions call
 
