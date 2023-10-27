@@ -57,7 +57,7 @@ h4 {
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 0.25rem;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -151,6 +151,12 @@ a:visited {
   text-decoration: none;
   transition: var(--03msTransition);
 }
+a::first-letter,
+a:hover::first-letter,
+a:visited::first-letter {
+  font-family: "Courgette", cursive;
+  font-size: 1.25rem;
+}
 
 ul {
   padding: 0;
@@ -182,36 +188,67 @@ button:hover {
   transition: var(--03msTransition);
 }
 
-.navSection {
+header {
+  padding-bottom: 1rem;
   width: 100%;
   background: linear-gradient(to bottom, var(--background) 85%, transparent 100%);
   position: fixed;
   top: 0;
   z-index: 3;
-  opacity: 0;
-  transform: translateY(-60%);
   transition: all 0.75s ease-out;
 }
-.navSection nav {
+header article {
   margin: auto;
-  padding: 0.5em 2em;
-  padding-bottom: 1.5em;
+  max-width: 1400px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
-.navSection i {
-  padding: 0 0.4em;
-  font-size: 24px;
+header aside img {
+  padding: 0.2rem;
+  display: block;
+  align-self: flex-start;
+}
+header div {
+  padding-left: 1rem;
+  flex: 1;
+}
+header h1 {
+  margin: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-top: 0.4rem;
+  font-size: 2rem;
+  background: linear-gradient(to right, var(--text) 50%, var(--greenPrimary) 55%, var(--greenTertiary) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+header hr {
+  height: 2px;
+  border: none;
+  background: linear-gradient(to right, var(--greenPrimary) 50%, var(--greenSecondary) 70%, var(--greenTertiary) 98%, transparent 100%);
+}
+header nav {
+  margin: 0.75rem 0;
+  padding-right: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+}
+header i {
+  padding: 0;
+  font-size: 22px;
   transition: var(--03msTransition);
 }
-.navSection i:hover {
+header i:hover {
   color: var(--greenPrimary);
 }
-.navSection li a {
+header a {
   color: var(--text);
+  font-size: 1.15rem;
 }
-.navSection li a:hover {
+header a:hover {
   color: var(--greenSecondary);
 }
 
@@ -349,25 +386,17 @@ footer a:hover {
     opacity: 0;
   }
 }
+.bordered {
+  background: linear-gradient(var(--secondary-color), var(--secondary-color)) 50% 50%/calc(100% - 6px) calc(100% - 6px) no-repeat, linear-gradient(120deg, var(--primary-color) 0%, transparent 25%), inear-gradient(320deg, var(--highlight-color) 0%, transparent 30%);
+  border-radius: 0.15rem;
+}
+
 @media (max-width: 992px) {
   body {
     background-size: 120vw 100vh;
   }
 }
 @media (max-width: 768px) {
-  #menuIcon {
-    display: block !important;
-    transition: var(--05msTransition);
-  }
-  #closeIcon {
-    margin: 1em 0.75em;
-    display: flex !important;
-    justify-content: flex-end;
-    align-self: flex-end;
-  }
-  #closeIcon i {
-    color: var(--background);
-  }
   #links {
     position: absolute;
     top: 0;
@@ -464,5 +493,18 @@ footer a:hover {
   .subContent {
     padding-left: 2em;
     padding-right: 2em;
+  }
+  #menuIcon {
+    display: block !important;
+    transition: var(--05msTransition);
+  }
+  #closeIcon {
+    margin: 1em 0.75em;
+    display: flex !important;
+    justify-content: flex-end;
+    align-self: flex-end;
+  }
+  #closeIcon i {
+    color: var(--background);
   }
 }/*# sourceMappingURL=styles.css.map */

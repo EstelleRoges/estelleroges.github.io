@@ -1,4 +1,4 @@
-const nav = document.querySelector(".navSection");
+const nav = document.getElementsByTagName("nav");
 const menuIcon = document.getElementById("menuIcon");
 const closeIcon = document.getElementById("closeIcon");
 const links = document.getElementById("links");

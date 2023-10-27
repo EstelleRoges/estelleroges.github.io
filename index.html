@@ -37,46 +37,45 @@
   </head>
 
   <body onload="navAnimation()">
-    <div class="navSection">
-      <nav>
-        <img
-          src="assets/svgs/logo_svg.svg"
-          alt="teaCup_logo"
-          style="padding: 0.3em"
-        />
-        <i
+    <header>
+      <article>
+        <aside>
+          <img
+            src="assets/svgs/logo_svg.svg"
+            alt="teaCup_logo"
+            style="padding: 0.3em"
+          />
+        </aside>
+        <div>
+          <h1>CodeCup</h1>
+          <hr />
+              <i
           id="menuIcon"
           onclick="toggleNav()"
           class="menu bi bi-list icon"
           aria-expanded="false"
         ></i>
-        <div id="links">
           <i id="closeIcon" onclick="closeMenu()" class="fa-solid fa-xmark"></i>
-          <ul>
-            <li><a onclick="autoClose()" href="#about">À propos</a></li>
-            <li><a onclick="autoClose()" href="#skills">Stack</a></li>
-            <li><a onclick="autoClose()" href="#portfolio">Portfolio</a></li>
-            <li><a onclick="autoClose()" href="#contact">Contact</a></li>
-            <li>
-              <a
-                onclick="autoClose()"
-                href="https://www.linkedin.com/in/estelle-roges-dev/"
-                target="_blank"
-                ><i class="bi bi-linkedin"></i
-              ></a>
-            </li>
-            <li>
-              <a
-                onclick="autoClose()"
-                href="https://github.com/EstelleRoges"
-                target="_blank"
-                ><i class="bi bi-github"></i
-              ></a>
-            </li>
-          </ul>
+          <nav role="navigation">
+            <a onclick="autoClose()" href="#about">About</a>
+            <a onclick="autoClose()" href="#portfolio">Portfolio</a>
+            <a onclick="autoClose()" href="#contact">Contact</a>
+            <a
+              onclick="autoClose()"
+              href="https://www.linkedin.com/in/estelle-roges-dev/"
+              target="_blank"
+              ><i class="bi bi-linkedin"></i>
+            </a>
+            <a
+              onclick="autoClose()"
+              href="https://github.com/EstelleRoges"
+              target="_blank"
+              ><i class="bi bi-github"></i>
+            </a>
+          </nav>
         </div>
-      </nav>
-    </div>
+      </article>
+    </header>
 
     <div class="content">
       <section id="home">
@@ -127,8 +126,8 @@
               <div class="storyContent">
                 <h3>Hello World!</h3>
                 <p>
-                  Récemment reconvertie, j'ai pour ambition de devenir
-                  développeuse frontend.
+                  Je suis Estelle, développeuse frontend spécialisée dans la
+                  création d'interfaces agréables à regarder et à naviguer.
                 </p>
                 <p>
                   Ma passion, c'est la création en général. Rien n'est plus
@@ -139,13 +138,10 @@
             </div>
             <div class="moreStory">
               <p>
-                Ce qui me fascine le plus dans le code, c'est ce passage de
-                lignes écrites en résultat visuel. J'aspire à maîtriser le développement de sites optimisés et dans lesquels il est agréable de naviguer.
-              </p>
-              <p>
                 Mon objectif est de monter en compétences en contribuant à
-                développer des projets concrets et challengeants. Suite à mes deux expériences pour une application mobile et une plateforme éducative, je suis à la
-                recherche de nouveaux défis!
+                développer des projets concrets et challengeants. Suite à mes
+                deux expériences pour une application mobile et une plateforme
+                éducative, je suis à la recherche de nouveaux défis!
               </p>
             </div>
           </div>
@@ -297,7 +293,6 @@
                 </li>
               </ul>
             </div>
-
           </section>
         </div>
 
@@ -423,10 +418,16 @@
                       <li>Autres: Vite.js</li>
                     </ul>
                     <p>
-                      Une to-do liste dans laquelle j'ai appris à utiliser le hook useContext.<br />
-                      Elle possède aussi un système d'onglets dans lesquels on peut ranger les tâches à faire.
+                      Une to-do liste dans laquelle j'ai appris à utiliser le
+                      hook useContext.<br />
+                      Elle possède aussi un système d'onglets dans lesquels on
+                      peut ranger les tâches à faire.
                     </p>
-                    <a href="https://shinaitokoto-todolist.netlify.app/" class="seeProject">Démo</a>
+                    <a
+                      href="https://shinaitokoto-todolist.netlify.app/"
+                      class="seeProject"
+                      >Démo</a
+                    >
                   </div>
                 </div>
               </div>
@@ -624,11 +625,8 @@
           rel="noopener noreferrer"
           >Shape Divider App</a
         >
-         | 
-        <a
-          href="https://icons8.com/"
-          target="_blank"
-          rel="noopener noreferrer"
+        |
+        <a href="https://icons8.com/" target="_blank" rel="noopener noreferrer"
           >Tech Icons</a
         >
       </p>
