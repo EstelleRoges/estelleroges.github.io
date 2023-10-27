@@ -1,250 +1,91 @@
-#cardTop {
-  margin-bottom: 0;
-}
-
-.cardsDeck {
-  margin-top: 3em;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  justify-items: stretch;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: 0.5s all ease-in-out;
-}
-
-.deckVisible {
-  opacity: 1;
-  transform: translateY(0);
+.projectsDeck {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  justify-items: center;
 }
 
 .projectCard {
-  margin: 0.3em;
-  height: 18em;
-  flex: 1;
+  margin: 0.5rem;
+  width: 260px;
+  height: 400px;
+  min-width: 200px;
+  box-shadow: 0 4px 3px var(--primary-color), 0 0 5px var(--primary-color);
+  border-radius: 0.75rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
 }
-.projectCard:nth-child(odd) {
-  transform: translateY(1em);
-}
-.projectCard:nth-child(even) {
-  transform: translateY(-1em);
-}
-
-.truncatedCard {
-  min-width: 100%;
-  height: 18em;
-  border-radius: 1.5em;
-  transition: all 0.4s;
-  box-shadow: 0 0 10px var(--shadow);
-  animation: fadeIn 0.7s ease-in;
-}
-.truncatedCard:hover .dataOverlay {
-  opacity: 1;
-}
-.truncatedCard img {
+.projectCard img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 1.5em;
-}
-.truncatedCard:nth-child(1) img {
-  -o-object-position: 10% 0;
-     object-position: 10% 0;
-}
-.truncatedCard:nth-child(2) img {
-  -o-object-position: 20% 0;
-     object-position: 20% 0;
-}
-.truncatedCard:nth-child(3) img {
-  -o-object-position: 50% 0;
-     object-position: 50% 0;
-}
-.truncatedCard:nth-child(4) img {
-  -o-object-position: 20% 0;
-     object-position: 20% 0;
+  -o-object-position: 0% 15%;
+     object-position: 0% 15%;
+  transition: all 0.4s ease-out;
+  filter: opacity(60%);
 }
 
-.extended {
-  width: 100%;
-}
-
-.dataOverlay {
-  width: 100%;
-  height: 100%;
-  padding: 0.3em;
-  display: grid;
-  justify-items: center;
-  justify-content: center;
-  align-items: center;
-  align-content: space-evenly;
-  border-radius: 1.5em;
+.projectData {
+  padding: 0.8rem;
   position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  background-image: linear-gradient(to bottom, rgba(203, 162, 124, 0.7019607843), rgba(203, 162, 124, 0.5019607843));
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
-  transition: all 0.4s;
+  inset: 77% 0 0 0;
+  border-radius: 0.75rem;
+  transition: all 0.4s ease-out;
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+  background-color: rgba(173, 125, 115, 0.1019607843);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
 }
-.dataOverlay p {
-  padding: 0;
+.projectData span {
+  margin-bottom: 0.5rem;
+}
+.projectData p {
+  margin: 0 0 1rem 0;
+  overflow-y: scroll;
+}
+.projectData a {
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
   text-align: center;
-  font-size: 20px;
-  font-weight: bold;
-  word-wrap: break-word;
-  color: white;
-  text-shadow: 0 0 3px #664629;
+  color: var(--secondary-color);
+  border-radius: 0.75rem;
+  font-size: 1.15rem;
+  transition: var(--03msTransition);
 }
-.dataOverlay button {
-  padding: 0.75em 1em;
-  border-radius: 50%;
-  background-color: var(--brownPrimary);
-  box-shadow: none;
-  cursor: pointer;
-}
-.dataOverlay i {
-  padding-top: 0.2em;
-  color: white;
-  font-size: 18px;
-  transition: all 0.3s;
-}
-.dataOverlay i:hover {
-  font-size: 20px;
+.projectData a:hover {
+  background-color: var(--primary-color-light);
 }
 
-.extendedProjectCard {
-  margin: 0.3em;
-  height: 20em;
-  border-radius: 1.5em;
-  transition: all 0.4s;
-  animation: fadeIn 0.5s ease-in;
+.mainData {
+  margin-bottom: 1rem;
 }
-.extendedProjectCard i {
-  display: flex;
-  justify-content: flex-end;
-  cursor: pointer;
+.mainData h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.45rem;
+  text-align: start;
 }
-.extendedProjectCard div:nth-child(2) img {
-  margin-bottom: 2em;
-  width: 100%;
-  max-width: 700px;
-  height: auto;
-  border-radius: 1.5em;
-}
-.extendedProjectCard div:nth-child(2) img p:first-child {
-  margin: 0;
-}
-.extendedProjectCard h2 {
-  margin-bottom: 0;
-  text-indent: 0;
-}
-.extendedProjectCard ul {
-  text-align: left;
-}
-.extendedProjectCard a {
-  margin: auto;
-  width: -moz-fit-content;
-  width: fit-content;
-  display: flex;
-  justify-content: center;
-  color: white;
-  text-align: center;
-}
-.extendedProjectCard:nth-child(odd) {
-  transform: translateY(0);
-}
-.extendedProjectCard:nth-child(even) {
-  transform: translateY(0);
+.mainData p {
+  text-align: right;
 }
 
-.dataExtended {
-  display: flex;
-  align-items: center;
-}
-.dataExtended div:first-child {
-  width: 50%;
-}
-.dataExtended div:first-child img {
-  max-height: 345px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.dataExtended div:last-child {
-  width: 50%;
-  padding: 1.2em;
-  padding-top: 0;
+.projectCard:hover img {
+  filter: opacity(20%);
 }
 
-.seeProject {
-  padding: 0.5em 1em;
-  border-radius: 0.75em;
-  font-size: 20px;
-  background-color: var(--brownPrimary);
-  box-shadow: 0 3px 2px var(--brownSecondary);
-}
-.seeProject:hover {
-  background-color: var(--brownSecondary);
+.projectCard:hover .projectData {
+  inset: 0;
 }
 
-.disabled {
-  background-color: var(--shadow);
-  box-shadow: 0 3px 2px #ababab;
-  cursor: none;
-}
-.disabled:hover {
-  background-color: var(--shadow);
-}
-
-@media (max-width: 900px) {
-  #cardTop {
-    margin-bottom: 3em;
-  }
-  .cardsDeck {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .projectCard,
-  .truncatedCard,
-  .dataOverlay {
-    min-width: 40%;
-    height: 12em;
-  }
-  .projectCard:nth-child(odd) {
-    transform: translateY(0);
-  }
-  .projectCard:nth-child(even) {
-    transform: translateY(0);
-  }
-  .projectCard .extendedProjectCard {
-    overflow: scroll;
-  }
-  .projectCard .extendedProjectCard i {
-    margin: 0.3em 0.5em 0em 0em;
-    margin-right: 0.5em;
-    margin-bottom: 0;
-  }
-  .projectCard .dataExtended {
-    flex-direction: column;
-  }
-  .projectCard .dataExtended div:first-child {
-    display: none;
-  }
-  .projectCard .dataExtended div:last-child {
-    padding-top: 0;
-    width: 100% !important;
-  }
-}
 @media (max-width: 578px) {
-  .dataExtended div:last-child {
-    padding: 0 0.5em 0.5em 0.5em;
-    width: 100% !important;
+  .projectCard {
+    width: 100%;
+    height: 260px;
   }
-  .projectCard,
-  .truncatedCard,
-  .dataOverlay {
-    min-width: 100%;
+  .projectData {
+    inset: 70% 0 0 0;
   }
 }/*# sourceMappingURL=styles_portfolio.css.map */

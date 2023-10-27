@@ -24,6 +24,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+    <link rel="stylesheet" type="text/css" href="styles/styles_header.css" />
     <link rel="stylesheet" type="text/css" href="styles/styles_about.css" />
     <link rel="stylesheet" type="text/css" href="styles/styles_skills.css" />
     <link rel="stylesheet" type="text/css" href="styles/styles_portfolio.css" />
@@ -49,14 +50,19 @@
         <div>
           <h1>CodeCup</h1>
           <hr />
-              <i
-          id="menuIcon"
-          onclick="toggleNav()"
-          class="menu bi bi-list icon"
-          aria-expanded="false"
-        ></i>
-          <i id="closeIcon" onclick="closeMenu()" class="fa-solid fa-xmark"></i>
+          <i
+            id="menuIcon"
+            onclick="toggleNav()"
+            class="menu bi bi-list icon"
+            aria-expanded="false"
+          >
+          </i>
           <nav role="navigation">
+            <i
+              id="closeIcon"
+              onclick="closeMenu()"
+              class="fa-solid fa-xmark"
+            ></i>
             <a onclick="autoClose()" href="#about">About</a>
             <a onclick="autoClose()" href="#portfolio">Portfolio</a>
             <a onclick="autoClose()" href="#contact">Contact</a>
@@ -77,11 +83,11 @@
       </article>
     </header>
 
-    <div class="content">
-      <section id="home">
+    <section>
+      <article id="home">
         <div class="textSection">
-          <span class="iAm">Je suis Estelle,</span>
-          <h1 class="myJob">Développeuse Frontend</h1>
+          <p class="iAm">Je suis Estelle,</p>
+          <h2 class="myJob">Développeuse Frontend</h2>
           <div class="connectAndCV">
             <button>
               <a href="#contact">Let's connect</a>
@@ -94,11 +100,11 @@
             </a>
           </div>
         </div>
-      </section>
-    </div>
+      </article>
+    </section>
 
-    <div class="content">
-      <section id="about">
+    <section>
+      <article id="about">
         <div class="subContent">
           <div class="gradientTitle">
             <h2>Qui suis-je</h2>
@@ -146,11 +152,11 @@
             </div>
           </div>
         </div>
-      </section>
-    </div>
+      </article>
+    </section>
 
-    <div class="content">
-      <section id="skills">
+    <section>
+      <article id="skills">
         <div class="skillsDividerTop">
           <svg
             data-name="Layer 1"
@@ -319,11 +325,11 @@
             ></path>
           </svg>
         </div>
-      </section>
-    </div>
+      </article>
+    </section>
 
-    <div class="content">
-      <section id="portfolio">
+    <section>
+      <article id="portfolio">
         <div class="subContent">
           <div class="gradientTitle">
             <h2>Portfolio</h2>
@@ -334,206 +340,117 @@
           </p>
           <a id="cardTop" href="#cardTop"></a>
 
-          <div class="cardsDeck">
+          <div class="projectsDeck">
             <div class="projectCard">
-              <div class="truncatedCard">
-                <div class="dataOverlay">
-                  <p>The Succi Place</p>
-                  <button onclick="extendCard(0)">
-                    <i
-                      class="fa-solid fa-up-right-and-down-left-from-center"
-                    ></i>
-                  </button>
+              <img
+                src="assets/images/theSucciPlaceThumbnail_mini.jpg"
+                alt="projectImage"
+              />
+              <div class="projectData">
+                <div class="mainData">
+                  <h4>The Succi Place</h4>
+                  <hr />
+                  <p>E-commerce</p>
                 </div>
-                <img
-                  src="./assets/images/theSucciPlaceThumbnail_mini.jpg"
-                  alt="estelle-roges-project-image"
-                />
-              </div>
-
-              <div class="extendedProjectCard none">
-                <i onclick="truncateCard(0)" class="fa-solid fa-xmark"></i>
-                <div class="dataExtended">
-                  <div>
-                    <img
-                      src="assets/images/theSucciPlaceThumbnail.jpg"
-                      alt="estelle-roges-the-Succi-Place"
-                    />
-                  </div>
-                  <div>
-                    <h2>The Succi Place</h2>
-                    <p>Site e-commerce</p>
-                    <ul>
-                      <li>Front: React (Javascript)</li>
-                      <li>Back: Pas de backend</li>
-                      <!-- <li>Autres: </li> -->
-                    </ul>
-                    <p>
-                      Mon premier projet "complexe" avec React. C'est un projet
-                      frontend, mais j'y ai tout de même ajouté quelques
-                      éléments dynamiques comme le panier.
-                    </p>
-                    <a
-                      href="https://thesucciplace.netlify.app/"
-                      class="seeProject"
-                      target="_blank"
-                      >Démo</a
-                    >
-                  </div>
-                </div>
+                <span>React (JS)</span>
+                <p>
+                  Mon premier projet "complexe" avec React. C'est un projet
+                  frontend, mais j'y ai tout de même ajouté quelques éléments
+                  dynamiques comme le panier.
+                </p>
+                <a
+                  href="https://thesucciplace.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Démo</a
+                >
               </div>
             </div>
-
             <div class="projectCard">
-              <div class="truncatedCard">
-                <div class="dataOverlay">
-                  <p>Shinaito List</p>
-                  <button onclick="extendCard(1)">
-                    <i
-                      class="fa-solid fa-up-right-and-down-left-from-center"
-                    ></i>
-                  </button>
+              <img
+                src="assets/images/shinaitoListThumbnail_mini.jpg"
+                alt="projectImage"
+              />
+              <div class="projectData">
+                <div class="mainData">
+                  <h4>Shinaito List</h4>
+                  <hr />
+                  <p>To-do list</p>
                 </div>
-                <img
-                  src="./assets/images/shinaitoListThumbnail_mini.jpg"
-                  alt="estelle-roges-project-image"
-                />
-              </div>
-
-              <div class="extendedProjectCard none">
-                <i onclick="truncateCard(1)" class="fa-solid fa-xmark"></i>
-                <div class="dataExtended">
-                  <div>
-                    <img
-                      src="assets/images/shinaitoListThumbnail.jpg"
-                      alt="estelle-roges-shinaiti-list-to-do-list"
-                    />
-                  </div>
-                  <div>
-                    <h2>Shinaito List</h2>
-                    <p>To-do list</p>
-                    <ul>
-                      <li>Front: React</li>
-                      <li>Back: Pas de backend</li>
-                      <li>Autres: Vite.js</li>
-                    </ul>
-                    <p>
-                      Une to-do liste dans laquelle j'ai appris à utiliser le
-                      hook useContext.<br />
-                      Elle possède aussi un système d'onglets dans lesquels on
-                      peut ranger les tâches à faire.
-                    </p>
-                    <a
-                      href="https://shinaitokoto-todolist.netlify.app/"
-                      class="seeProject"
-                      >Démo</a
-                    >
-                  </div>
-                </div>
+                <span>
+                  React (JS) <br />
+                  Vite.js
+                </span>
+                <p>
+                  Une to-do liste dans laquelle j'ai appris à utiliser le hook
+                  useContext.<br />
+                  Elle possède aussi un système d'onglets dans lesquels on peut
+                  ranger les tâches à faire.
+                </p>
+                  <a
+                    href="https://shinaitokoto-todolist.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Démo</a
+                  >
               </div>
             </div>
-
             <div class="projectCard">
-              <div class="truncatedCard">
-                <div class="dataOverlay">
-                  <p>The Cookie Quotes App</p>
-                  <button onclick="extendCard(2)">
-                    <i
-                      class="fa-solid fa-up-right-and-down-left-from-center"
-                    ></i>
-                  </button>
+              <img
+                src="assets/images/cookieQuotesthumbnail.jpg"
+                alt="projectImage"
+              />
+              <div class="projectData">
+                <div class="mainData">
+                  <h4>The Cookie Quotes</h4>
+                  <hr />
+                  <p>Appli mobile</p>
                 </div>
-                <img
-                  src="./assets/images/cookieQuotesthumbnail.jpg"
-                  alt="estelle-roges-project-image"
-                />
-              </div>
-              <div class="extendedProjectCard none">
-                <i onclick="truncateCard(2)" class="fa-solid fa-xmark"></i>
-                <div class="dataExtended">
-                  <div>
-                    <img
-                      src="assets/images/cookieQuotesthumbnail.jpg"
-                      alt="estelle-roges-the-cookie-quotes-app"
-                      style="height: 25em"
-                    />
-                  </div>
-                  <div>
-                    <h2>The Cookie Quotes App</h2>
-                    <p>Application mobile</p>
-                    <ul>
-                      <li>Front: React Native (Javascript)</li>
-                      <li>Back: Pas de backend</li>
-                      <!-- <li>Autres: </li> -->
-                    </ul>
-                    <p>
-                      Cette application mobile est un projet que j'ai depuis un
-                      moment. Elle permettra à l'utilisateur de recevoir des
-                      citations à certains moments.
-                    </p>
-                    <a href="#" class="seeProject disabled">En construction</a>
-                  </div>
-                </div>
+                <span>React Native (JS)</span>
+                <span>EN CONSTRUCTION</span>
+                <p>
+                  Cette application mobile est un projet que j'ai depuis un
+                  moment. Elle permettra à l'utilisateur de recevoir des
+                  citations à certains moments.
+                </p>
+                <!-- <button>
+                  <a href="#" target="_blank">Télécharger</a>
+                </button> -->
               </div>
             </div>
-
             <div class="projectCard">
-              <div class="truncatedCard">
-                <div class="dataOverlay">
-                  <p>Grains Nobles et Plus</p>
-                  <button onclick="extendCard(3)">
-                    <i
-                      class="fa-solid fa-up-right-and-down-left-from-center"
-                    ></i>
-                  </button>
+              <img
+                src="assets/images/grainsNoblesTh-mini.jpg"
+                alt="projectImage"
+              />
+              <div class="projectData">
+                <div class="mainData">
+                  <h4>Grains Nobles et Plus</h4>
+                  <hr />
+                  <p>Site web</p>
                 </div>
-                <img
-                  src="./assets/images/grainsNoblesTh-mini.jpg"
-                  alt="estelle-roges-project-image"
-                />
-              </div>
-              <div class="extendedProjectCard none">
-                <i onclick="truncateCard(3)" class="fa-solid fa-xmark"></i>
-                <div class="dataExtended">
-                  <div>
-                    <img
-                      src="assets/images/grainsNoblesTh.jpg"
-                      alt="estelle-roges-grains-nobles-et-plus"
-                      style="object-position: 0 0"
-                    />
-                  </div>
-                  <div>
-                    <h2>Grains Nobles et Plus</h2>
-                    <p>Site web - Restaurant</p>
-                    <ul>
-                      <li>Front: HTML / CSS / Javascript</li>
-                      <li>Back: Pas de backend</li>
-                      <li></li>
-                    </ul>
-                    <p>
-                      Voici le tout premier site que j'ai développé et hébergé.
-                      <br />Ce site internet présente le restaurant Grains
-                      Nobles et Plus, qui se trouve dans le 5è arrondissement de
-                      Paris. <br />
-                      J'ai développé ce site bénévolement.
-                    </p>
-                    <a
-                      href="http://www.grainsnoblesetplus.com/"
-                      class="seeProject"
-                      target="_blank"
-                      >Accéder au site</a
-                    >
-                  </div>
-                </div>
+                <span>HTML / CSS / JS</span>
+                <p>
+                  Voici le tout premier site que j'ai développé et hébergé.
+                  <br />Ce site internet présente le restaurant Grains Nobles et
+                  Plus, qui se trouve dans le 5è arrondissement de Paris. <br />
+                  J'ai développé ce site bénévolement.
+                </p>
+                  <a
+                    href="http://www.grainsnoblesetplus.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Voir</a
+                  >
               </div>
             </div>
           </div>
         </div>
-      </section>
-    </div>
+      </article>
+    </section>
 
-    <div class="content">
-      <section id="contact">
+    <section>
+      <article id="contact">
         <div class="contactDividerTop">
           <svg
             data-name="Layer 1"
@@ -609,8 +526,8 @@
             </aside>
           </div>
         </div>
-      </section>
-    </div>
+      </article>
+    </section>
 
     <footer>
       <p>© Copyright Estelle ROGÈS</p>
@@ -623,7 +540,7 @@
           href="https://www.shapedivider.app/"
           target="_blank"
           rel="noopener noreferrer"
-          >Shape Divider App</a
+          >Shape Divider</a
         >
         |
         <a href="https://icons8.com/" target="_blank" rel="noopener noreferrer"

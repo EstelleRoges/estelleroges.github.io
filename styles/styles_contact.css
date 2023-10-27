@@ -26,7 +26,7 @@
   height: 110px;
 }
 .contactDividerTop .shape-fill {
-  fill: var(--background);
+  fill: var(--secondary-color);
 }
 
 .contactSection {
@@ -34,7 +34,8 @@
   display: flex;
   justify-content: space-between;
 }
-.contactSection form, .contactSection aside {
+.contactSection form,
+.contactSection aside {
   width: 50%;
 }
 
@@ -88,11 +89,6 @@
   display: inline;
   font-family: "Courgette", cursive, serif;
 }
-.someInfos .pin {
-  display: inline-block;
-  color: var(--brownSecondary);
-  filter: drop-shadow(2px 2px 3px var(--brownPrimary));
-}
 
 .fadedInX-axis {
   opacity: 1;
@@ -126,7 +122,8 @@
   .contactSection {
     flex-direction: column;
   }
-  .contactSection form, .contactSection aside {
+  .contactSection form,
+  .contactSection aside {
     width: 100%;
   }
   .someInfos {

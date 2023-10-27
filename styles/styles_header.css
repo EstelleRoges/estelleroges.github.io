@@ -1,0 +1,122 @@
+header {
+  padding-bottom: 1rem;
+  width: 100%;
+  background: linear-gradient(to bottom, var(--secondary-color) 85%, transparent 100%);
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  opacity: 0;
+  transform: translateY(-60%);
+  transition: all 0.75s ease-out;
+}
+header article {
+  margin: auto;
+  max-width: 1400px;
+  display: flex;
+  position: relative;
+}
+header aside img {
+  padding: 0.2rem;
+  display: block;
+  align-self: flex-start;
+}
+header div {
+  padding-left: 1rem;
+  flex: 1;
+}
+header h1 {
+  margin: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-top: 0.4rem;
+  font-size: 2rem;
+  background: linear-gradient(to right, var(--text-color) 50%, var(--highlight-color) 55%, var(--primary-color-light) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+header hr {
+  height: 2px;
+  border: none;
+  background: linear-gradient(to right, var(--primary-color-dark) 50%, var(--primary-color) 70%, var(--primary-color-light) 98%, transparent 100%);
+}
+header nav {
+  margin: 0.75rem 0;
+  padding-right: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.5rem;
+}
+header i {
+  padding: 0;
+  font-size: 1.5rem;
+  transition: var(--03msTransition);
+}
+header i:hover {
+  color: var(--primary-color);
+}
+header a {
+  color: var(--text-color);
+  font-size: 1.15rem;
+}
+header a:hover {
+  color: var(-primary-color-light);
+}
+
+#menuIcon,
+#closeIcon {
+  display: none !important;
+  transition: var(--05msTransition);
+}
+
+.appeared {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.visible {
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 1;
+}
+
+@media (max-width: 576px) {
+  #menuIcon {
+    margin: 0.5rem 0.75rem;
+    display: flex !important;
+    justify-content: flex-end;
+    transition: var(--05msTransition);
+    color: var(--text-color);
+  }
+  #closeIcon {
+    display: flex !important;
+    justify-content: flex-end;
+  }
+  #closeIcon i {
+    color: var(--secondary-color);
+  }
+  header nav {
+    margin-top: 0;
+    padding: 2rem;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-image: var(--menuBackground);
+    position: absolute;
+    inset: 0;
+    gap: 3rem 0;
+    opacity: 0;
+    transform: translateX(100%);
+    z-index: -1;
+    transition: var(--05msTransition);
+  }
+  header nav a {
+    font-size: 1.35rem;
+  }
+  header nav i {
+    margin-bottom: 3rem;
+  }
+}/*# sourceMappingURL=styles_header.css.map */

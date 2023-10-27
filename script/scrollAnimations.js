@@ -78,7 +78,7 @@ const skillsAnimations = () => {
 };
 
 // Portfolio section
-const cardsDeck = document.querySelector(".cardsDeck");
+const cardsDeck = document.querySelector(".projectsDeck");
 const projectCards = document.querySelectorAll(".projectCard");
 const truncatedCards = document.querySelectorAll(".truncatedCard");
 const extendedProjectCards = document.querySelectorAll(".extendedProjectCard");

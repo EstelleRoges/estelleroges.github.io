@@ -21,7 +21,7 @@
   height: 110px;
 }
 #skills .skillsDividerTop .shape-fill {
-  fill: var(--background);
+  fill: var(--secondary-color);
 }
 #skills .skillsDividerBottom {
   position: absolute;
@@ -40,7 +40,7 @@
   height: 110px;
 }
 #skills .skillsDividerBottom .shape-fill {
-  fill: var(--background);
+  fill: var(--secondary-color);
 }
 #skills .stack {
   margin-top: 2em;
@@ -58,7 +58,7 @@
   position: absolute;
   top: -1em;
   box-shadow: 1px 4px 4px var(--shadow);
-  background: linear-gradient(to right, var(--greenPrimary) 50%, var(--greenTertiary) 100%);
+  background: linear-gradient(to right, var(--primary-color) 50%, var(--primary-color-light) 100%);
   color: white;
   display: inline-block;
 }

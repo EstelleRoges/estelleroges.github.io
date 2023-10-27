@@ -1,5 +1,4 @@
 #about {
-  padding-top: 2em;
   position: relative;
 }
 #about::after {
@@ -8,7 +7,7 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to bottom, var(--background) 0%, transparent 10%);
+  background-image: linear-gradient(to bottom, var(--secondary-color) 0%, transparent 10%);
 }
 
 .tagsHeader {
@@ -21,16 +20,6 @@
 }
 .first-row div {
   width: 50%;
-}
-
-.pin {
-  width: -moz-fit-content;
-  width: fit-content;
-  display: inline;
-  filter: drop-shadow(2px 2px 3px var(--brownPrimary));
-}
-.pin i {
-  color: var(--brownSecondary);
 }
 
 .tags {

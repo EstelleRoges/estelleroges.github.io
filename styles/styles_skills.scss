@@ -23,7 +23,7 @@
     }
 
     .shape-fill {
-      fill: var(--background);
+      fill: var(--secondary-color);
     }
   }
 
@@ -44,7 +44,7 @@
     }
 
     .shape-fill {
-      fill: var(--background);
+      fill: var(--secondary-color);
     }
   }
 
@@ -68,8 +68,8 @@
     box-shadow: 1px 4px 4px var(--shadow);
     background: linear-gradient(
       to right,
-      var(--greenPrimary) 50%,
-      var(--greenTertiary) 100%
+      var(--primary-color) 50%,
+      var(--primary-color-light) 100%
     );
     color: white;
     display: inline-block;
@@ -109,9 +109,9 @@
     transition: var(--05msTransition);
 
     &.stackListAppeared {
-    opacity: 1;
-    transform: translateX(0);
-  }
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
   .frontend {
     opacity: 0;
@@ -123,15 +123,13 @@
     opacity: 0;
     transform: translateX(-30px);
     transition: var(--05msTransition);
-        transition-delay: 0.4s;
-
+    transition-delay: 0.4s;
   }
   .tools {
     opacity: 0;
     transform: translateX(-30px);
     transition: var(--05msTransition);
-        transition-delay: 0.6s;
-
+    transition-delay: 0.6s;
   }
 
   .stackListAppeared {
