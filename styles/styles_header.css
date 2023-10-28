@@ -29,7 +29,7 @@ header h1 {
   width: -moz-fit-content;
   width: fit-content;
   padding-top: 0.4rem;
-  font-size: 2rem;
+  font-size: 1.75rem;
   background: linear-gradient(to right, var(--text-color) 50%, var(--highlight-color) 55%, var(--primary-color-light) 100%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -59,7 +59,7 @@ header i:hover {
 }
 header a {
   color: var(--text-color);
-  font-size: 1.15rem;
+  font-size: 1.1rem;
 }
 header a:hover {
   color: var(-primary-color-light);

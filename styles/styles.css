@@ -155,14 +155,14 @@ button {
   padding: 0.7rem 1.4rem;
   border: none;
   border-radius: 1rem;
-  background-color: var(--primary-color);
+  background-color: var(--primary-color-dark);
   color: var(--secondary-color);
   cursor: pointer;
   transition: var(--03msTransition);
   box-shadow: 0 3px 2px var(--primary-color-light);
 }
 button:hover {
-  background-color: var(--primary-color-light);
+  background-color: var(--primary-color);
   transition: var(--03msTransition);
 }
 

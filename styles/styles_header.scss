@@ -35,7 +35,7 @@ header {
     margin: 0;
     width: fit-content;
     padding-top: 0.4rem;
-    font-size: 2rem;
+    font-size: 1.75rem;
     background: linear-gradient(
       to right,
       var(--text-color) 50%,
@@ -80,7 +80,7 @@ header {
 
   a {
     color: var(--text-color);
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     &:hover {
       color: var(-primary-color-light);
     }
