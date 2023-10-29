@@ -23,17 +23,17 @@
 }
 
 .tags {
-  background-color: white;
-  background-image: url("https://www.transparenttextures.com/patterns/lined-paper.png");
   margin: auto;
   padding: 1em;
   width: 30vw;
   max-width: 375px;
   height: -moz-fit-content;
   height: fit-content;
+  background-color: white;
+  background-image: url("https://www.transparenttextures.com/patterns/lined-paper.png");
   border-radius: 5px;
   transform: rotate(-5deg);
-  box-shadow: 3px 3px 3px var(--shadow);
+  box-shadow: 3px 3px 3px var(--primary-color-dark);
   position: relative;
   opacity: 0;
   transform: translateY(-5px);

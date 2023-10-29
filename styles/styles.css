@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Niconne&family=Raleway:wght@300;400;600;700&display=swap");
 :root {
-  --greenBackground: #d3e7c5;
-  --greyBackground: #eaebea;
-  --text: #33221e;
-  --text-size: 1.1rem;
   --main-font: "Raleway", sans-serif;
   --accent-font: "Niconne", cursive;
   --primary-color: #ad7d73;
@@ -12,6 +8,7 @@
   --secondary-color: #f7f4f3;
   --accent-color: #67433c;
   --text-color: #33221e;
+  --text-size: 1.1rem;
   --highlight-color: #8e3f3f;
   --menuBackground: linear-gradient(to bottom, #c39f98f2 70%, #f7f4f3f2 90%);
   --03msTransition: all 0.3s ease-in-out;
@@ -252,8 +249,8 @@ button:hover {
 footer {
   padding-top: 3rem;
   padding-bottom: 1rem;
-  background-color: var(--greyBackground);
-  background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+  background-color: var(--secondary-color);
+  background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
 }
 footer p {
   margin: 0;

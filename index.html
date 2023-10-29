@@ -1,576 +1,387 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Estelle ROGÈS frontend developper portfolio"
-    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Courgette&family=Josefin+Sans:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
-    <link rel="stylesheet" type="text/css" href="styles/styles_header.css" />
-    <link rel="stylesheet" type="text/css" href="styles/styles_about.css" />
-    <link rel="stylesheet" type="text/css" href="styles/styles_skills.css" />
-    <link rel="stylesheet" type="text/css" href="styles/styles_portfolio.css" />
-    <link rel="stylesheet" type="text/css" href="styles/styles_contact.css" />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="assets/images/logo_favicon_ico.ico"
-    />
-    <title>Estelle R | CodeCup</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Estelle ROGÈS frontend developper portfolio" />
 
-  <body onload="navAnimation()">
-    <header>
-      <article>
-        <aside>
-          <img
-            src="assets/svgs/logo_svg.svg"
-            alt="teaCup_logo"
-            style="padding: 0.3em"
-          />
-        </aside>
-        <div>
-          <h1>CodeCup</h1>
-          <hr />
-          <i
-            id="menuIcon"
-            onclick="toggleNav()"
-            class="menu bi bi-list icon"
-            aria-expanded="false"
-          >
-          </i>
-          <nav role="navigation">
-            <i
-              id="closeIcon"
-              onclick="closeMenu()"
-              class="fa-solid fa-xmark"
-            ></i>
-            <a onclick="autoClose()" href="#about">About</a>
-            <a onclick="autoClose()" href="#portfolio">Portfolio</a>
-            <a onclick="autoClose()" href="#contact">Contact</a>
-            <a
-              onclick="autoClose()"
-              href="https://www.linkedin.com/in/estelle-roges-dev/"
-              target="_blank"
-              ><i class="bi bi-linkedin"></i>
-            </a>
-            <a
-              onclick="autoClose()"
-              href="https://github.com/EstelleRoges"
-              target="_blank"
-              ><i class="bi bi-github"></i>
-            </a>
-          </nav>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Josefin+Sans:wght@300;400;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+  <link rel="stylesheet" type="text/css" href="styles/styles_header.css" />
+  <link rel="stylesheet" type="text/css" href="styles/styles_about.css" />
+  <link rel="stylesheet" type="text/css" href="styles/styles_skills.css" />
+  <link rel="stylesheet" type="text/css" href="styles/styles_portfolio.css" />
+  <link rel="stylesheet" type="text/css" href="styles/styles_pricing.css" />
+  <link rel="stylesheet" type="text/css" href="styles/styles_contact.css" />
+  <link rel="icon" type="image/x-icon" href="assets/images/logo_favicon_ico.ico" />
+  <title>Estelle R | CodeCup</title>
+</head>
+
+<body onload="navAnimation()">
+  <header>
+    <article>
+      <aside>
+        <img src="assets/svgs/logo_svg.svg" alt="teaCup_logo" style="padding: 0.3em" />
+      </aside>
+      <div>
+        <h1>CodeCup</h1>
+        <hr />
+        <i id="menuIcon" onclick="toggleNav()" class="menu bi bi-list icon" aria-expanded="false">
+        </i>
+        <nav role="navigation">
+          <i id="closeIcon" onclick="closeMenu()" class="fa-solid fa-xmark"></i>
+          <a onclick="autoClose()" href="#about">About</a>
+          <a onclick="autoClose()" href="#portfolio">Portfolio</a>
+          <a onclick="autoClose()" href="#contact">Contact</a>
+          <a onclick="autoClose()" href="https://www.linkedin.com/in/estelle-roges-dev/" target="_blank"><i
+              class="bi bi-linkedin"></i>
+          </a>
+          <a onclick="autoClose()" href="https://github.com/EstelleRoges" target="_blank"><i class="bi bi-github"></i>
+          </a>
+        </nav>
+      </div>
+    </article>
+  </header>
+
+  <section>
+    <article id="home">
+      <div class="textSection">
+        <p class="iAm">Je suis Estelle,</p>
+        <h2 class="myJob">Développeuse Frontend</h2>
+        <div class="connectAndCV">
+          <button>
+            <a href="#contact">Let's connect</a>
+          </button>
+          <a target="_blank" href="assets/Estelle ROGÈS - Développeuse Web frontend 5.pdf">
+            Mon CV
+          </a>
         </div>
-      </article>
-    </header>
+      </div>
+    </article>
+  </section>
 
-    <section>
-      <article id="home">
-        <div class="textSection">
-          <p class="iAm">Je suis Estelle,</p>
-          <h2 class="myJob">Développeuse Frontend</h2>
-          <div class="connectAndCV">
-            <button>
-              <a href="#contact">Let's connect</a>
-            </button>
-            <a
-              target="_blank"
-              href="assets/Estelle ROGÈS - Développeuse Web frontend 5.pdf"
-            >
-              Mon CV
-            </a>
-          </div>
+  <section>
+    <article id="about">
+      <div class="subContent">
+        <div class="gradientTitle">
+          <h2>Qui suis-je</h2>
+          <i class="bi bi-person-workspace"></i>
         </div>
-      </article>
-    </section>
-
-    <section>
-      <article id="about">
-        <div class="subContent">
-          <div class="gradientTitle">
-            <h2>Qui suis-je</h2>
-            <i class="bi bi-person-workspace"></i>
-          </div>
-          <div id="aboutContent">
-            <div class="first-row">
-              <aside class="tags">
-                <div class="tagsHeader">
-                  <span class="pin">
-                    <i class="bi bi-circle-fill"></i>
-                  </span>
-                  <h3>Tags</h3>
-                </div>
-                <ul>
-                  <li>#ViveLesIdées</li>
-                  <li>#TeamThé<i class="luv bi bi-heart-fill"></i></li>
-                  <li>#Créative</li>
-                  <li>#Curieuse</li>
-                  <li>#Persévérante</li>
-                  <li>#StackOverflow</li>
-                  <li>#CuteCode</li>
-                </ul>
-              </aside>
-              <div class="storyContent">
-                <h3>Hello World!</h3>
-                <p>
-                  Je suis Estelle, développeuse frontend spécialisée dans la
-                  création d'interfaces agréables à regarder et à naviguer.
-                </p>
-                <p>
-                  Ma passion, c'est la création en général. Rien n'est plus
-                  satisfaisant pour moi qu'avoir une idée et tout mettre en
-                  place pour lui donner vie.
-                </p>
+        <div id="aboutContent">
+          <div class="first-row">
+            <aside class="tags">
+              <div class="tagsHeader">
+                <span class="pin">
+                  <i class="bi bi-circle-fill"></i>
+                </span>
+                <h3>Tags</h3>
               </div>
-            </div>
-            <div class="moreStory">
+              <ul>
+                <li>#ViveLesIdées</li>
+                <li>#TeamThé<i class="luv bi bi-heart-fill"></i></li>
+                <li>#Créative</li>
+                <li>#Curieuse</li>
+                <li>#Persévérante</li>
+                <li>#StackOverflow</li>
+                <li>#CuteCode</li>
+              </ul>
+            </aside>
+            <div class="storyContent">
+              <h3>Hello World!</h3>
               <p>
-                Mon objectif est de monter en compétences en contribuant à
-                développer des projets concrets et challengeants. Suite à mes
-                deux expériences pour une application mobile et une plateforme
-                éducative, je suis à la recherche de nouveaux défis!
+                Je suis Estelle, développeuse frontend spécialisée dans la
+                création d'interfaces agréables à regarder et à naviguer.
+              </p>
+              <p>
+                Ma passion, c'est la création en général. Rien n'est plus
+                satisfaisant pour moi qu'avoir une idée et tout mettre en
+                place pour lui donner vie.
               </p>
             </div>
           </div>
-        </div>
-      </article>
-    </section>
-
-    <section>
-      <article id="skills">
-        <div class="skillsDividerTop">
-          <svg
-            data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
-              opacity=".25"
-              class="shape-fill"
-            ></path>
-            <path
-              d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
-              opacity=".5"
-              class="shape-fill"
-            ></path>
-            <path
-              d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
-              class="shape-fill"
-            ></path>
-          </svg>
-        </div>
-
-        <div class="subContent">
-          <div class="gradientTitle">
-            <h2>Ma stack</h2>
-            <i class="bi bi-journal-code"></i>
+          <div class="moreStory">
+            <p>
+              Mon objectif est de monter en compétences en contribuant à
+              développer des projets concrets et challengeants. Suite à mes
+              deux expériences pour une application mobile et une plateforme
+              éducative, je suis à la recherche de nouveaux défis!
+            </p>
           </div>
-          <p>
-            *Les icônes grises sont les technologies que je suis encore en train
-            de découvrir
-          </p>
-          <section class="stack">
-            <div class="basics">
-              <h4>Bases</h4>
-              <ul>
-                <li>
-                  <i class="htmlStyle fa-brands fa-html5"></i>
-                  <p>HTML5</p>
-                </li>
-                <li>
-                  <i class="cssStyle fa-brands fa-css3-alt"></i>
-                  <p>CSS3</p>
-                </li>
-                <li>
-                  <i class="jsStyle fa-brands fa-js-square"></i>
-                  <p>JavaScript</p>
-                </li>
-
-                <li>
-                  <img src="assets/svgs/icons8-typescript.svg" alt="" />
-                  <p>TypeScript</p>
-                </li>
-              </ul>
-            </div>
-
-            <div class="frontend">
-              <h4>Front</h4>
-              <ul>
-                <li>
-                  <i class="reactStyle fa-brands fa-react"></i>
-                  <p>React</p>
-                </li>
-                <li>
-                  <i class="reactStyle fa-brands fa-react"></i>
-                  <p>React Native</p>
-                </li>
-                <li>
-                  <img
-                    src="assets/svgs/icons8-sass-avatar.svg"
-                    alt="sass_logo"
-                  />
-                  <p>Sass</p>
-                </li>
-                <li>
-                  <img
-                    src="assets/svgs/icons8-styled-components-48.png"
-                    alt="sass_logo"
-                  />
-                  <p>Styled Comp.</p>
-                </li>
-              </ul>
-            </div>
-
-            <div class="backend">
-              <h4>Back</h4>
-              <ul>
-                <li>
-                  <img
-                    src="./assets/svgs/icons8-logo-de-mysql.svg"
-                    alt="mysql Svg"
-                  />
-                  <p>MySQL</p>
-                </li>
-                <li>
-                  <i class="nodeStyle fa-brands fa-node-js"></i>
-                  <p>NodeJS</p>
-                </li>
-                <li>
-                  <img
-                    src="assets/svgs/icons8-express-js.svg"
-                    alt="express js logo"
-                  />
-                  <p>ExpressJS</p>
-                </li>
-                <li>
-                  <img src="assets/svgs/mongodb.svg" alt="mongodb logo" />
-                  <p>MongoDB</p>
-                </li>
-              </ul>
-            </div>
-
-            <div class="tools">
-              <h4>Outils</h4>
-              <ul>
-                <li>
-                  <img src="assets/svgs/icons8-git.svg" alt="git logo" />
-                  <p>Git</p>
-                </li>
-                <li>
-                  <img src="assets/svgs/icons8-github.svg" alt="git logo" />
-                  <p>GitHub</p>
-                </li>
-                <li>
-                  <img
-                    src="assets/svgs/icons8-visual-studio-code-2019.svg"
-                    alt="vscode logo"
-                  />
-                  <p>VS Code</p>
-                </li>
-
-                <li>
-                  <img src="assets/svgs/npm.svg" alt="npm logo" />
-                  <p>NPM</p>
-                </li>
-                <li>
-                  <img src="assets/svgs/yarn.svg" alt="yarn logo" />
-                  <p>Yarn</p>
-                </li>
-              </ul>
-            </div>
-          </section>
         </div>
+      </div>
+    </article>
+  </section>
 
-        <div class="skillsDividerBottom">
-          <svg
-            data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
-              opacity=".25"
-              class="shape-fill"
-            ></path>
-            <path
-              d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
-              opacity=".5"
-              class="shape-fill"
-            ></path>
-            <path
-              d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
-              class="shape-fill"
-            ></path>
-          </svg>
+  <section>
+    <article id="skills">
+      <div class="skillsDividerTop">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path
+            d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+            opacity=".25" class="shape-fill"></path>
+          <path
+            d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+            opacity=".5" class="shape-fill"></path>
+          <path
+            d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+            class="shape-fill"></path>
+        </svg>
+      </div>
+      <div class="subContent">
+        <div class="gradientTitle">
+          <h2>Environnement technique</h2>
+          <i class="bi bi-journal-code"></i>
         </div>
-      </article>
-    </section>
-
-    <section>
-      <article id="portfolio">
-        <div class="subContent">
-          <div class="gradientTitle">
-            <h2>Portfolio</h2>
-            <i class="bi bi-list-stars"></i>
+        <section class="stack">
+          <div class="mainTech-1"><i class="reactStyle fa-brands fa-react"></i><img src="assets/svgs/typescript.svg"
+              alt="typescript"></div>
+          <div class="mainTech-2"><img src="assets/svgs/javascript.svg" alt="javascript">
           </div>
-          <p>
-            Voici des projets variés que j'ai développé. D'autres sont à venir!
-          </p>
-          <a id="cardTop" href="#cardTop"></a>
+          <div class="midTech-1"><img src="assets/svgs/node-js.svg" alt="nodeJs"></div>
+          <div class="midTech-2">
+            <img src="assets/svgs/sass.svg" alt="sass">
+            <img src="assets/svgs/styled-components.png" alt="styled-components">
+          </div>
+          <div class="tool-1"><img src="assets/svgs/vs-code.svg" alt="vscode"></div>
+          <div class="tool-2"><img src="assets/svgs/github.svg" alt="github"></div>
+          <div class="tool-3">tool</div>
+          <div class="tech-4">tool</div>
 
-          <div class="projectsDeck">
-            <div class="projectCard">
-              <img
-                src="assets/images/theSucciPlaceThumbnail_mini.jpg"
-                alt="projectImage"
-              />
-              <div class="projectData">
-                <div class="mainData">
-                  <h4>The Succi Place</h4>
-                  <hr />
-                  <p>E-commerce</p>
-                </div>
-                <span>React (JS)</span>
-                <p>
-                  Mon premier projet "complexe" avec React. C'est un projet
-                  frontend, mais j'y ai tout de même ajouté quelques éléments
-                  dynamiques comme le panier.
-                </p>
-                <a
-                  href="https://thesucciplace.netlify.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Démo</a
-                >
+          <div class="misc-stack">
+          </div>
+        </section>
+      </div>
+
+      <div class="skillsDividerBottom">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path
+            d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+            opacity=".25" class="shape-fill"></path>
+          <path
+            d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+            opacity=".5" class="shape-fill"></path>
+          <path
+            d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+            class="shape-fill"></path>
+        </svg>
+      </div>
+    </article>
+  </section>
+
+  <section>
+    <article id="portfolio">
+      <div class="subContent">
+        <div class="gradientTitle">
+          <h2>Portfolio</h2>
+          <i class="bi bi-list-stars"></i>
+        </div>
+        <p>
+          Voici des projets variés que j'ai développé. D'autres sont à venir!
+        </p>
+        <a id="cardTop" href="#cardTop"></a>
+
+        <div class="projectsDeck">
+          <div class="projectCard">
+            <img src="assets/images/theSucciPlaceThumbnail_mini.jpg" alt="projectImage" />
+            <div class="projectData">
+              <div class="mainData">
+                <h4>The Succi Place</h4>
+                <hr />
+                <p>E-commerce</p>
               </div>
+              <span>React (JS)</span>
+              <p>
+                Mon premier projet "complexe" avec React. C'est un projet
+                frontend, mais j'y ai tout de même ajouté quelques éléments
+                dynamiques comme le panier.
+              </p>
+              <a href="https://thesucciplace.netlify.app/" target="_blank" rel="noopener noreferrer">Démo</a>
             </div>
-            <div class="projectCard">
-              <img
-                src="assets/images/shinaitoListThumbnail_mini.jpg"
-                alt="projectImage"
-              />
-              <div class="projectData">
-                <div class="mainData">
-                  <h4>Shinaito List</h4>
-                  <hr />
-                  <p>To-do list</p>
-                </div>
-                <span>
-                  React (JS) <br />
-                  Vite.js
-                </span>
-                <p>
-                  Une to-do liste dans laquelle j'ai appris à utiliser le hook
-                  useContext.<br />
-                  Elle possède aussi un système d'onglets dans lesquels on peut
-                  ranger les tâches à faire.
-                </p>
-                  <a
-                    href="https://shinaitokoto-todolist.netlify.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Démo</a
-                  >
+          </div>
+          <div class="projectCard">
+            <img src="assets/images/shinaitoListThumbnail_mini.jpg" alt="projectImage" />
+            <div class="projectData">
+              <div class="mainData">
+                <h4>Shinaito List</h4>
+                <hr />
+                <p>To-do list</p>
               </div>
+              <span>
+                React (JS) <br />
+                Vite.js
+              </span>
+              <p>
+                Une to-do liste dans laquelle j'ai appris à utiliser le hook
+                useContext.<br />
+                Elle possède aussi un système d'onglets dans lesquels on peut
+                ranger les tâches à faire.
+              </p>
+              <a href="https://shinaitokoto-todolist.netlify.app/" target="_blank" rel="noopener noreferrer">Démo</a>
             </div>
-            <div class="projectCard">
-              <img
-                src="assets/images/cookieQuotesthumbnail.jpg"
-                alt="projectImage"
-              />
-              <div class="projectData">
-                <div class="mainData">
-                  <h4>The Cookie Quotes</h4>
-                  <hr />
-                  <p>Appli mobile</p>
-                </div>
-                <span>React Native (JS)</span>
-                <span>EN CONSTRUCTION</span>
-                <p>
-                  Cette application mobile est un projet que j'ai depuis un
-                  moment. Elle permettra à l'utilisateur de recevoir des
-                  citations à certains moments.
-                </p>
-                <!-- <button>
+          </div>
+          <div class="projectCard">
+            <img src="assets/images/cookieQuotesthumbnail.jpg" alt="projectImage" />
+            <div class="projectData">
+              <div class="mainData">
+                <h4>The Cookie Quotes</h4>
+                <hr />
+                <p>Appli mobile</p>
+              </div>
+              <span>React Native (JS)</span>
+              <span>EN CONSTRUCTION</span>
+              <p>
+                Cette application mobile est un projet que j'ai depuis un
+                moment. Elle permettra à l'utilisateur de recevoir des
+                citations à certains moments.
+              </p>
+              <!-- <button>
                   <a href="#" target="_blank">Télécharger</a>
                 </button> -->
-              </div>
             </div>
-            <div class="projectCard">
-              <img
-                src="assets/images/grainsNoblesTh-mini.jpg"
-                alt="projectImage"
-              />
-              <div class="projectData">
-                <div class="mainData">
-                  <h4>Grains Nobles et Plus</h4>
-                  <hr />
-                  <p>Site web</p>
-                </div>
-                <span>HTML / CSS / JS</span>
-                <p>
-                  Voici le tout premier site que j'ai développé et hébergé.
-                  <br />Ce site internet présente le restaurant Grains Nobles et
-                  Plus, qui se trouve dans le 5è arrondissement de Paris. <br />
-                  J'ai développé ce site bénévolement.
-                </p>
-                  <a
-                    href="http://www.grainsnoblesetplus.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Voir</a
-                  >
+          </div>
+          <div class="projectCard">
+            <img src="assets/images/grainsNoblesTh-mini.jpg" alt="projectImage" />
+            <div class="projectData">
+              <div class="mainData">
+                <h4>Grains Nobles et Plus</h4>
+                <hr />
+                <p>Site web</p>
               </div>
+              <span>HTML / CSS / JS</span>
+              <p>
+                Voici le tout premier site que j'ai développé et hébergé.
+                <br />Ce site internet présente le restaurant Grains Nobles et
+                Plus, qui se trouve dans le 5è arrondissement de Paris. <br />
+                J'ai développé ce site bénévolement.
+              </p>
+              <a href="http://www.grainsnoblesetplus.com/" target="_blank" rel="noopener noreferrer">Voir</a>
             </div>
           </div>
         </div>
-      </article>
-    </section>
+      </div>
+    </article>
+  </section>
 
-    <section>
-      <article id="contact">
-        <div class="contactDividerTop">
-          <svg
-            data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
-              opacity=".25"
-              class="shape-fill"
-            ></path>
-            <path
-              d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
-              opacity=".5"
-              class="shape-fill"
-            ></path>
-            <path
-              d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
-              class="shape-fill"
-            ></path>
-          </svg>
+  <section>
+    <article id="pricing">
+      <div class="subContent">
+        <div class="gradientTitle">
+          <h2>Tarifs</h2>
+          <i class="fa-solid fa-money-check-dollar"></i>
         </div>
-        <div class="subContent">
-          <div class="gradientTitle">
-            <h2>Let's connect!</h2>
-            <i class="bi bi-envelope"></i>
+        <article class="prices">
+          <div>
+            <h3>Site internet</h3>
+            <p>Codage</p>
+            <p>Responsivité</p>
+            <p>Optimisation</p>
+            <p>*Charte graphique</p>
+            <article>
+              <p>À partir de</p>
+              <p>750€</p>
+            </article>
           </div>
-          <p>Intéressé par mon profil? Envoyez-moi donc un mail!</p>
-          <div class="contactSection">
-            <form class="contactForm">
-              <input
-                type="text"
-                name="name"
-                id="personName"
-                placeholder="Votre nom"
-              />
-              <input
-                type="email"
-                name="mail"
-                id="personMail"
-                placeholder="E-mail"
-              />
-              <input
-                type="text"
-                name="subject"
-                id="topic"
-                placeholder="C'est à quel sujet?"
-              />
-              <textarea
-                id="personMessage"
-                rows="7"
-                placeholder="Exprimez-vous!"
-              ></textarea>
-              <button onClick="sendMail(event)" type="submit">Envoyer</button>
-            </form>
-            <aside class="moreInfos">
-              <div class="someInfos">
-                <div class="tagsHeader">
-                  <span class="pin">
-                    <i class="bi bi-circle-fill"></i>
-                  </span>
-                  <h3>Notes</h3>
-                </div>
-                <p>Je suis basée en Seine et Marne</p>
-                <p>Je me déplace en transports</p>
-                <p>
-                  Sur site, télétravail ou hybride, tout me va!<br />(*si c'est
-                  sur site, dîtes-moi si je dois ramener ma bouilloire)
-                </p>
-                <p></p>
+          <div>
+            <h3>Mission ponctuelle</h3>
+            <p>text</p>
+            <p>text</p>
+            <p>text</p>
+            <p>text</p>
+            <div>
+              <p>TJM</p>
+              <p>350€ / jour</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </article>
+  </section>
+
+  <section>
+    <article id="contact">
+      <div class="contactDividerTop">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path
+            d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+            opacity=".25" class="shape-fill"></path>
+          <path
+            d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+            opacity=".5" class="shape-fill"></path>
+          <path
+            d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+            class="shape-fill"></path>
+        </svg>
+      </div>
+      <div class="subContent">
+        <div class="gradientTitle">
+          <h2>Let's connect!</h2>
+          <i class="bi bi-envelope"></i>
+        </div>
+        <p>Intéressé par mon profil? Envoyez-moi donc un mail!</p>
+        <div class="contactSection">
+          <form class="contactForm">
+            <input type="text" name="name" id="personName" placeholder="Votre nom" />
+            <input type="email" name="mail" id="personMail" placeholder="E-mail" />
+            <input type="text" name="subject" id="topic" placeholder="C'est à quel sujet?" />
+            <textarea id="personMessage" rows="7" placeholder="Exprimez-vous!"></textarea>
+            <button onClick="sendMail(event)" type="submit">Envoyer</button>
+          </form>
+          <aside class="moreInfos">
+            <div class="someInfos">
+              <div class="tagsHeader">
+                <span class="pin">
+                  <i class="bi bi-circle-fill"></i>
+                </span>
+                <h3>Notes</h3>
               </div>
-            </aside>
-          </div>
+              <p>Je suis basée en Seine et Marne</p>
+              <p>Je me déplace en transports</p>
+              <p>
+                Sur site, télétravail ou hybride, tout me va!<br />(*si c'est
+                sur site, dîtes-moi si je dois ramener ma bouilloire)
+              </p>
+              <p></p>
+            </div>
+          </aside>
         </div>
-      </article>
-    </section>
+      </div>
+    </article>
+  </section>
 
-    <footer>
-      <p>© Copyright Estelle ROGÈS</p>
-      <p>
-        <a href="https://www.freepik.com/photos/laptop-coffee"
-          >Background Image</a
-        >
-        |
-        <a
-          href="https://www.shapedivider.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Shape Divider</a
-        >
-        |
-        <a href="https://icons8.com/" target="_blank" rel="noopener noreferrer"
-          >Tech Icons</a
-        >
-      </p>
-    </footer>
+  <footer>
+    <p>© Copyright Estelle ROGÈS</p>
+    <p>
+      <a href="https://www.freepik.com/photos/laptop-coffee">Background Image</a>
+      |
+      <a href="https://www.shapedivider.app/" target="_blank" rel="noopener noreferrer">Shape Divider</a>
+      |
+      <a href="https://icons8.com/" target="_blank" rel="noopener noreferrer">Tech Icons</a>
+    </p>
+  </footer>
 
-    <div id="scripts">
-      <script
-        type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-      ></script>
-      <script type="text/javascript">
-        (function () {
-          emailjs.init("FOlf6XQ311rAPFxv-");
-        })();
-      </script>
-      <script src="./script/navbarScript.js"></script>
-      <script src="./script/sendMails.js"></script>
-      <script src="./script/scrollAnimations.js"></script>
-      <script
-        src="https://kit.fontawesome.com/a789c7f6d3.js"
-        crossorigin="anonymous"
-      ></script>
-      <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-        crossorigin="anonymous"
-      ></script>
-    </div>
-  </body>
+  <div id="scripts">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("FOlf6XQ311rAPFxv-");
+      })();
+    </script>
+    <script src="./script/navbarScript.js"></script>
+    <script src="./script/sendMails.js"></script>
+    <script src="./script/scrollAnimations.js"></script>
+    <script src="https://kit.fontawesome.com/a789c7f6d3.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"></script>
+  </div>
+</body>
+
 </html>

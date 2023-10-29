@@ -10,7 +10,7 @@
   width: 260px;
   height: 400px;
   min-width: 200px;
-  box-shadow: 0 4px 3px var(--primary-color), 0 0 5px var(--primary-color);
+  box-shadow: 0 4px 3px var(--primary-color-dark), 0 0 5px var(--primary-color);
   border-radius: 0.75rem;
   position: relative;
   overflow: hidden;
@@ -46,6 +46,7 @@
 .projectData p {
   margin: 0 0 1rem 0;
   overflow-y: scroll;
+  flex: 1;
 }
 .projectData a {
   padding: 0.5rem 1rem;
@@ -68,6 +69,11 @@
   font-size: 1.45rem;
   text-align: start;
 }
+.mainData hr {
+  height: 1px;
+  border: none;
+  background: linear-gradient(to right, var(--primary-color-dark), var(--highlight-color), transparent 100%);
+}
 .mainData p {
   text-align: right;
 }
@@ -83,9 +89,9 @@
 @media (max-width: 578px) {
   .projectCard {
     width: 100%;
-    height: 260px;
+    height: 350px;
   }
   .projectData {
-    inset: 70% 0 0 0;
+    inset: 75% 0 0 0;
   }
 }/*# sourceMappingURL=styles_portfolio.css.map */

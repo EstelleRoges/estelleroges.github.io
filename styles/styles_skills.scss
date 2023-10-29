@@ -1,5 +1,5 @@
 #skills {
-  background-color: var(--greyBackground);
+  background-color: var(--secondary-color);
   position: relative;
 
   .gradientTitle {
@@ -23,7 +23,7 @@
     }
 
     .shape-fill {
-      fill: var(--secondary-color);
+      fill: var(--primary-color-light);
     }
   }
 
@@ -44,18 +44,56 @@
     }
 
     .shape-fill {
-      fill: var(--secondary-color);
+      fill: var(--primary-color-light);
     }
   }
 
   .stack {
     margin-top: 2em;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas:
+      "mainTech-1 mainTech-1 midTech-2 midTech-2"
+      "mainTech-1 mainTech-1 tool-3 tech-4"
+      "midTech-1 tool-1 mainTech-2 mainTech-2"
+      "midTech-1 tool-2 mainTech-2 mainTech-2";
 
     div {
       position: relative;
+    }
+
+    img,
+    i {
+      width: 40px;
+    }
+
+    .mainTech-1 {
+      grid-area: mainTech-1;
+    }
+    .mainTech-2 {
+      grid-area: mainTech-2;
+    }
+    .midTech-1 {
+      grid-area: midTech-1;
+    }
+    .midTech-2 {
+      grid-area: midTech-2;
+    }
+    .tool-1 {
+      grid-area: tool-1;
+    }
+    .tool-2 {
+      grid-area: tool-2;
+    }
+    .tool-3 {
+      grid-area: tool-3;
+    }
+    .tech-4 {
+      grid-area: tech-4;
     }
   }
 
@@ -103,38 +141,7 @@
     }
   }
 
-  .basics {
-    opacity: 0;
-    transform: translateX(-30px);
-    transition: var(--05msTransition);
-
-    &.stackListAppeared {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  .frontend {
-    opacity: 0;
-    transform: translateX(-30px);
-    transition: var(--05msTransition);
-    transition-delay: 0.2s;
-  }
-  .backend {
-    opacity: 0;
-    transform: translateX(-30px);
-    transition: var(--05msTransition);
-    transition-delay: 0.4s;
-  }
-  .tools {
-    opacity: 0;
-    transform: translateX(-30px);
-    transition: var(--05msTransition);
-    transition-delay: 0.6s;
-  }
-
-  .stackListAppeared {
-    opacity: 1;
-    transform: translateX(0);
+  .main-stack {
   }
 
   .htmlStyle {

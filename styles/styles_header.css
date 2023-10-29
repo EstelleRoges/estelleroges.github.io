@@ -59,7 +59,7 @@ header i:hover {
 }
 header a {
   color: var(--text-color);
-  font-size: 1.1rem;
+  font-size: var(--text-size);
 }
 header a:hover {
   color: var(-primary-color-light);

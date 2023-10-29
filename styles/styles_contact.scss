@@ -1,6 +1,6 @@
 #contact {
   position: relative;
-  background-color: var(--greyBackground);
+  background-color: var(--secondary-color);
   background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
 
   p {
@@ -61,8 +61,7 @@
     padding: 1em;
     resize: none;
     outline: none;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 1px 3px 5px var(--shadow);
+    background-color: white;
   }
 
   button {
@@ -72,7 +71,7 @@
 }
 
 .someInfos {
-  background-color: #ffffff;
+  background-color: var(--secondary-color);
   background-image: url("https://www.transparenttextures.com/patterns/lined-paper.png");
   margin: 0.5em auto 1.5em 20%;
   padding: 1em;
@@ -81,7 +80,7 @@
   height: fit-content;
   letter-spacing: 2px;
   border-radius: 5px;
-  box-shadow: -2px 2px 4px var(--shadow);
+  box-shadow: 2px 4px 4px var(--primary-color-dark);
   opacity: 0;
   transform: rotate(6deg) translateX(-20px) scale(0);
   transition: var(--03msTransition);
