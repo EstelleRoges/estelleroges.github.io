@@ -3,15 +3,13 @@
 :root {
   --main-font: "Raleway", sans-serif;
   --accent-font: "Niconne", cursive;
-  --primary-color: #ad7d73;
-  --primary-color-light: #c39f98;
-  --primary-color-dark: #8d5b53;
-  --secondary-color: #f7f4f3;
-  --accent-color: #67433c;
-  --text-color: #33221e;
+  --primary-color: #729044;
+  --primary-color-light: #b7cb90;
+  --primary-color-dark: #57683c;
+  --secondary-color: #f6f9f1;
+  --accent-color: #bf8d5f;
+  --text-color: #0f1d0c;
   --text-size: 1.1rem;
-  --highlight-color: #8e3f3f;
-  --menuBackground: linear-gradient(to bottom, #c39f98f2 70%, #f7f4f3f2 90%);
   --03msTransition: all 0.3s ease-in-out;
   --05msTransition: all 0.5s ease-in-out;
 }
@@ -20,6 +18,7 @@
   box-sizing: border-box;
   font-family: var(--main-font);
   scroll-behavior: smooth;
+  scroll-padding-top: 3rem;
 }
 
 html {
@@ -105,7 +104,7 @@ section {
   i {
     font-size: 36px;
     padding-right: 0.3rem;
-    color: var(--primary-color-dark);
+    color: var(--primary-color-light);
     filter: drop-shadow(2px 2px 1px var(--primary-color));
   }
 }
@@ -159,12 +158,12 @@ p {
 button {
   padding: 0.7rem 1.4rem;
   border: none;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   background-color: var(--primary-color-dark);
   color: var(--secondary-color);
   cursor: pointer;
   transition: var(--03msTransition);
-  box-shadow: 0 3px 2px var(--primary-color-light);
+  box-shadow: 0 0 2px var(--primary-color);
 
   &:hover {
     background-color: var(--primary-color);
@@ -178,7 +177,7 @@ button {
   filter: drop-shadow(2px 2px 3px var(--primary-color-dark));
 
   i {
-    color: var(--highlight-color);
+    color: var(--primary-color);
   }
 }
 
@@ -226,7 +225,7 @@ button {
     background: linear-gradient(
       to right,
       var(--text-color) 25%,
-      var(--highlight-color) 70%,
+      var(--primary-color) 70%,
       var(--primary-color-light) 100%
     );
     background-clip: text;
@@ -275,7 +274,7 @@ footer {
   padding-top: 3rem;
   padding-bottom: 1rem;
   background-color: var(--secondary-color);
-  background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+  background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
 
   p {
     margin: 0;
@@ -321,14 +320,6 @@ footer {
   to {
     opacity: 0;
   }
-}
-
-.bordered {
-  background: linear-gradient(var(--highlight-color), var(--highlight-color))
-      50% 50% / calc(100% - 6px) calc(-100% - 6px) no-repeat,
-    linear-gradient(120deg, var(--primary-color) 0%, transparent 25%),
-    inear-gradient(320deg, var(--primary-color-light) 0%, transparent 30%);
-  border-radius: 0.15rem;
 }
 
 @media (max-width: 992px) {
@@ -408,7 +399,6 @@ footer {
   }
 
   .subContent {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 2.5rem 1.25rem;
   }
 }

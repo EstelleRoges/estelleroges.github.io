@@ -3,6 +3,12 @@
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
   justify-items: center;
+  opacity: 0;
+  transition: var(--05msTransition);
+}
+
+.deckVisible {
+  opacity: 1;
 }
 
 .projectCard {
@@ -35,7 +41,7 @@
   transition: all 0.4s ease-out;
   -webkit-backdrop-filter: blur(6px);
           backdrop-filter: blur(6px);
-  background-color: rgba(173, 125, 115, 0.1019607843);
+  background-color: rgba(191, 141, 95, 0.1019607843);
   z-index: 1;
   display: flex;
   flex-direction: column;
@@ -66,13 +72,14 @@
 }
 .mainData h4 {
   margin-bottom: 0.5rem;
-  font-size: 1.45rem;
+  font-size: 1.5rem;
   text-align: start;
+  text-shadow: 0 0 2px var(--primary-color-dark);
 }
 .mainData hr {
   height: 1px;
   border: none;
-  background: linear-gradient(to right, var(--primary-color-dark), var(--highlight-color), transparent 100%);
+  background: linear-gradient(to right, var(--primary-color-dark), var(--primary-color), transparent 100%);
 }
 .mainData p {
   text-align: right;

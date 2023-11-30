@@ -1,5 +1,6 @@
 #skills {
   background-color: var(--secondary-color);
+  background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
   position: relative;
 }
 #skills .gradientTitle {
@@ -44,44 +45,12 @@
 }
 #skills .stack {
   margin-top: 2em;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  gap: 1rem;
-  justify-items: center;
-  align-items: center;
-  grid-template-areas: "mainTech-1 mainTech-1 midTech-2 midTech-2" "mainTech-1 mainTech-1 tool-3 tech-4" "midTech-1 tool-1 mainTech-2 mainTech-2" "midTech-1 tool-2 mainTech-2 mainTech-2";
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 #skills .stack div {
   position: relative;
-}
-#skills .stack img,
-#skills .stack i {
-  width: 40px;
-}
-#skills .stack .mainTech-1 {
-  grid-area: mainTech-1;
-}
-#skills .stack .mainTech-2 {
-  grid-area: mainTech-2;
-}
-#skills .stack .midTech-1 {
-  grid-area: midTech-1;
-}
-#skills .stack .midTech-2 {
-  grid-area: midTech-2;
-}
-#skills .stack .tool-1 {
-  grid-area: tool-1;
-}
-#skills .stack .tool-2 {
-  grid-area: tool-2;
-}
-#skills .stack .tool-3 {
-  grid-area: tool-3;
-}
-#skills .stack .tech-4 {
-  grid-area: tech-4;
 }
 #skills h4 {
   width: 6em;
@@ -89,7 +58,7 @@
   border-radius: 1em;
   position: absolute;
   top: -1em;
-  box-shadow: 1px 4px 4px var(--shadow);
+  box-shadow: 1px 2px 4px var(--primary-color);
   background: linear-gradient(to right, var(--primary-color) 50%, var(--primary-color-light) 100%);
   color: white;
   display: inline-block;
@@ -105,7 +74,7 @@
   justify-content: center;
   background-color: white;
   border-radius: 2em;
-  box-shadow: 2px 2px 7px var(--shadow);
+  box-shadow: 2px 2px 7px var(--primary-color);
   z-index: 0;
 }
 #skills ul li {
@@ -117,6 +86,37 @@
 }
 #skills ul p {
   margin-bottom: 0;
+}
+#skills .basics {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: var(--05msTransition);
+}
+#skills .basics.stackListAppeared {
+  opacity: 1;
+  transform: translateX(0);
+}
+#skills .frontend {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: var(--05msTransition);
+  transition-delay: 0.2s;
+}
+#skills .backend {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: var(--05msTransition);
+  transition-delay: 0.4s;
+}
+#skills .tools {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: var(--05msTransition);
+  transition-delay: 0.6s;
+}
+#skills .stackListAppeared {
+  opacity: 1;
+  transform: translateX(0);
 }
 #skills .htmlStyle {
   color: #f16529;
