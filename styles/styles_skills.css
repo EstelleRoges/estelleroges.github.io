@@ -92,51 +92,50 @@
   transform: translateX(-30px);
   transition: var(--05msTransition);
 }
-#skills .basics.stackListAppeared {
-  opacity: 1;
-  transform: translateX(0);
-}
-#skills .frontend {
+
+.frontend {
   opacity: 0;
   transform: translateX(-30px);
   transition: var(--05msTransition);
   transition-delay: 0.2s;
 }
-#skills .backend {
+
+.backend {
   opacity: 0;
   transform: translateX(-30px);
   transition: var(--05msTransition);
   transition-delay: 0.4s;
 }
-#skills .tools {
+
+.tools {
   opacity: 0;
   transform: translateX(-30px);
   transition: var(--05msTransition);
   transition-delay: 0.6s;
 }
-#skills .stackListAppeared {
+
+.stackListAppeared {
   opacity: 1;
   transform: translateX(0);
 }
-#skills .htmlStyle {
+
+.htmlStyle {
   color: #f16529;
 }
-#skills .cssStyle {
+
+.cssStyle {
   color: #2965f1;
 }
-#skills .jsStyle {
+
+.jsStyle {
   color: #f7df1e;
 }
-#skills .reactStyle {
+
+.reactStyle {
   color: #00d8ff;
 }
-#skills .bsStyle {
-  color: #563d7c;
-}
-#skills .sassStyle {
-  color: #f06292;
-}
-#skills .nodeStyle {
+
+.nodeStyle {
   color: #ccc;
 }
 

@@ -97,11 +97,9 @@ section {
 .gradientTitle h2 {
   margin: 0.5rem 0;
 }
-.gradientTitle i {
-  font-size: 36px;
+.gradientTitle img {
   padding-right: 0.3rem;
-  color: var(--primary-color-light);
-  filter: drop-shadow(2px 2px 1px var(--primary-color));
+  filter: drop-shadow(2px 1px 1px var(--primary-color));
 }
 
 h2 {

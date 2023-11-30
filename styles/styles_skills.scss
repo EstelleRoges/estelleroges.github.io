@@ -108,10 +108,6 @@
     opacity: 0;
     transform: translateX(-30px);
     transition: var(--05msTransition);
-
-    &.stackListAppeared {
-    opacity: 1;
-    transform: translateX(0);
   }
   }
   .frontend {
@@ -152,19 +148,12 @@
   .reactStyle {
     color: #00d8ff;
   }
-  .bsStyle {
-    color: #563d7c;
-  }
-  .sassStyle {
-    color: #f06292;
-  }
   // . wpStyle: {color: #21759B;}
   .nodeStyle {
     // color: #83cd29;
     color: #ccc;
   }
   // . jestStyle: {color: #99415B;}
-}
 
 @media (max-width: 768px) {
   #skills ul {

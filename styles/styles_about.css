@@ -1,14 +1,6 @@
 #about {
   position: relative;
 }
-#about::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(to bottom, var(--secondary-color) 0%, transparent 10%);
-}
 
 .tagsHeader {
   display: flex;
@@ -58,16 +50,6 @@
 }
 .tags span {
   margin: 0;
-}
-.tags .luv {
-  margin: 0;
-  font-size: 16px;
-  color: #d13149;
-  display: inline-block;
-  position: relative;
-  right: 3px;
-  bottom: 5px;
-  transform: rotate(15deg);
 }
 
 .storyContent {
