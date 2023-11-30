@@ -15,6 +15,10 @@ const homeElements = [
     class: "connectAndCV",
     timeout: 1400,
   },
+  {
+    class: "heroImage",
+    timeout: 1800,
+  }
 ];
 
 window.addEventListener("load", () =>

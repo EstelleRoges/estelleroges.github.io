@@ -180,26 +180,11 @@ button {
 }
 
 #home {
-  padding-top: 15rem;
+  padding-top: 3rem;
   height: 100vh;
-  background: url(../assets/images/background.jpg);
-  background-color: var(--secondary-color);
-  background-repeat: no-repeat;
-  background-size: 1500px 100vh;
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(
-      to right,
-      #f4f5f766,
-      var(--secondary-color)
-    );
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 // HERO SECTION
@@ -257,7 +242,8 @@ button {
 
 .iAm,
 .myJob,
-.connectAndCV {
+.connectAndCV,
+.heroImage {
   opacity: 0;
   transform: translateY(-20px);
   transition: all 0.5s ease-in-out;
