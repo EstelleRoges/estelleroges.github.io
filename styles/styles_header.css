@@ -10,6 +10,10 @@ header {
   transform: translateY(-60%);
   transition: all 0.75s ease-out;
 }
+header .githubLink {
+  width: 28px;
+  height: 28px;
+}
 header article {
   margin: auto;
   max-width: 1400px;
@@ -113,8 +117,5 @@ header a:hover {
   }
   header nav a {
     font-size: 1.35rem;
-  }
-  header nav i {
-    margin-bottom: 3rem;
   }
 }/*# sourceMappingURL=styles_header.css.map */

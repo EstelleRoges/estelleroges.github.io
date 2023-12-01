@@ -53,29 +53,21 @@ const aboutAnimations = () => {
 
 // Skills section
 
-const basics = document.querySelector(".basics");
-const frontend = document.querySelector(".frontend");
-const backend = document.querySelector(".backend");
+const techs = document.querySelector(".techs");
+// const backend = document.querySelector(".backend");
 const tools = document.querySelector(".tools");
 
 const skillsAnimations = () => {
-  const basicsPosition = basics.getBoundingClientRect().top;
-  const frontendPosition = basics.getBoundingClientRect().top;
-  const backendPosition = basics.getBoundingClientRect().top;
-  const toolsPosition = basics.getBoundingClientRect().top;
+  const techsPosition = techs.getBoundingClientRect().top;
+  // const backendPosition = backend.getBoundingClientRect().top;
+  const toolsPosition = tools.getBoundingClientRect().top;
 
-  if (basicsPosition < screenPosition) {
-    basics.classList.add("stackListAppeared");
+  if (techsPosition < screenPosition) {
+    techs.classList.add("stackListAppeared");
   }
-
-  if (frontendPosition < screenPosition) {
-    frontend.classList.add("stackListAppeared");
-  }
-
-  if (backendPosition < screenPosition) {
-    backend.classList.add("stackListAppeared");
-  }
-
+  // if (backendPosition < screenPosition) {
+  //   backend.classList.add("stackListAppeared");
+  // }
   if (toolsPosition < screenPosition) {
     tools.classList.add("stackListAppeared");
   }

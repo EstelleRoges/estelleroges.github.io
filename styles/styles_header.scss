@@ -1,4 +1,9 @@
 header {
+  .githubLink {
+    width: 28px;
+    height: 28px;
+  }
+
   padding-bottom: 1rem;
   background: linear-gradient(
     to bottom,
@@ -137,10 +142,6 @@ header {
 
     a {
       font-size: 1.35rem;
-    }
-
-    i {
-      margin-bottom: 3rem;
     }
   }
 }
