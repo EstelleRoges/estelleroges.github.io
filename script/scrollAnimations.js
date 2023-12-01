@@ -9,16 +9,16 @@ const homeElements = [
   },
   {
     class: "myJob",
-    timeout: 1000,
-  },
-  {
-    class: "connectAndCV",
-    timeout: 1400,
+    timeout: 900,
   },
   {
     class: "heroImage",
-    timeout: 1800,
-  }
+    timeout: 1200,
+  },
+  {
+    class: "connectAndCV",
+    timeout: 1500,
+  },
 ];
 
 window.addEventListener("load", () =>

@@ -179,11 +179,13 @@ button:hover {
 }
 
 .textSection {
+  margin-top: 1rem;
   position: relative;
   z-index: 1;
   text-align: center;
 }
 .textSection p {
+  margin: 0.35rem;
   text-align: center;
   font-size: 1.3rem;
   letter-spacing: 2px;
