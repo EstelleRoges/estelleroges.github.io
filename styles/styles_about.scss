@@ -60,6 +60,10 @@
     li {
       padding: 0.4em;
       font-size: 18px;
+      & span {
+        font-weight: 700;
+        color: var(--primary-color-dark);
+      }
     }
   }
 
