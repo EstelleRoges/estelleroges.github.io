@@ -51,9 +51,9 @@
 .contactForm textarea {
   font-size: 18px;
   border: none;
-  border-radius: 0.5em;
-  margin-bottom: 1em;
-  padding: 1em;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
   resize: none;
   outline: none;
   background-color: white;
@@ -65,15 +65,14 @@
 }
 
 .someInfos {
-  background-color: var(--secondary-color);
-  background-image: url("https://www.transparenttextures.com/patterns/lined-paper.png");
-  margin: 0.5em auto 1.5em 20%;
-  padding: 1em;
+  margin: 0.5rem auto 1.5rem 17%;
+  padding: 1rem;
   width: 100%;
-  max-width: 400px;
+  max-width: 375px;
   height: -moz-fit-content;
   height: fit-content;
-  letter-spacing: 2px;
+  background-color: var(--secondary-color);
+  background-image: url("https://www.transparenttextures.com/patterns/lined-paper.png");
   border-radius: 5px;
   box-shadow: 1px 2px 5px var(--primary-color-dark);
   opacity: 0;
@@ -83,7 +82,7 @@
 .someInfos h3,
 .someInfos span {
   margin: 0;
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
   width: -moz-fit-content;
   width: fit-content;
   display: inline;
