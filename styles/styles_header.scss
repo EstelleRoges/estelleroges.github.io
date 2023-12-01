@@ -1,6 +1,5 @@
 header {
   padding-bottom: 1rem;
-  width: 100%;
   background: linear-gradient(
     to bottom,
     var(--secondary-color) 85%,
@@ -8,6 +7,8 @@ header {
   );
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 3;
   opacity: 0;
   transform: translateY(-60%);
@@ -89,7 +90,7 @@ header {
 
 #menuIcon,
 #closeIcon {
-  display: none !important;
+  display: none;
   transition: var(--05msTransition);
 }
 
@@ -106,20 +107,16 @@ header {
 
 @media (max-width: 576px) {
   #menuIcon {
-    margin: 0.5rem 0.75rem;
-    display: flex !important;
+    margin: 0.5rem 0.75rem 0.5rem auto;
+    display: block;
     justify-content: flex-end;
     transition: var(--05msTransition);
     color: var(--text-color);
   }
 
   #closeIcon {
-    display: flex !important;
-    justify-content: flex-end;
-
-    i {
-      color: var(--secondary-color);
-    }
+    display: block;
+    margin-left: auto;
   }
 
   header nav {
@@ -129,7 +126,7 @@ header {
     height: 100vh;
     flex-direction: column;
     justify-content: flex-start;
-    background-image: linear-gradient(to bottom,#729044e6, #f6f9f1e6 );
+    background-image: linear-gradient(to bottom, #729044, #f6f9f1f2);
     position: absolute;
     inset: 0;
     gap: 3rem 0;

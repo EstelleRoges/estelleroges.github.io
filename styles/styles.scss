@@ -349,10 +349,6 @@ footer {
     text-align: center;
   }
 
-  #upperSection {
-    padding: 1rem 0.7rem;
-  }
-
   #home {
     margin-bottom: 0;
   }
@@ -369,8 +365,8 @@ footer {
     width: 100%;
     text-align: center;
 
-    h1 {
-      font-size: 12vw;
+    h2 {
+      font-size: 13vw;
     }
   }
 
@@ -380,6 +376,11 @@ footer {
     a {
       margin: 1rem 0;
     }
+  }
+
+  .heroImage {
+    max-width: 70%;
+    height: auto;
   }
 
   .subContent {

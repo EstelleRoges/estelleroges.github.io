@@ -43,19 +43,19 @@
         <div>
           <h1>CodeCup</h1>
           <hr />
-          <i
+          <img
             id="menuIcon"
+            src="assets/svgs/menuIcon.svg"
+            alt="menuIcon"
             onclick="toggleNav()"
-            class="menu bi bi-list icon"
-            aria-expanded="false"
-          >
-          </i>
+          />
           <nav role="navigation">
-            <i
+            <img
               id="closeIcon"
+              src="assets/svgs/closeIcon.svg"
+              alt="close"
               onclick="closeMenu()"
-              class="fa-solid fa-xmark"
-            ></i>
+            />
             <a onclick="autoClose()" href="#about">About</a>
             <a onclick="autoClose()" href="#portfolio">Portfolio</a>
             <a onclick="autoClose()" href="#contact">Contact</a>
@@ -93,7 +93,11 @@
               Mon CV
             </a>
           </div>
-          <img class="heroImage" src="assets/svgs/programmer-svg.svg" alt="heroImage" />
+          <img
+            class="heroImage"
+            src="assets/svgs/programmer-svg.svg"
+            alt="heroImage"
+          />
         </div>
       </article>
     </section>
@@ -101,10 +105,10 @@
     <section>
       <article id="about">
         <div class="subContent">
-          <header class="gradientTitle">
+          <div class="gradientTitle">
             <h2>Qui suis-je</h2>
             <img src="assets/svgs/userIcon.svg" alt="user" />
-          </header>
+          </div>
           <div id="aboutContent">
             <div class="first-row">
               <aside class="tags">
@@ -176,10 +180,10 @@
           </svg>
         </div>
         <div class="subContent">
-          <header class="gradientTitle">
+          <div class="gradientTitle">
             <h2>Environnement technique</h2>
             <img src="assets/svgs/codeIcon.svg" alt="code" />
-          </header>
+          </div>
           <section class="stack">
             <div class="basics">
               <h4>Bases</h4>
@@ -304,10 +308,10 @@
     <section>
       <article id="portfolio">
         <div class="subContent">
-          <header class="gradientTitle">
+          <div class="gradientTitle">
             <h2>Portfolio</h2>
             <img src="assets/svgs/galleryIcon.svg" alt="portfolio" />
-          </header>
+          </div>
           <p>
             Voici des projets variés que j'ai développé. D'autres sont à venir!
           </p>
@@ -425,10 +429,10 @@
     <!-- <section>
     <article id="pricing">
       <div class="subContent">
-        <header class="gradientTitle">
+        <div class="gradientTitle">
           <h2>Tarifs</h2>
           <i class="fa-solid fa-money-check-dollar"></i>
-        </header>
+        </div>
         <article class="prices">
           <div>
             <h3>Site internet</h3>
@@ -484,10 +488,10 @@
           </svg>
         </div>
         <div class="subContent">
-          <header class="gradientTitle">
+          <div class="gradientTitle">
             <h2>Let's connect!</h2>
             <img src="assets/svgs/letterIcon.svg" alt="contact" />
-          </header>
+          </div>
           <p>Intéressé par mon profil? Envoyez-moi donc un mail!</p>
           <div class="contactSection">
             <form class="contactForm">
