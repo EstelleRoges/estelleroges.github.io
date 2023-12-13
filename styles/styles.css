@@ -172,6 +172,7 @@ button:hover {
 
 #home {
   padding-top: 3rem;
+  width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -180,9 +181,8 @@ button:hover {
 
 .textSection {
   margin-top: 1rem;
-  position: relative;
-  z-index: 1;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 .textSection p {
   margin: 0.35rem;
@@ -201,6 +201,11 @@ button:hover {
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+}
+.textSection img {
+  margin: auto;
+  max-width: 375px;
+  display: block;
 }
 
 .connectAndCV {
